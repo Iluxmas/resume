@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+
+body {
+  max-width: 1920px;
+  background: #f5f5f5;
+  font-family: "Open Sans", sans-serif;
+  color: #252525;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+#root {
+  width: 100%;
+}
+.page {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+.header {
+  max-width: 1280px;
+  height: 120px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__menu {
+  width: 100%;
+  list-style-type: none;
+  
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+}
+
+.header__list-item {
+  height: 50px;
+  font-weight: 400;
+  
+  font-size: 18px;
+  line-height: 50px;
+}
+
+.header__list-item:hover {
+background-color:#d668f811
+}
+
+.header__link {
+  text-decoration: none;
+  text-align: center;
+ color:#252525;
+}
+.header__link:hover {
+  cursor: pointer;
+  color:#8a00b4;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color:#8a00b4;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.block__container {
+  /* max-width: 1280px; */
+  margin: 0 auto;
+}
+/* LEAD BLOCK */
+.lead {
+  height: 960px;
+  margin-left: -240px;
+  margin-right: -240px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0 240px;
+  align-items: flex-start;
+  justify-content: center;
+  background-image: url('../images/lead_bcg_frontend2.png');
+   background-size: 105%;
+   background-position: 50% 15%;
+  background-repeat: no-repeat;
+}
+
+.lead__greet {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 25px;
+  
+}
+.lead__name {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 30px;
+  margin-bottom: 20px;
+  color: #8a00b4;
+}
+.lead__header {
+  max-width: 540px;
+  text-align-last: end;
+  font-weight: 600;
+  font-size: 85px;
+  line-height: 110px;
+  margin-bottom: 20px;
+  margin-left: -20px;
+  padding: 0;
+}
+.lead__description {
+max-width: 500px;
+font-weight: 400;
+font-size: 20px;
+line-height: 30px;
+margin-bottom: 20px;
+}
+.lead__button {
+  width: 190px;
+  height: 54px;
+  background-color: #8a00b4;
+  color: #eee;
+  border: none;
+  border-radius: 3px;
+  font-weight: 600;
+font-size: 18px;
+line-height: 27px;
+}
+.lead__photo {
+  position: absolute;
+  right: 400px;
+  bottom: 0;
+  height: 800px;
+  width: 400px;
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), #f5f5f5 90%),url('../images/feynman.png');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+/* -------SKILLZ BLOCK ---------*/
+
+.skillz__container {
+  list-style-type: none;
+  max-width: 1080px;
+  margin: 0 auto;
+  height: 310px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  row-gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.skillz {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.skillz__header {
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 28px;
+  margin-bottom: 50px;
+}
+.skillz__item {
+  width: 140px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skillz__img {
+  /* width: 65px; */
+  height: auto;
+  max-height: 75px;
+  margin-bottom: 15px;
+}
+.skillz__title {
+  font-size: 26px;
+  font-weight: 600;
+margin: 0;
+}
+
+/* ------- EXP BLOCK ---------*/
+
+.exp {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.exp__header {
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 28px;
+  margin-bottom: 50px;
+}
+.exp__container {
+}
+.exp__head-container {
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.exp__item {
+  border: 1px solid #252525;
+  box-sizing: border-box;
+  margin-bottom: -1px;
+  max-width: 1080px;
+  overflow: hidden;
+  max-height: 70px;
+  transition: max-height .3s ease-in;
+}
+.open {
+  max-height: 300px;
+}
+
+.exp__head-container{
+  padding: 10px 16px;
+}
+.exp__head {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+  gap: 40px
+}
+.exp__head-date {
+  font-weight: 600;
+  font-size: 32px;
+}
+.exp__head-company {
+  line-height: 50px;
+  font-size: 28px;
+}
+.exp__head-position{
+  line-height: 50px;
+}
+.exp__description {
+  background-color: #ffcb46;
+  padding: 16px;
+}
+.exp__expand-bttn{
+  animation: rotateBackw .4s normal forwards ease-in-out;
+}
+
+.exp__expand-bttn.rotate{
+  animation: rotateForw .4s normal forwards ease-in-out;
+}
+@keyframes rotateForw {
+0%  { transform: rotate(0deg);  }
+100%{ transform: rotate(45deg); }
+}
+@keyframes rotateBackw {
+  0%  { transform: rotate(45deg); }
+  100%{ transform: rotate(0deg);  }
+}
+
+
+/* opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;
+opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; height: 86px; */
+/* 
+.exp__card-head {
+  height: 130px;
+  padding: 16px;
+  background: linear-gradient(10deg, #66a6b8 20%, #5471b9 80%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.exp__card-body {
+  width: 520px;
+  min-height: 350px;
+  padding: 16px;
+  background: #eee;
+}
+.exp__card-logo {
+  width: 55px;
+  margin-right: 18px;
+}
+.exp__card-head-textblock {
+  color: #f5f5f5;
+}
+.exp__card-position {
+  font-size: 18px;
+  font-weight: 800;
+
+  margin: 0;
+}
+.exp__card-company {
+  margin: 0;
+}
+.exp__card-dates {
+  margin: 0;
+}
+.exp__card-list{
+  margin: 0;
+  padding-left: 25px;
+}
+.exp__card-list-item{} */
