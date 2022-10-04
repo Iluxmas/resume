@@ -1,6 +1,8 @@
-import { createContext } from "react";
+import React, { createContext } from "react";
 import Logo from "../images/exp__icons/siegw.png";
-export const TranslationContext = createContext();
+import Todo from "../images/projects/todo-app.JPG";
+
+export const TranslationContext = createContext("");
 
 export const lead = {};
 export const exp = {
@@ -9,7 +11,7 @@ export const exp = {
       pos: "Фронтенд разработчик",
       logo: Logo,
       company: "Я.Практикум",
-      dates: "апр. 22 - по настоящее время",
+      dates: "апр. 22 - по н. в.",
       resp: [
         "Создавал страницы с помощью HTML и CSS",
         "Использовал flex и grid для создания адаптивности под различные устройства",
@@ -50,7 +52,60 @@ export const exp = {
   en: [],
 };
 export const skills = {};
-export const projects = {};
+export const education = {
+  ru: [
+    {
+      place: "Я.Практикум",
+      dep: "Яндекс , Front-end Разработчик",
+      dates: "04.2022 - 01.2023",
+    },
+    {
+      place: "Udemy",
+      dep: "Юрий Бура, React + Redux - Профессиональная Разработка",
+      dates: "04.2022 - 06.2022",
+    },
+    {
+      place: "Udemy",
+      dep: "Иван Петриченко, Полный курс по JavaScript + React",
+      dates: "02.2022 - 03.2022",
+    },
+    {
+      place: "РХТУ им. Д.И.Менделеева",
+      dep: "Кафедра высокотературных материалов и технологий",
+      dates: "09.2007 - 06.2011",
+    },
+  ],
+};
+
+export const projects = {
+  ru: [
+    {
+      id: 1,
+      image: Todo,
+      title: "Todo app",
+      description: "Application for managing todo list",
+      tags: ["CSS", "React", "HTML", "Webpack"],
+      link: "https://github.com/Iluxmas/To-do-app",
+    },
+    {
+      id: 2,
+      image: Todo,
+      title: "Todo app 2",
+      description:
+        "Application for managing todo list 2 Application for managing todo list Application for managing todo list",
+      tags: ["CSS", "React", "HTML"],
+      link: "https://github.com/Iluxmas/To-do-app",
+    },
+    {
+      id: 3,
+      image: Todo,
+      title: "Todo app 3",
+      description: "Application for managing todo list 2",
+      tags: ["CSS", "React", "HTML"],
+      link: "https://github.com/Iluxmas/To-do-app",
+    },
+  ],
+};
 export const aboutMe = {};
 export const aboutsThis = {};
 export const contact = {};

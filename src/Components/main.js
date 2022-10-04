@@ -3,14 +3,18 @@ import { lead } from "../contexts/TranslationContext";
 import Lead from "./lead";
 import Skills from "./skills";
 import Experience from "./experience";
+import Education from "./education";
+import Projects from "./projects";
 
 export default function Main() {
   return (
     <>
-      <Lead />
-      <Skills />
+      {/* <Lead />
+      <Skills /> */}
       <Experience />
-      <h1>Alabai 2</h1>
+      <Education />
+      <Projects />
+      <h1></h1>
     </>
   );
 }

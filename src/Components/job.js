@@ -9,14 +9,14 @@ export default function Job({ data }) {
   function handleOpenDescr(event) {
     setIsOpen(() => !isOpen);
   }
-  
+
   let addHeight = descriptionHeight.current?.clientHeight;
   let bttnClass, divClass, heightStyle;
 
   if (isOpen) {
     bttnClass = "exp__expand-bttn rotate";
     divClass = "exp__item open";
-    heightStyle = { maxHeight: `${70 + addHeight}` + "px" };
+    heightStyle = { maxHeight: `${70 + addHeight + 32}` + "px" };
   } else {
     bttnClass = "exp__expand-bttn";
     divClass = "exp__item";
@@ -33,8 +33,12 @@ export default function Job({ data }) {
         </div>
         <img className={bttnClass} src={Close} onClick={handleOpenDescr} />
       </div>
-      <div ref={descriptionHeight} className="exp__description">
-        {resp}
+      <div className="exp__description">
+        <ul ref={descriptionHeight} className="exp__description-list">
+          {resp.map((item, idx) => {
+            return <li key={idx}>{item}</li>;
+          })}
+        </ul>
       </div>
     </div>
   );

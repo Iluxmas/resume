@@ -17,9 +17,9 @@ export const icons = {
   React,
   Git,
   SASS,
-  Jest,
-  Redux,
   Webpack,
   Figma,
+  Redux,
+  Jest,
   Photoshop,
 };

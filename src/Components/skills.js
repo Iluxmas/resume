@@ -1,6 +1,8 @@
 import React from "react";
 import { icons } from "./stackIconsData";
 
+import "./skills.css";
+
 export default function Skills() {
   let itemId = 1;
   let stack = [];

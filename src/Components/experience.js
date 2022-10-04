@@ -1,19 +1,24 @@
 import React, { useContext } from "react";
 import { TranslationContext, exp } from "../contexts/TranslationContext";
 import Job from "./job";
+import "./experience.css";
 
 export default function Experience() {
-  const lang = useContext(TranslationContext) || "ru";
+  const lang = useContext(TranslationContext);
 
   return (
-    <div className="exp">
-      <h2 className="exp__header">Experience</h2>
-      <div className="exp__container">
-        {exp[lang].map((item, idx) => {
-          return <Job key={idx} data={item} />;
-        })}
-      </div>
-    </div>
+    <TranslationContext.Consumer>
+      {(lang) => (
+        <div className="exp">
+          <h2 className="exp__header">Experience</h2>
+          <div className="exp__container">
+            {exp[lang].map((item, idx) => {
+              return <Job key={idx} data={item} />;
+            })}
+          </div>
+        </div>
+      )}
+    </TranslationContext.Consumer>
   );
 }
 

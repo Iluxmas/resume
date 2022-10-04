@@ -1,0 +1,40 @@
+.edu__container{
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    align-items: center;
+    justify-content: center;
+}
+.edu__header {
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 28px;
+    margin-bottom: 50px;
+}
+.edu__table{
+    width: 100%;
+    margin: 0 auto;
+}
+.edu__table-header{
+    font-size: 22px;
+    border-bottom: 1px solid #252525;
+}
+th {
+    line-height: 50px;
+}
+td {
+    line-height: 50px;
+}
+.edu__table-body{
+    font-size: 18px;
+    border-bottom: 1px solid #252525;
+}
+.column1{
+    width: 25%;
+}
+.column2{
+    width: 57%;
+}
+.column3{
+    width: 18%;
+}
