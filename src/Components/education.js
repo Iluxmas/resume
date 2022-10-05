@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
 import { education, TranslationContext } from "../contexts/TranslationContext";
-import "./education.css";
+import "./styles/education.css";
 export default function Education() {
   const lang = useContext(TranslationContext);
 
   return (
-    <div className="edu__container">
+    <section className="edu__container">
       <h2 className="edu__header">Education</h2>
       <table className="edu__table">
         <thead>
@@ -27,6 +27,6 @@ export default function Education() {
           })}
         </tbody>
       </table>
-    </div>
+    </section>
   );
 }

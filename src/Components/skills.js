@@ -1,7 +1,7 @@
 import React from "react";
 import { icons } from "./stackIconsData";
 
-import "./skills.css";
+import "./styles/skills.css";
 
 export default function Skills() {
   let itemId = 1;
@@ -10,7 +10,7 @@ export default function Skills() {
     stack.push([key, icons[key]]);
   }
   return (
-    <div className="skillz">
+    <section className="skillz">
       <h2 className="skillz__header">My tech stack</h2>
       <ul className="skillz__container">
         {stack.map((item) => {
@@ -22,6 +22,6 @@ export default function Skills() {
           );
         })}
       </ul>
-    </div>
+    </section>
   );
 }

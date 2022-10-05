@@ -1,0 +1,65 @@
+.about {
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-image: url("../../images/about_bcg_thinkbig2.png");
+  background-size: 115%;
+  background-position: 50% 40px;
+  background-repeat: no-repeat;
+}
+
+.about__container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0;
+}
+.about__header {
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 28px;
+  margin-bottom: 50px;
+}
+.about__content {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.about__portrait {
+  max-width: 370px;
+  max-height: 370px;
+  border-radius: 50%;
+  align-self: center;
+  transform: rotate(-90deg);
+  flex-shrink: 1;
+}
+/* @media (min-width: 668px) {
+  .about__portrait {
+    max-width: 315px;
+    max-height: 315px;
+  }
+} */
+@media (min-width: 768px) {
+  .about__content {
+    flex-direction: row;
+  }
+  .about__portrait {
+    max-width: 350px;
+  }
+}
+
+.about__text-block {
+  width: 100%;
+  flex-shrink: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about__title {
+  font-weight: 600;
+}
+.about__maintext {
+  text-align: justify;
+  width: 100%;
+  min-width: 300px;
+}

@@ -1,7 +1,11 @@
 import React, { useContext } from "react";
-import { TranslationContext, exp } from "../contexts/TranslationContext";
+import {
+  TranslationContext,
+  exp,
+  exp_img,
+} from "../contexts/TranslationContext";
 import Job from "./job";
-import "./experience.css";
+import "./styles/experience.css";
 
 export default function Experience() {
   const lang = useContext(TranslationContext);
@@ -9,14 +13,29 @@ export default function Experience() {
   return (
     <TranslationContext.Consumer>
       {(lang) => (
-        <div className="exp">
+        <section className="exp">
           <h2 className="exp__header">Experience</h2>
           <div className="exp__container">
             {exp[lang].map((item, idx) => {
               return <Job key={idx} data={item} />;
             })}
           </div>
-        </div>
+          <div className="exp__known-companies">
+            <h2 className="exp__known-companies-title">
+              References<span class="_accent">.</span>
+            </h2>
+            <p className="exp__known-companies-subtitle">
+              Nice companies I have never worked with yet.
+            </p>
+            <div className="exp__logo-container">
+              {exp_img.map((item, idx) => {
+                return (
+                  <img className="exp__company-image" key={idx} src={item} />
+                );
+              })}
+            </div>
+          </div>
+        </section>
       )}
     </TranslationContext.Consumer>
   );

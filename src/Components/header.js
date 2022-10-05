@@ -1,16 +1,15 @@
 import React from "react";
 // import "./header.css";
-import "./burger.css";
+import "./styles/burger.css";
 
 export default function Header() {
   const links = [
     "Home",
+    "Education",
     "Skills",
     "Experience",
-    "Education",
     "Projects",
     "About Me",
-    "The Story",
     "Contacts",
   ];
 

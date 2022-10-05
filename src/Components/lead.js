@@ -1,9 +1,9 @@
 import React from "react";
-import "./lead.css";
+import "./styles/lead.css";
 
 export default function Lead() {
   return (
-    <div className="lead">
+    <section className="lead">
       <div className="lead__container">
         <p className="lead__greet">Hello! I'm</p>
         <p className="lead__name">Topsy Kretts</p>
@@ -16,6 +16,6 @@ export default function Lead() {
         <button className="lead__button">Explore</button>
         <div className="lead__photo"></div>
       </div>
-    </div>
+    </section>
   );
 }

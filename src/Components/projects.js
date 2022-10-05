@@ -1,8 +1,9 @@
 import React, { useState, useContext, useEffect } from "react";
 import { projects, TranslationContext } from "../contexts/TranslationContext";
 import Tile from "./tile";
+import FilterBar from "./filterbar";
 
-import "./projects.css";
+import "./styles/projects.css";
 
 export default function Projects() {
   const [filter, setFilter] = useState("all");
@@ -17,25 +18,31 @@ export default function Projects() {
     setTags([...new Set(tagsArray)]);
   }, []);
 
+  function handleTagSelect(tag) {
+    setFilter(tag);
+  }
+
+  let visibleProjects = projects[lang];
+  if (filter !== "all") {
+    visibleProjects = projects[lang].filter((item) =>
+      item.tags.includes(filter)
+    );
+  }
+
+  // ДЕЛАЕМ ПО ШИРИНЕ КАК ЛИД
+
   return (
     <section className="projects">
       <h2 className="exp__header">Projects</h2>
       <div className="gallery__container">
         <div className="gallery__control">
           <ul className="gallery__control-list">
-            {tags.length > 0 &&
-              tags.map((item, idx) => {
-                return (
-                  <li className="gallery__control-item" key={idx}>
-                    {item}
-                  </li>
-                );
-              })}
+            <FilterBar tags={tags} onSelect={handleTagSelect} />
           </ul>
         </div>
         <ul className="gallery">
-          {projects[lang].length > 0 &&
-            projects[lang].map((item) => {
+          {visibleProjects.length > 0 &&
+            visibleProjects.map((item) => {
               return <Tile content={item} key={item.id} />;
             })}
         </ul>
