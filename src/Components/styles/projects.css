@@ -3,8 +3,16 @@
   padding: 40px 20px;
   margin: 0 auto;
 }
+.gallery__container {
+  margin-top: 45px;
+}
 .gallery__control {
   border-bottom: 2px solid #8a00b4;
+}
+@media (max-width: 670px) {
+  .gallery__control {
+    display: none;
+  }
 }
 .gallery__control-list {
   list-style-type: none;

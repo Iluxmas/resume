@@ -49,9 +49,11 @@ export default function AboutMe() {
   }
 
   return (
-    <section className="about">
+    <section className="about" id="__about">
       <div className="about__container">
-        <h2 className="about__header">{about[lang].header}</h2>
+        <h2 className="_section__header _huge">
+          #<span className="_accent">{about[lang].header}</span>.
+        </h2>
         <div className="about__content">
           <img className="about__portrait" ref={portrait} src={Photo} />
           <div className="about__text-block">

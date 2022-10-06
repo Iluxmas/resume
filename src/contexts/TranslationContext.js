@@ -12,143 +12,224 @@ import microsoft from "../images/comp_logos/microsoft.png";
 import google from "../images/comp_logos/google.png";
 import stark from "../images/comp_logos/stark.png";
 import umbrella from "../images/comp_logos/umbrella.png";
+import quiksilver from "../images/comp_logos/quiksilver.png";
 
 export const TranslationContext = createContext("");
 
-export const lead = {};
-export const exp = {
+// ===== Zero block ========  HEADER MENU
+export const headerMenu = {
   ru: [
-    {
-      pos: "Фронтенд разработчик",
-      logo: Logo,
-      company: "Я.Практикум",
-      dates: "апр. 22 - по н. в.",
-      resp: [
-        "Создавал страницы с помощью HTML и CSS",
-        "Использовал flex и grid для создания адаптивности под различные устройства",
-        "Писал код на JavaScript для построения логики работы приложения",
-        "Настройка клиент-серверного взаимодействия по средствам API",
-        "Портировал проекты на React",
-      ],
-    },
-    {
-      pos: "Менеджер технологической поддержки",
-      logo: Logo,
-      company: "Siegwerk",
-      dates: "дек. 20 - июл. 22",
-      resp: [
-        "Технологическая поддержка клиентов на территории России;",
-        "Организация тестов на производстве заказчика;",
-        "Решение проблем, возникающих на производстве клиента, анализ и разработка корректирующих мероприятий",
-        "Работа с рецептурами, подбор альтернативного сырья, проведение комплексных и специализированных тестов красок, подбор цвета;",
-        "Взаимодействие с технологической командой и исследовательской лабораторией в Германии;",
-        "Внедрение новых продуктов на российский рынок",
-      ],
-    },
-    {
-      pos: "Химик // Старший Химик",
-      logo: Logo,
-      company: "Siegwerk",
-      dates: "май. 17 - дек. 20",
-      resp: [
-        "Создание, модификация, адаптация лаков и красок под нужны заказчиков для печати на гибких плёнках",
-        "Проведение тестов для выяснения причин и решения проблем возникающих у клиентов во флексо и глубокой печати",
-        "Изучение физических и технологических свойств красок и лаков по методикам компании, изучение влияния рецептур на эти свойства в соответствии со стандартными методиками и с разработанными правилами и процедурами, совершенствование методик тестирования свойств лаков и красок",
-        "Подбор цветов по жидкому образцу или пантонному вееру под необходимые условия печати, материал или структуру, с использованием программы inkFormulation и спектрофотометра eXact",
-        "Контактирование с зарубежными коллегами по вопросам выполнения тестов и обмена опытом",
-        "Контроль наличия и заказ необходимых в работе материалов в лаборатории",
-      ],
-    },
+    "Домой",
+    "Образование",
+    "Навыки",
+    "Опыт",
+    "Проекты",
+    "Обо мне",
+    "Контакты",
   ],
+  en: [
+    "Home",
+    "Education",
+    "Skills",
+    "Experience",
+    "Projects",
+    "About Me",
+    "Contacts",
+  ],
+};
+
+// ===== 1st block ========  LEAD
+export const lead = {};
+
+// ===== 2nd block ======== EDUCATION
+export const education = {
+  ru: {
+    title: "Образование",
+    studies: [
+      {
+        place: "Я.Практикум",
+        dep: "Яндекс , Фронтенд Разработчик",
+        dates: "04.2022 - 01.2023",
+      },
+      {
+        place: "Udemy",
+        dep: "Юрий Бура, React + Redux - Профессиональная Разработка",
+        dates: "04.2022 - 06.2022",
+      },
+      {
+        place: "Udemy",
+        dep: "Иван Петриченко, Полный курс по JavaScript + React",
+        dates: "02.2022 - 03.2022",
+      },
+      {
+        place: "РХТУ им. Д.И.Менделеева",
+        dep: "Кафедра высокотемпературных материалов и технологий",
+        dates: "09.2007 - 06.2011",
+      },
+    ],
+  },
+  en: {
+    title: "Education",
+    studies: [
+      {
+        place: "Yandex.Practicum",
+        dep: "Yandex , Frontend Developer",
+        dates: "04.2022 - 01.2023",
+      },
+      {
+        place: "Udemy",
+        dep: "Juriy Bura, React + Redux - Professional Development",
+        dates: "04.2022 - 06.2022",
+      },
+      {
+        place: "Udemy",
+        dep: "Ivan Petrychenko/, JavaScript + React Complete Course",
+        dates: "02.2022 - 03.2022",
+      },
+      {
+        place: "Mendeleev University of Chemical Technology",
+        dep: "High Temperature Materials and Technologies Department",
+        dates: "09.2007 - 06.2011",
+      },
+    ],
+  },
+};
+
+// ===== 3rd block ======== SKILLZ + EXPERIENCE + KNOWN COMPANIES (DONT SHOUT ON ME!)
+export const skills = {
+  ru: "Навыки",
+  en: "Skills",
+};
+
+export const exp = {
+  ru: {
+    header: "Опыт работы",
+    data: [
+      {
+        pos: "Фронтенд разработчик",
+        logo: Logo,
+        company: "Я.Практикум",
+        dates: "04.2022 - по н. в.",
+        resp: [
+          "Создавал страницы с помощью HTML и CSS",
+          "Использовал flex и grid для создания адаптивности под различные устройства",
+          "Писал код на JavaScript для построения логики работы приложения",
+          "Настройка клиент-серверного взаимодействия по средствам API",
+          "Портировал проекты на React",
+        ],
+      },
+      {
+        pos: "Менеджер технологической поддержки",
+        logo: Logo,
+        company: "Зигверк",
+        dates: "12.2020 - 07.2022",
+        resp: [
+          "Оказывал технологическую поддержку клиентов на территории России",
+          "Вел проекты клиентов начиная с запроса и до внедрения на производстве",
+          "Искал и решал причины проблем, возникающие на производстве клиента",
+          "Работал с рецептурами, подбирал альтернативное сырье, проведил комплексные тесты красок",
+          "Взаимодействовал с технологической командой и исследовательской лабораторией в Германии",
+          "Отвечал за внедрение новых продуктов на российский рынок",
+        ],
+      },
+      {
+        pos: "Химик // Старший Химик",
+        logo: Logo,
+        company: "Зигверк",
+        dates: "05.2017 - 12.2020",
+        resp: [
+          "Создавал и модифицировал рецептуры лаков и красок под нужны заказчиков",
+          "Планировал и выполнял тесты по стандартным методикам, с оценкой результатов и написанием отчетов",
+          "Изучал физические и технологические свойства красок и лаков в соответствии со стандартами компании",
+          "Взаимодействовал с зарубежными коллегами по вопросам выполнения тестов и обмена опытом",
+          "Обучал новых сотрудников лаборатории",
+          "Контролировал и поддерживал функционирование лаборатории",
+        ],
+      },
+      {
+        pos: "Научный сотрудник",
+        logo: Logo,
+        company: "ФГУП Вимс",
+        dates: "10.2011 - 05.2017",
+        resp: [
+          "Работал в команде по разработке методик подготовки и анализа руд методами АЭС",
+          "Участвовал в создании научных публикаций",
+        ],
+      },
+    ],
+    refs: "Рекомендации",
+    subrefs: "Ниже логотипы классных компаний, с которыми я пока не работал.",
+  },
   en: [],
 };
 
-export const exp_img = [apple, stark, google, microsoft, umbrella];
-export const skills = {};
-export const education = {
-  ru: [
-    {
-      place: "Я.Практикум",
-      dep: "Яндекс , Front-end Разработчик",
-      dates: "04.2022 - 01.2023",
-    },
-    {
-      place: "Udemy",
-      dep: "Юрий Бура, React + Redux - Профессиональная Разработка",
-      dates: "04.2022 - 06.2022",
-    },
-    {
-      place: "Udemy",
-      dep: "Иван Петриченко, Полный курс по JavaScript + React",
-      dates: "02.2022 - 03.2022",
-    },
-    {
-      place: "РХТУ им. Д.И.Менделеева",
-      dep: "Кафедра высокотературных материалов и технологий",
-      dates: "09.2007 - 06.2011",
-    },
-  ],
+export const expLogos = [stark, quiksilver, apple, microsoft, google, umbrella];
+
+// ===== 4th block ======== PROJECTS
+export const projects = {
+  ru: {
+    header: "Проекты",
+    data: [
+      {
+        id: 1,
+        image: ThumbTodo,
+        title: "Todo manager",
+        description: "Application for managing todo list",
+        tags: ["React", "Webpack", "JavaScript"],
+        link: "https://github.com/Iluxmas/To-do-app",
+      },
+      {
+        id: 2,
+        image: ThumbMesto,
+        title: "Mesto app",
+        description:
+          "Project theme was photo social network. Template was taken from Figma. Page is adaptive, size and position of elements depends on screen size. ApiService class component responsible for server-client interaction.",
+        tags: ["HTML", "CSS", "Webpack", "JavaScript", "API"],
+        link: "https://github.com/Iluxmas/mesto",
+      },
+      {
+        id: 3,
+        image: ThumbHowto,
+        title: "How-to-learn",
+        description:
+          "Project theme was Education Techniques. To create this page I implemented some new knowledges about markup language and css flex. Files organization was made according to BEM nested methodology. Language switch was made with JS.",
+        tags: ["HTML", "CSS", "JavaScript"],
+        link: "https://github.com/Iluxmas/how-to-learn",
+      },
+      {
+        id: 4,
+        image: ThumbRusTravel,
+        title: "Russian travel",
+        description:
+          "Project theme was russian travel, template was taken from Figma. Page is adaptive, size and position of elements depends on screen size through media queries. Grid and flex both were used. For styles SCSS was used with further conversion to css.",
+        tags: ["HTML", "CSS", "SCSS"],
+        link: "https://github.com/Iluxmas/russian-travel",
+      },
+      {
+        id: 5,
+        image: ThumbStardb,
+        title: "Star Wars DB",
+        description: "Simple DB based on SWAPI",
+        tags: ["React", "JavaScript", "API"],
+        link: "https://github.com/Iluxmas/Starwars-DB",
+      },
+      {
+        id: 6,
+        image: ThumbMesto,
+        title: "Mesto React",
+        description: "React ported version of Mesto ",
+        tags: ["React", "JavaScript", "API"],
+        link: "https://github.com/Iluxmas/mesto",
+      },
+    ],
+  },
 };
 
-export const projects = {
-  ru: [
-    {
-      id: 1,
-      image: ThumbTodo,
-      title: "Todo manager",
-      description: "Application for managing todo list",
-      tags: ["React", "Webpack", "JavaScript"],
-      link: "https://github.com/Iluxmas/To-do-app",
-    },
-    {
-      id: 2,
-      image: ThumbMesto,
-      title: "Mesto app",
-      description:
-        "Project theme was photo social network. Template was taken from Figma. Page is adaptive, size and position of elements depends on screen size. ApiService class component responsible for server-client interaction.",
-      tags: ["HTML", "CSS", "Webpack", "JavaScript", "API"],
-      link: "https://github.com/Iluxmas/mesto",
-    },
-    {
-      id: 3,
-      image: ThumbHowto,
-      title: "How-to-learn",
-      description:
-        "Project theme was Education Techniques. To create this page I implemented some new knowledges about markup language and css flex. Files organization was made according to BEM nested methodology. Language switch was made with JS.",
-      tags: ["HTML", "CSS", "JavaScript"],
-      link: "https://github.com/Iluxmas/how-to-learn",
-    },
-    {
-      id: 4,
-      image: ThumbRusTravel,
-      title: "Russian travel",
-      description:
-        "Project theme was russian travel, template was taken from Figma. Page is adaptive, size and position of elements depends on screen size through media queries. Grid and flex both were used. For styles SCSS was used with further conversion to css.",
-      tags: ["HTML", "CSS", "SCSS"],
-      link: "https://github.com/Iluxmas/russian-travel",
-    },
-    {
-      id: 5,
-      image: ThumbStardb,
-      title: "Star Wars DB",
-      description: "Simple DB based on SWAPI",
-      tags: ["React", "JavaScript", "API"],
-      link: "https://github.com/Iluxmas/Starwars-DB",
-    },
-    {
-      id: 6,
-      image: ThumbMesto,
-      title: "Mesto React",
-      description: "React ported version of Mesto ",
-      tags: ["React", "JavaScript", "API"],
-      link: "https://github.com/Iluxmas/mesto",
-    },
-  ],
-};
+// ===== 5th block ======== ANOUTME
 export const about = {
   ru: {
     header: "Обо мне",
-    title: "Мысли ШИРЕ",
+    title: `Мысли ШИРЕ`,
     text: "Я Фронтенд Разработчик и с 2022 года нахожусь в Стамбуле, Турция. Мой бэкграунд химико-технологический, последнее месо работы - в крупнейшем мировом производителе полиграфических красок - дало мне большой опыт в управлении проектами, разработке продуктов и мышление ориентированное на бизнес. Но, поскольку я очень интересовался математикой и физикой, я всегда мечтал о программировании, оно всегда было частью меня. Я выбрал фронтенд т.к. у меня развитое чувство прекрасного, ежедневно посещая различные вебсайты я вижу, что хорошие фронтенд разработчики по-прежнему требуются. Также я люблю задачи и загадки, т.к не люблю вопросы без ответа. Я люблю обращать внимание на детали, надеюсь, вы заметили это, изучая этот сайт. Я очень рад, что смогу привнести свое видение, навыки и опыт в WEB. Зимой катаюсь на сноуборде, летом на велосипеде, нравится скалолазание и люблю путешествовать, пока что 32 посещенных страны.",
   },
   en: {
@@ -158,7 +239,30 @@ export const about = {
   },
 };
 export const aboutsThis = {};
-export const contact = {};
+
+// ===== 6th block ======== CONTACT
+export const contact = {
+  ru: {
+    header: "Контакты",
+    location: "Местоположение:",
+    place: "Стамбул, Турция",
+    writeMe: "Связаться со мной:",
+    checkMine: "Мои страницы:",
+  },
+  en: {
+    header: "Contacts",
+    location: "Location:",
+    place: "Istanbul, Turkey",
+    writeMe: "Feel free to write me:",
+    checkMine: "Or check my profiles at:",
+  },
+};
+
+// ===== 7th block ======== FOOTER
+export const footer = {
+  ru: "",
+  en: "",
+};
 
 export const translations = {
   en: {

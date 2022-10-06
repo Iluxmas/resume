@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import {
   TranslationContext,
   exp,
-  exp_img,
+  expLogos,
 } from "../contexts/TranslationContext";
 import Job from "./job";
 import "./styles/experience.css";
@@ -13,22 +13,26 @@ export default function Experience() {
   return (
     <TranslationContext.Consumer>
       {(lang) => (
-        <section className="exp">
-          <h2 className="exp__header">Experience</h2>
+        <section className="exp" id="__experience">
+          <h2 className="_section__header _huge">
+            <span className="_accent">#</span>
+            {exp[lang].header}
+            <span className="_accent">.</span>
+          </h2>
           <div className="exp__container">
-            {exp[lang].map((item, idx) => {
+            {exp[lang].data.map((item, idx) => {
               return <Job key={idx} data={item} />;
             })}
           </div>
           <div className="exp__known-companies">
-            <h2 className="exp__known-companies-title">
-              References<span class="_accent">.</span>
+            <h2 className="_section__header _huge">
+              <span className="_accent">#</span>
+              {exp[lang].refs}
+              <span className="_accent">.</span>
             </h2>
-            <p className="exp__known-companies-subtitle">
-              Nice companies I have never worked with yet.
-            </p>
+            <p className="exp__known-companies-subtitle">{exp[lang].subrefs}</p>
             <div className="exp__logo-container">
-              {exp_img.map((item, idx) => {
+              {expLogos.map((item, idx) => {
                 return (
                   <img className="exp__company-image" key={idx} src={item} />
                 );

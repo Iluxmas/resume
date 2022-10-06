@@ -12,8 +12,8 @@ export default function Projects() {
 
   useEffect(() => {
     let tagsArray = ["all"];
-    for (let i = 0; i < projects[lang].length; i++) {
-      tagsArray.push(...projects[lang][i].tags);
+    for (let i = 0; i < projects[lang].data.length; i++) {
+      tagsArray.push(...projects[lang].data[i].tags);
     }
     setTags([...new Set(tagsArray)]);
   }, []);
@@ -22,9 +22,9 @@ export default function Projects() {
     setFilter(tag);
   }
 
-  let visibleProjects = projects[lang];
+  let visibleProjects = projects[lang].data;
   if (filter !== "all") {
-    visibleProjects = projects[lang].filter((item) =>
+    visibleProjects = projects[lang].data.filter((item) =>
       item.tags.includes(filter)
     );
   }
@@ -32,8 +32,12 @@ export default function Projects() {
   // ДЕЛАЕМ ПО ШИРИНЕ КАК ЛИД
 
   return (
-    <section className="projects">
-      <h2 className="exp__header">Projects</h2>
+    <section className="projects" id="__projects">
+      <h2 className="_section__header _huge">
+        <span className="_accent">#</span>
+        {projects[lang].header}
+        <span className="_accent">.</span>
+      </h2>
       <div className="gallery__container">
         <div className="gallery__control">
           <ul className="gallery__control-list">

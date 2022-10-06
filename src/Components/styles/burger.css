@@ -1,38 +1,35 @@
 /* ............/header/............ *
 /* desktop mode............/// */
 
-.navmenu__input {
-  display: none;
-}
-
-.header__hamburger-lines {
-  display: none;
-}
-
 .header {
+  width: 100%;
+}
+.header__container {
   box-shadow: 0px 5px 10px 0px #aaa;
   position: fixed;
+  left: 0;
+  right: 0;
   width: 100%;
   color: #252525;
   opacity: 0.98;
+  height: 50px;
   background: #f5f5f5;
-  height: 60px;
   z-index: 12;
 }
 @media (min-width: 769px) {
-  .header {
-    height: 70px;
+  .header__container {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 }
 @media (min-width: 1025px) {
-  .header {
-    height: 80px;
+  .header__container {
   }
 }
 .navmenu {
+  width: 100%;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,6 +41,13 @@
     margin: 0 auto;
   }
 }
+.navmenu__input {
+  display: none;
+}
+
+.header__hamburger-lines {
+  display: none;
+}
 
 .header__menu {
   order: 2;
@@ -53,7 +57,7 @@
   padding: 0;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: center;
   gap: 30px;
   margin: 0;
 }
@@ -78,6 +82,10 @@
 .header__menu-item:hover {
   background-color: #d668f81c;
 }
+._selected {
+  background-color: #d668f81c;
+}
+
 .header__menu-link {
   text-decoration: none;
   color: #252525;
@@ -91,15 +99,10 @@
   transition: color 0.2s ease-in-out;
 }
 
-.logo {
-  order: 1;
-  font-size: 2.3rem;
-  margin-bottom: 0.5rem;
-}
 .hover-underline-animation {
   display: inline-block;
   position: relative;
-  color: #0087ca;
+  color: #8a00b4;
 }
 
 .hover-underline-animation:after {
@@ -119,100 +122,10 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-/* ............//// Showcase styling ////......... */
-
-.showcase-area {
-  height: 50vh;
-  background: linear-gradient(
-      rgba(240, 240, 240, 0.144),
-      rgba(255, 255, 255, 0.336)
-    ),
-    url("https://i.postimg.cc/wT3TQS3V/header-image2.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.showcase-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  font-size: 1.6rem;
-}
-
-.main-title {
-  text-transform: uppercase;
-  margin-top: 1.5em;
-}
-
-/* ......//about us//...... */
-
-#about {
-  padding: 50px 0;
-  background: #f5f5f7;
-}
-
-.about-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#about h2 {
-  font-size: 2.3rem;
-}
-
-#about p {
-  font-size: 1.2rem;
-  color: #555;
-}
-
-#about .small {
-  font-size: 1.2rem;
-  color: #666;
-  font-weight: 600;
-}
-
-.about-img {
-  flex: 1 1 400px;
-  padding: 30px;
-  transform: translateX(150%);
-  animation: about-img-animation 1s ease-in-out forwards;
-}
-
-@keyframes about-img-animation {
-  100% {
-    transform: translate(0);
-  }
-}
-
-.about-text {
-  flex: 1 1 400px;
-  padding: 30px;
-  margin: auto;
-  transform: translate(-150%);
-  animation: about-text-animation 1s ease-in-out forwards;
-}
-
-@keyframes about-text-animation {
-  100% {
-    transform: translate(0);
-  }
-}
-
-.about-img img {
-  display: block;
-  height: 400px;
-  max-width: 100%;
-  margin: auto;
-  object-fit: cover;
-  object-position: right;
-}
 /* ......../ media query /.......... */
 
 @media (max-width: 768px) {
-  .header {
+  .header__container {
     opacity: 0.95;
   }
 
@@ -225,6 +138,7 @@
     display: block;
     position: relative;
     height: 64px;
+    margin: 0;
   }
 
   .navmenu__input {
@@ -283,7 +197,8 @@
     flex-direction: column;
     gap: 26px;
     background: #fff;
-    transform: translate(330%);
+
+    transform: translate(100vw);
     transition: transform 0.5s ease-in-out;
     box-shadow: 5px 0px 10px 0px #aaa;
   }
@@ -295,15 +210,8 @@
     width: 100%;
   }
 
-  .logo {
-    position: absolute;
-    top: 5px;
-    right: 15px;
-    font-size: 2rem;
-  }
-
   .navmenu__input:checked ~ .header__menu {
-    transform: translateX(220%);
+    transform: translateX(100vw) translateX(-250px);
   }
 
   .navmenu__input:checked ~ .header__hamburger-lines .line1 {
@@ -320,29 +228,13 @@
 }
 
 @media (max-width: 500px) {
-  html {
-    font-size: 65%;
-  }
-
   .header__menu-item {
     font-size: 1.6rem;
-  }
-  .logo {
-    position: absolute;
-    top: 06px;
-    right: 15px;
-    font-size: 3rem;
   }
 
   .header__menu-item {
     margin-bottom: 2.5rem;
     font-size: 1.8rem;
     font-weight: 500;
-  }
-}
-
-@media (orientation: landscape) and (max-height: 500px) {
-  .showcase-area {
-    height: 50vmax;
   }
 }

@@ -3,7 +3,7 @@
 .exp {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 10px 14px;
+  padding: 10px 14px 0;
 }
 @media (min-width: 768px) {
   .exp {
@@ -19,6 +19,7 @@
   margin-bottom: 50px;
 }
 .exp__container {
+  margin-top: 45px;
 }
 
 .exp__head-container {
@@ -131,6 +132,10 @@
   width: 30px;
   animation: rotateBackw 0.4s normal forwards ease-in-out;
 }
+.exp__expand-bttn:hover {
+  cursor: pointer;
+}
+
 @media (min-width: 1024px) {
   .exp__expand-bttn {
     width: 40px;
@@ -138,7 +143,7 @@
 }
 
 .exp__expand-bttn.rotate {
-  animation: rotateForw 0.4s normal forwards ease-in-out;
+  animation: rotateForw 0.3s normal forwards ease-in-out;
 }
 @keyframes rotateForw {
   0% {
@@ -158,8 +163,8 @@
 }
 
 .exp__known-companies {
-  height: 600px;
-  max-width: 700px;
+  padding: 180px 20px;
+  max-width: 984px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -169,17 +174,26 @@
 .exp__known-companies-title {
   margin-bottom: 0;
   font-weight: 600;
-  font-size: 65px;
 }
 .exp__known-companies-subtitle {
-  font-size: 20px;
-  margin-bottom: 45px;
+  font-size: 16px;
+  margin-top: 18px;
+  margin-bottom: 35px;
+  text-align: center;
 }
+@media (min-width: 768px) {
+  .exp__known-companies-subtitle {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 45px;
+  }
+}
+
 .exp__logo-container {
   display: flex;
   flex-direction: row;
-  gap: 80px;
-  row-gap: 40px;
+  gap: 52px;
+  row-gap: 30px;
   flex-wrap: wrap;
   /* align-items: center; */
   justify-content: center;
@@ -196,11 +210,26 @@
 }
 
 .exp__company-image {
-  height: 50px;
+  height: 32px;
   animation: floating 2s infinite alternate ease-in-out;
 }
-.exp__company-image:hover {
-  transform: scale(1.45);
+@media (min-width: 420px) {
+  .exp__company-image {
+    height: 40px;
+  }
+  .exp__logo-container {
+    gap: 62px;
+    row-gap: 34px;
+  }
+}
+@media (min-width: 768px) {
+  .exp__company-image {
+    height: 50px;
+  }
+  .exp__logo-container {
+    gap: 80px;
+    row-gap: 40px;
+  }
 }
 /* opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;
   opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; height: 86px; */

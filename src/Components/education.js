@@ -5,8 +5,12 @@ export default function Education() {
   const lang = useContext(TranslationContext);
 
   return (
-    <section className="edu__container">
-      <h2 className="edu__header">Education</h2>
+    <section className="edu__container" id="__education">
+      <h2 className="_section__header _huge">
+        <span className="_accent">#</span>
+        {education[lang].title}
+        <span className="_accent">.</span>
+      </h2>
       <table className="edu__table">
         <thead>
           <tr>
@@ -16,7 +20,7 @@ export default function Education() {
           </tr>
         </thead>
         <tbody>
-          {education[lang].map(({ place, dep, dates }, idx) => {
+          {education[lang].studies.map(({ place, dep, dates }, idx) => {
             return (
               <tr key={idx}>
                 <td className="edu__table-body">{place}</td>

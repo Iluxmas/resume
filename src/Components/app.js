@@ -5,11 +5,13 @@ import Header from "./header";
 import Main from "./main";
 import Footer from "./footer";
 
+import "../vendors/normalize.css";
 import "./styles/app.css";
 
 export default function App() {
   const [lang, setLang] = useState("ru");
   const [theme, setTheme] = useState("dark");
+  const [currentScroll, setCurrentScroll] = useState(0);
 
   useEffect(() => {
     const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
@@ -27,6 +29,23 @@ export default function App() {
   }, []);
 
   // ADD CALCULATION OFFSET SCROLL TO NOT SHOW BACKTOP BUTTON !!!!
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setCurrentScroll(position);
+  };
+
+  let backtopStyle = "back-top";
+  if (currentScroll < window.innerHeight) {
+    backtopStyle = "back-top _hide";
+  }
+  // add maximum offset of BACKTOP BUTTON, to no go to edge at high resolution
   // ADD HIGHLIGHT OF MENU PUNKT WHILE SSCROLL TO GET iNFROMED WHERE YOU ARE (in desktop mode)
 
   return (
@@ -38,10 +57,8 @@ export default function App() {
 
           {/* idea: company i am not worked with: google microsoft etc... */}
           <Footer />
-          <div className="back-top">
-            <a className="back-top-link" href="#">
-              ^
-            </a>
+          <div className={backtopStyle}>
+            <a className="back-top-link" href="#"></a>
           </div>
         </div>
       </TranslationContext.Provider>
