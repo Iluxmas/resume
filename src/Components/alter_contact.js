@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { contact, TranslationContext } from "../contexts/TranslationContext";
 
-import "./styles/contacts.css";
+import "./styles/alter_contact.css";
 import Logo from "../images/logo.png";
 import TeleIcon from "../images/social/social_tele.png";
 import GitIcon from "../images/social/social_github.png";
@@ -15,11 +15,13 @@ export default function Alter() {
     <section className="contacts" id="__contacts">
       <div className="contacts__container">
         <h2 className="_section__header _huge">
-          #<span className="_accent">{contact[lang].header}</span>.
+          <span className="_accent">#</span>
+          {contact[lang].header}
+          <span className="_accent">.</span>
         </h2>
         <p className="contacts__subheader">
-          SOME text hereSOME text hereSOME text hereSOME text hereSOME text
-          hereSOME text hereSOME text hereSOME text hereSOME text here
+          It was nice to meet you. Below you will find links to some my accounts
+          where you can contact me. See you!
         </p>
 
         <img className="contacts__logo" src={Logo} />

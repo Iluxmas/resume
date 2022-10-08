@@ -1,11 +1,17 @@
 .about {
   margin: 0 auto;
-  padding: 140px 20px;
+  padding: 60px 18px;
   background-image: url("../../images/about_bcg_thinkbig4.png");
   background-size: 110%;
   background-position: 50% 40%;
   background-repeat: no-repeat;
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .about {
+    padding: 120px 20px;
+  }
 }
 .about__decor {
   position: absolute;
@@ -30,10 +36,16 @@
   margin-bottom: 50px;
 }
 .about__content {
-  margin: 50px auto 0;
+  margin: 20px auto 0;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .about__content {
+    margin: 50px auto 0;
+    gap: 25px;
+  }
 }
 .about__portrait {
   opacity: 0.1;
@@ -71,7 +83,7 @@
 
 .about__text-block {
   margin: 0 auto;
-  width: 80%;
+
   flex-shrink: 2;
   display: flex;
   flex-direction: column;

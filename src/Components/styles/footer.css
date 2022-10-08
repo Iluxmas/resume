@@ -1,9 +1,9 @@
 .footer {
-  background-color: #252525;
+  background-color: #232323;
 }
 .footer__container {
   height: 80px;
-  padding: 20px 40px;
+  padding: 16px 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,7 +11,20 @@
 .footer__copyright {
   margin: 0;
   font-weight: 200;
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 18px;
   color: #f5f5f5;
+  text-align: center;
+}
+@media (min-width: 460px) {
+  .footer__container {
+    padding: 20px 40px;
+  }
+  .footer__copyright {
+    margin: 0;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 20px;
+    color: #f5f5f5;
+  }
 }

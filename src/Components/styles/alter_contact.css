@@ -1,0 +1,217 @@
+.contacts {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 50px 14px 80px;
+}
+.contacts__logo {
+  width: 240px;
+  margin-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .contacts__logo {
+    width: 300px;
+    margin-bottom: 80px;
+  }
+}
+
+.contacts__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contacts__header {
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 28px;
+  margin-bottom: 50px;
+}
+.contacts__subheader {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 85%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .contacts__subheader {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    max-width: 870px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+.contacts__social {
+  min-width: 245px;
+  margin: 0 auto;
+  width: 60%;
+  border-radius: 3px;
+  transition: 0.25s;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: white;
+}
+@media (min-width: 494px) {
+  .contacts__social {
+    flex-direction: row;
+    justify-content: space-between;
+    background: none;
+    gap: 15px;
+    width: 100%;
+  }
+}
+@media (max-width: 630px) {
+  .contacts__social {
+    padding: 0;
+  }
+}
+@media (max-width: 767px) {
+  .contacts__social {
+    gap: 20px;
+    padding: 0;
+  }
+  .contacts__social-item {
+    line-height: 34px;
+  }
+}
+@media (min-width: 768px) {
+  .contacts__social {
+    flex-direction: column;
+    width: 35%;
+    padding-left: 30px;
+    justify-content: space-around;
+    background-color: white;
+  }
+}
+
+.contacts__social-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.contacts__social-item {
+}
+.contacts__social-link {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+}
+.contacts__social-icon {
+}
+.git {
+  background-image: url("../../images/social/social_github.png");
+}
+.linked {
+  background-image: url("../../images/social/social_linked.png");
+}
+.telegram {
+  background-image: url("../../images/social/social_tele.png");
+}
+.email {
+  background-image: url("../../images/social/social_mail.png");
+}
+.location {
+  background-image: url("../../images/social/social_location.png");
+}
+
+.contacts__social-location {
+  margin: 0;
+  padding: 0;
+}
+
+.contacts__social-link,
+.contacts__social-location {
+  color: #252525;
+  text-decoration: none;
+
+  vertical-align: middle;
+}
+.contacts__social-link:hover {
+  cursor: pointer;
+}
+
+/* =======FORM======== */
+/* .contacts__form-container {
+    padding: 20px 20px 25px 20px;
+    background-color: white;
+    border-radius: 3px;
+    transition: 0.25s;
+    position: relative;
+  }
+  
+  .contact__form {
+  }
+  
+  .contacts__input {
+    height: 35px;
+    padding: 5px 15px;
+    margin-bottom: 35px;
+    border-radius: 3px;
+    font-size: 13px;
+    border: 1px solid #dcdcdc;
+  }
+  
+  .contacts__input:active,
+  .contacts__input:focus {
+    outline: 1px solid #8a00b4;
+  }
+  .contacts__input_type_name {
+    width: 45%;
+    margin-right: 10%;
+  }
+  .contacts__input_type_lastname {
+    width: 45%;
+  }
+  .contacts__input_type_email {
+    width: 100%;
+  }
+  .contacts__input_type_message {
+    padding-top: 10px;
+    resize: none;
+    width: 100%;
+    height: 100px;
+  }
+  .contacts__submit-btn {
+    text-transform: uppercase;
+    width: auto;
+    height: 33px;
+    padding: 0 25px;
+    background: none;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 33px;
+    color: #8a00b4;
+    border: 1px solid #8a00b4;
+  }
+  
+  .contacts__form-container:hover {
+    box-shadow: 0px 3px 5px rgb(0 0 0 / 30%);
+  }
+  
+  @media (min-width: 768px) {
+    .contacts__social:hover {
+      box-shadow: 0px 3px 5px rgb(0 0 0 / 30%);
+    }
+  }
+  
+  .contacts__undercontruction {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("../../images/under_c3.png");
+    background-color: #f5f5f52f;
+    background-size: cover;
+    background-repeat: no-repeat;
+  } */
