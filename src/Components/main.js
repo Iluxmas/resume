@@ -6,6 +6,7 @@ import Education from "./education";
 import Projects from "./projects";
 import AboutMe from "./aboutme";
 import Contacts from "./contacts";
+import Alter from "./alter_contact";
 
 export default function Main() {
   return (
@@ -16,7 +17,8 @@ export default function Main() {
       <Experience />
       <Projects />
       <AboutMe />
-      <Contacts />
+      {/* <Contacts /> */}
+      <Alter />
     </>
   );
 }

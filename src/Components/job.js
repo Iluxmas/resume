@@ -16,21 +16,21 @@ export default function Job({ data }) {
   if (isOpen) {
     bttnClass = "exp__expand-bttn rotate";
     divClass = "exp__item open";
-    heightStyle = { maxHeight: `${70 + addHeight + 32}` + "px" };
+    heightStyle = { maxHeight: `${64 + addHeight + 32}` + "px" };
   } else {
     bttnClass = "exp__expand-bttn";
     divClass = "exp__item";
-    heightStyle = { maxHeight: `70px` };
+    heightStyle = { maxHeight: `64px` };
   }
 
   return (
     <div className={divClass} style={heightStyle}>
-      <div className="exp__head-container">
-        <div className="exp__head">
+      <div className="exp__head">
+        <div className="exp__position-control">
           <div className="exp__head-date">{dates}</div>
           <div className="exp__head-company">{company}</div>
-          <div className="exp__head-position">{pos}</div>
         </div>
+        <div className="exp__head-position">{pos}</div>
         <img className={bttnClass} src={Close} onClick={handleOpenDescr} />
       </div>
       <div className="exp__description">

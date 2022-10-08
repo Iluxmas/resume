@@ -1,6 +1,6 @@
 .projects {
   max-width: 1080px;
-  padding: 40px 20px;
+  padding: 40px 20px 80px;
   margin: 0 auto;
 }
 .gallery__container {
@@ -60,10 +60,14 @@
   margin: 0 auto;
   gap: 25px;
   justify-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   /* grid-auto-rows: 1fr; */
 }
-
+@media (min-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
 /* ========= TILE BLOCK ========== */
 .gallery__item {
   width: 100%;

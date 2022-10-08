@@ -1,15 +1,12 @@
 /* ------- EXP BLOCK ---------*/
 
 .exp {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 10px 14px 0;
+  padding: 20px 14px 0;
+  background: #eee;
 }
 @media (min-width: 768px) {
   .exp {
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 40px 20px;
+    padding: 60px 20px;
   }
 }
 .exp__header {
@@ -19,13 +16,13 @@
   margin-bottom: 50px;
 }
 .exp__container {
-  margin-top: 45px;
+  padding-top: 50px;
+  padding-bottom: 90px;
 }
+/* @media (max-width ) */
 
-.exp__head-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+.exp__jobs-container {
+  margin-top: 45px;
 }
 .exp__item {
   border: 1px solid #252525;
@@ -33,109 +30,200 @@
   margin-bottom: -1px;
   max-width: 1080px;
   overflow: hidden;
-  max-height: 70px;
+  max-height: 50px;
   transition: max-height 0.3s ease-in;
+}
+@media (min-width: 768px) {
+  .exp__item {
+    max-height: 64px;
+  }
 }
 .open {
   max-height: 300px;
 }
 
-.exp__head-container {
-  padding: 10px 10px;
-}
 .exp__head {
+  padding: 8px 8px;
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: space-between;
-  gap: 20px;
+  justify-content: space-between;
+  gap: 30px;
 }
 @media (min-width: 768px) {
   .exp__head {
-    gap: 30px;
+    gap: 28px;
+    padding: 10px 10px;
   }
 }
 @media (min-width: 1024px) {
   .exp__head {
-    gap: 55px;
-  }
-  .exp__head-container {
+    gap: 35px;
     padding: 10px 16px;
   }
 }
+@media (min-width: 1180px) {
+  .exp__head {
+    gap: 50px;
+  }
+}
+.exp__position-control {
+  /* width: 400px; */
+
+  min-width: 110px;
+  display: flex;
+  gap: 0;
+  flex-direction: column-reverse;
+}
+@media (min-width: 768px) {
+  .exp__position-control {
+    padding-left: 0;
+    min-width: 330px;
+    flex-direction: row;
+    gap: 28px;
+  }
+}
+@media (min-width: 890px) {
+  .exp__position-control {
+    min-width: 392px;
+    gap: 30px;
+    /* padding: 10px 16px; */
+  }
+}
+@media (min-width: 1024px) {
+  .exp__position-control {
+    min-width: 480px;
+    gap: 35px;
+    /* padding: 10px 16px; */
+  }
+}
+@media (min-width: 1180px) {
+  .exp__position-control {
+    gap: 50px;
+  }
+}
+
 .exp__head-date {
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 50px;
-  min-width: 180px;
-  text-align-last: justify;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  min-width: 100px;
+  flex-shrink: 2;
 }
 .exp__head-company {
+  font-weight: 600;
+  line-height: 24px;
+  font-size: 14px;
   min-width: 100px;
-  line-height: 50px;
-  font-size: 16px;
 }
 .exp__head-position {
   font-size: 14px;
-  line-height: 50px;
+  line-height: 48px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
 }
 .exp__description {
   padding: 12px;
+
+  background-color: #ffcb46;
 }
 .exp__description-list {
   list-style-type: square;
+  margin-bottom: 0;
+  font-size: 14px;
+  padding-left: 1.4rem;
 }
-@media (min-width: 722px) {
+
+@media (min-width: 580px) {
+  .exp__head-position {
+    font-size: 16px;
+  }
+}
+/* @media (min-width: 722px) {
   .exp__head-date {
-    font-weight: 600;
-    font-size: 22px;
-    min-width: 190px;
+    font-size: 16px;
+    width: 140px;
   }
   .exp__head-company {
-    min-width: 120px;
+    width: 120px;
+    font-size: 16px;
+  }
+
+  .exp__description {
+    padding: 14px;
+  }
+} */
+@media (min-width: 768px) {
+  .exp__head-date {
     font-size: 18px;
+    line-height: 44px;
+    width: 150px;
+    text-align-last: justify;
+  }
+  .exp__head-company {
+    width: 140px;
+    line-height: 44px;
+    font-size: 22px;
+  }
+  .exp__head-position {
+    font-size: 16px;
+    line-height: 44px;
+  }
+  .exp__description-list {
+    padding-left: 2rem;
+    font-size: 16px;
+  }
+}
+@media (min-width: 890px) {
+  .exp__head-date {
+    font-weight: 600;
+    font-size: 26px;
+    width: 230px;
+  }
+  .exp__head-company {
+    font-weight: 400;
+    min-width: 110px;
+    font-size: 20px;
   }
   .exp__head-position {
     font-size: 16px;
   }
-  .exp__description {
-    padding: 14px;
-    background-color: #ffcb46;
-  }
-  .exp__description-list {
-    list-style-type: square;
-  }
 }
-
-@media (min-width: 1024px) {
+@media (min-width: 1080px) {
   .exp__head-date {
     font-weight: 600;
-    font-size: 32px;
-    min-width: 270px;
+    font-size: 28px;
+    width: 248px;
   }
   .exp__head-company {
-    min-width: 170px;
+    width: 160px;
     font-size: 26px;
   }
   .exp__head-position {
     font-size: 18px;
   }
   .exp__description {
-    padding: 16px;
-  }
-  .exp__description-list {
-    list-style-type: square;
+    padding: 14px;
   }
 }
 
 .exp__expand-bttn {
-  width: 30px;
+  width: 26px;
+  margin-left: auto;
+  display: inline;
+  /* align-self: flex-start; */
   animation: rotateBackw 0.4s normal forwards ease-in-out;
 }
 .exp__expand-bttn:hover {
   cursor: pointer;
 }
-
+@media (min-width: 768px) {
+  .exp__expand-bttn {
+    width: 30px;
+  }
+}
 @media (min-width: 1024px) {
   .exp__expand-bttn {
     width: 40px;
@@ -163,9 +251,10 @@
 }
 
 .exp__known-companies {
-  padding: 180px 20px;
+  position: relative;
+  padding: 40px 20px;
   max-width: 984px;
-  margin: 0 auto;
+  margin: 100px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -186,6 +275,9 @@
     font-size: 20px;
     margin-top: 20px;
     margin-bottom: 45px;
+  }
+  .exp__known-companies {
+    padding: 40px 20px 70px;
   }
 }
 
@@ -212,6 +304,7 @@
 .exp__company-image {
   height: 32px;
   animation: floating 2s infinite alternate ease-in-out;
+  z-index: 4;
 }
 @media (min-width: 420px) {
   .exp__company-image {
@@ -230,6 +323,18 @@
     gap: 80px;
     row-gap: 40px;
   }
+}
+
+.exp__known-decor {
+  position: absolute;
+  width: 120%;
+  left: -100px;
+  top: 30px;
+  height: 100%;
+  background-image: url("../../images/decor/Vector2.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  z-index: 1;
 }
 /* opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;
   opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; height: 86px; */

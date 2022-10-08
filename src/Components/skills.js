@@ -14,21 +14,23 @@ export default function Skills() {
   }
   return (
     <section className="skillz" id="__skills">
-      <h2 className="_section__header _huge">
-        <span className="_accent">#</span>
-        {skills[lang]}
-        <span className="_accent">.</span>
-      </h2>
-      <ul className="skillz__container">
-        {stack.map((item) => {
-          return (
-            <li className="skillz__item" key={itemId++}>
-              <img className="skillz__img" src={item[1]} />
-              <h3 className="skillz__title">{item[0]}</h3>
-            </li>
-          );
-        })}
-      </ul>
+      <div className="skillz__container _container _container-narrow">
+        <h2 className="_section__header _huge">
+          <span className="_accent">#</span>
+          {skills[lang]}
+          <span className="_accent">.</span>
+        </h2>
+        <ul className="skillz__list">
+          {stack.map((item) => {
+            return (
+              <li className="skillz__item" key={itemId++}>
+                <img className="skillz__img" src={item[1]} />
+                <h3 className="skillz__title">{item[0]}</h3>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </section>
   );
 }

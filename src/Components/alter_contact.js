@@ -1,0 +1,61 @@
+import React, { useContext } from "react";
+import { contact, TranslationContext } from "../contexts/TranslationContext";
+
+import "./styles/contacts.css";
+import Logo from "../images/logo.png";
+import TeleIcon from "../images/social/social_tele.png";
+import GitIcon from "../images/social/social_github.png";
+import LinkedIcon from "../images/social/social_linked.png";
+import MailIcon from "../images/social/social_mail.png";
+
+export default function Alter() {
+  const lang = useContext(TranslationContext);
+
+  return (
+    <section className="contacts" id="__contacts">
+      <div className="contacts__container">
+        <h2 className="_section__header _huge">
+          #<span className="_accent">{contact[lang].header}</span>.
+        </h2>
+        <p className="contacts__subheader">
+          SOME text hereSOME text hereSOME text hereSOME text hereSOME text
+          hereSOME text hereSOME text hereSOME text hereSOME text here
+        </p>
+
+        <img className="contacts__logo" src={Logo} />
+        <div className="contacts__social2">
+          <ul className="contacts__social-list">
+            <li className="contacts__social-item">
+              <a
+                className="contacts__social-link contacts__social-icon telegram"
+                href="https://t.me/topsykrets"
+                target="_blank"
+              ></a>
+            </li>
+            <li className="contacts__social-item">
+              <a
+                className="contacts__social-link contacts__social-icon email"
+                href="mailto:ilya.sulkhanov@gmail.com"
+                target="_blank"
+              ></a>
+            </li>
+            <li className="contacts__social-item">
+              <a
+                className="contacts__social-link contacts__social-icon git"
+                href="https://github.com/Iluxmas"
+                target="_blank"
+              ></a>
+            </li>
+            <li className="contacts__social-item">
+              <a
+                className="contacts__social-link contacts__social-icon  linked"
+                href="https://www.linkedin.com/in/ilya-super-frontend/"
+                target="_blank"
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  );
+}

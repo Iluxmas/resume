@@ -1,7 +1,15 @@
+.edu {
+  padding: 0 14px;
+}
+@media (min-width: 768px) {
+  .edu {
+    padding: 40px 20px;
+  }
+}
+
 .edu__container {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 50px 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   align-items: center;
   justify-content: center;
 }
@@ -14,27 +22,63 @@
 .edu__table {
   width: 100%;
   margin: 0 auto;
+  margin-top: 45px;
 }
 .edu__table-header {
-  font-size: 22px;
+  font-size: 16px;
   border-bottom: 1px solid #252525;
 }
 th {
-  line-height: 50px;
+  line-height: 32px;
 }
 td {
-  line-height: 50px;
+  max-width: 0;
+  line-height: 28px;
 }
 .edu__table-body {
-  font-size: 18px;
+  font-size: 12px;
   border-bottom: 1px solid #252525;
+}
+@media (min-width: 544px) {
+  .edu__table-header {
+    font-size: 16px;
+  }
+  .edu__table-body {
+    font-size: 14px;
+  }
+}
+@media (min-width: 768px) {
+  .edu__table-header {
+    font-size: 18px;
+  }
+  .edu__table-body {
+    font-size: 16px;
+  }
+}
+@media (min-width: 840px) {
+  th {
+    line-height: 50px;
+  }
+  td {
+    line-height: 48px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .edu__table-body {
+    font-size: 18px;
+  }
 }
 .column1 {
   width: 25%;
 }
 .column2 {
-  width: 57%;
+  /* min-width: 0; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .column3 {
-  width: 18%;
+  width: 20%;
+  min-width: 140px;
 }
