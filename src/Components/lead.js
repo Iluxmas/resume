@@ -19,8 +19,12 @@ export default function Lead() {
           EdTech companies would be especially welcome. Below you will find all
           information about my skills and portfolio.
         </p>
-        <a className="lead__button" href="#__education">
-          Explore
+        <a
+          className="lead__button"
+          href="https://github.com/Iluxmas/resume/raw/master/src/files/Sulkhanov_Ilya_resume_final.pdf"
+          target="_blank"
+        >
+          Download CV
         </a>
         <div className="lead__photo"></div>
       </div>
