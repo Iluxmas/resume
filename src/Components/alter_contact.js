@@ -29,28 +29,28 @@ export default function Alter() {
           <ul className="contacts__social-list">
             <li className="contacts__social-item">
               <a
-                className="contacts__social-link contacts__social-icon telegram"
+                className="contacts__social-link telegram"
                 href="https://t.me/topsykrets"
                 target="_blank"
               ></a>
             </li>
             <li className="contacts__social-item">
               <a
-                className="contacts__social-link contacts__social-icon email"
+                className="contacts__social-link email"
                 href="mailto:ilya.sulkhanov@gmail.com"
                 target="_blank"
               ></a>
             </li>
             <li className="contacts__social-item">
               <a
-                className="contacts__social-link contacts__social-icon git"
+                className="contacts__social-link git"
                 href="https://github.com/Iluxmas"
                 target="_blank"
               ></a>
             </li>
             <li className="contacts__social-item">
               <a
-                className="contacts__social-link contacts__social-icon  linked"
+                className="contacts__social-link linked"
                 href="https://www.linkedin.com/in/ilya-super-frontend/"
                 target="_blank"
               ></a>

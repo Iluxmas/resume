@@ -1,15 +1,13 @@
 .edu {
-  padding: 0 14px;
+  padding: 50px 14px;
 }
 @media (min-width: 768px) {
   .edu {
-    padding: 40px 20px;
+    padding: 90px 20px;
   }
 }
 
 .edu__container {
-  padding-top: 50px;
-  padding-bottom: 50px;
   align-items: center;
   justify-content: center;
 }

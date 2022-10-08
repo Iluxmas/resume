@@ -21,7 +21,7 @@ export default function Lead() {
         </p>
         <a
           className="lead__button"
-          href="https://github.com/Iluxmas/resume/raw/master/src/files/Sulkhanov_Ilya_resume_final.pdf"
+          href="https://github.com/Iluxmas/resume/raw/master/src/files/Sulkhanov_Ilya_resume_final_RU.pdf"
           target="_blank"
         >
           Download CV

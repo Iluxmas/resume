@@ -1,5 +1,7 @@
 import React, { useState, useContext, useEffect, useRef } from "react";
 import { headerMenu, TranslationContext } from "../contexts/TranslationContext";
+
+import Logo from "../images/logo3.png";
 // import "./header.css";
 import "./styles/burger.css";
 

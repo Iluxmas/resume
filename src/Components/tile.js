@@ -11,13 +11,7 @@ export default function Tile(props) {
           <div className="gallery__item-overlay-inner">
             <div className="gallery__item-head">
               <h3 className="gallery__item-title">{title}</h3>
-              <a className="gallery__item-link" target="_blank" href={link}>
-                <img
-                  className="item-link-icon"
-                  src={Icon}
-                  title="Check on Github"
-                />
-              </a>
+              <a className="gallery__item-link" target="_blank" href={link}></a>
             </div>
             <p className="gallery__item-description">{description}</p>
           </div>

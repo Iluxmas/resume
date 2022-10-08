@@ -1,7 +1,13 @@
 /* -------SKILLZ BLOCK ---------*/
 
 .skillz__container {
-  padding: 50px 14px;
+  padding: 70px 14px 90px;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .skillz__container {
+    padding: 70px 14px 140px;
+  }
 }
 .skillz__header {
   font-weight: 600;
@@ -81,5 +87,62 @@
   }
   .skillz__title {
     font-size: 18px;
+  }
+}
+.skills__decor_dots1 {
+  position: absolute;
+  height: 180px;
+  width: 45px;
+  background: url("../../images/decor/Ornament_16.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  left: 10px;
+  top: -20px;
+}
+@media (min-width: 768px) {
+  .skills__decor_dots1 {
+    height: 240px;
+    width: 60px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .skills__decor_dots1 {
+    left: -70px;
+    top: -70px;
+  }
+}
+.skills__decor_dots-group {
+  position: absolute;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  height: auto;
+  width: 90px;
+  bottom: -18px;
+  right: 0;
+}
+.skills__oval {
+  border-radius: 50%;
+  background-color: #ff8800;
+  display: inline-block;
+  z-index: 10;
+}
+._small {
+  height: 13px;
+  width: 13px;
+}
+._medium {
+  height: 28px;
+  width: 28px;
+}
+@media (min-width: 768px) {
+  ._small {
+    height: 16px;
+    width: 16px;
+  }
+  ._medium {
+    height: 36px;
+    width: 36px;
   }
 }
