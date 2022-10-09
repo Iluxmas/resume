@@ -453,8 +453,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../contexts/TranslationContext */ "./src/contexts/TranslationContext.js");
 /* harmony import */ var react_animation_on_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-animation-on-scroll */ "./node_modules/react-animation-on-scroll/dist/esm/index.js");
-/* harmony import */ var _styles_education_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/education.css */ "./src/Components/styles/education.css");
-/* harmony import */ var animate_css_animate_min_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! animate.css/animate.min.css */ "./node_modules/animate.css/animate.min.css");
+/* harmony import */ var animate_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! animate.css */ "./node_modules/animate.css/animate.css");
+/* harmony import */ var _styles_education_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles/education.css */ "./src/Components/styles/education.css");
 
 
 
@@ -466,7 +466,7 @@ function Education() {
     className: "edu",
     id: "__education"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_animation_on_scroll__WEBPACK_IMPORTED_MODULE_2__.AnimationOnScroll, {
-    animateIn: "animate__fadeInLeft",
+    animateIn: "animate__slideInUp",
     animateOnce: "true"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "edu__container _container _container-wide"
@@ -515,7 +515,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../contexts/TranslationContext */ "./src/contexts/TranslationContext.js");
 /* harmony import */ var _job__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./job */ "./src/Components/job.js");
-/* harmony import */ var _styles_experience_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/experience.css */ "./src/Components/styles/experience.css");
+/* harmony import */ var react_animation_on_scroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-animation-on-scroll */ "./node_modules/react-animation-on-scroll/dist/esm/index.js");
+/* harmony import */ var animate_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! animate.css */ "./node_modules/animate.css/animate.css");
+/* harmony import */ var _styles_experience_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styles/experience.css */ "./src/Components/styles/experience.css");
+
+
 
 
 
@@ -528,7 +532,10 @@ function Experience() {
       id: "__experience"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
       className: "exp_top_bcg"
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_animation_on_scroll__WEBPACK_IMPORTED_MODULE_3__.AnimationOnScroll, {
+      animateIn: "animate__slideInUp",
+      animateOnce: "true"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
       className: "exp__container _container _container-wide"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
       className: "_section__header _huge"
@@ -543,7 +550,10 @@ function Experience() {
         key: idx,
         data: item
       });
-    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_animation_on_scroll__WEBPACK_IMPORTED_MODULE_3__.AnimationOnScroll, {
+      animateIn: "animate__slideInUp",
+      animateOnce: "true"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
       className: "_container-narrow exp__known-companies "
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
       className: "_section__header _huge"
@@ -563,7 +573,7 @@ function Experience() {
       });
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
       className: "exp__known-decor_dots"
-    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
       className: "exp_bottom_bcg"
     }));
   });
@@ -927,7 +937,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../contexts/TranslationContext */ "./src/contexts/TranslationContext.js");
 /* harmony import */ var react_animation_on_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-animation-on-scroll */ "./node_modules/react-animation-on-scroll/dist/esm/index.js");
-/* harmony import */ var animate_css_animate_min_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! animate.css/animate.min.css */ "./node_modules/animate.css/animate.min.css");
+/* harmony import */ var animate_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! animate.css */ "./node_modules/animate.css/animate.css");
 /* harmony import */ var _styles_lead_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles/lead.css */ "./src/Components/styles/lead.css");
 
 
@@ -936,11 +946,6 @@ __webpack_require__.r(__webpack_exports__);
 
 function Lead() {
   var lang = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.TranslationContext);
-
-  function scrollDown() {
-    window.scroll(0, window.scrollY + 50);
-  }
-
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
     className: "lead",
     id: "__lead"
@@ -950,34 +955,19 @@ function Lead() {
     className: "lead__decor_arrow"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "lead__decor_oval"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_animation_on_scroll__WEBPACK_IMPORTED_MODULE_2__.AnimationOnScroll, {
-    animateIn: "animate__fadeInLeft",
-    animateOnce: "true"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "lead__greet"
-  }, _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.lead[lang].greet)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_animation_on_scroll__WEBPACK_IMPORTED_MODULE_2__.AnimationOnScroll, {
-    animateIn: "animate__fadeInLeft",
-    animateOnce: true,
-    delay: 60
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "lead__name"
-  }, _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.lead[lang].name)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_animation_on_scroll__WEBPACK_IMPORTED_MODULE_2__.AnimationOnScroll, {
-    animateIn: "animate__fadeInLeft",
-    animateOnce: true,
-    delay: 120
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
-    className: "lead__header"
-  }, _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.lead[lang].header)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_animation_on_scroll__WEBPACK_IMPORTED_MODULE_2__.AnimationOnScroll, {
-    animateIn: "animate__fadeInLeft",
-    animateOnce: true,
-    delay: 180
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "lead__description"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "lead__greet animate__animated animate__fadeInLeft faster animate__delay-1s"
+  }, _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.lead[lang].greet), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "lead__name animate__animated animate__fadeInLeft faster animate__delay-1s"
+  }, _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.lead[lang].name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+    className: "lead__header animate__animated animate__fadeInLeft faster animate__delay-1s"
+  }, _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.lead[lang].header), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "lead__description animate__animated animate__fadeInLeft fast animate__delay-1s"
   }, _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.lead[lang].description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    className: "lead__button",
+    className: "lead__button animate__animated animate__fadeInLeft fast animate__delay-2s",
     href: "https://github.com/Iluxmas/resume/raw/master/src/files/Sulkhanov_Ilya_resume_final_RU.pdf",
     target: "_blank"
-  }, _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.lead[lang].button)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.lead[lang].button), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "lead__photo"
   })));
 }
@@ -1356,7 +1346,7 @@ var headerMenu = {
 var lead = {
   ru: {
     greet: "Привет! Меня зовут",
-    name: "Сулханов Илья",
+    name: "Сулханов Илья, и я - ",
     header: "Фронтенд Разработчик",
     description: "Который сейчас находится в поиске работы. Ниже вы найдете описание моих навыков, опыта и контакты для связи.",
     button: "Скачать Резюме"
@@ -1505,7 +1495,7 @@ var about = {
   ru: {
     header: "Обо мне",
     title: "\u041C\u044B\u0441\u043B\u0438 \u0428\u0418\u0420\u0415",
-    text: "Я Фронтенд Разработчик и с 2022 года нахожусь в Стамбуле, Турция. Мой бэкграунд химико-технологический, последнее месо работы - в крупнейшем мировом производителе полиграфических красок - дало мне большой опыт в управлении проектами, разработке продуктов и мышление ориентированное на бизнес. Но, поскольку я очень интересовался математикой и физикой, я всегда мечтал о программировании, оно всегда было частью меня. Я выбрал фронтенд т.к. у меня развитое чувство прекрасного, ежедневно посещая различные вебсайты я вижу, что хорошие фронтенд разработчики по-прежнему требуются. Также я люблю задачи и загадки, т.к не люблю вопросы без ответа. Я люблю обращать внимание на детали, надеюсь, вы заметили это, изучая этот сайт. Я очень рад, что смогу привнести свое видение, навыки и опыт в WEB. Зимой катаюсь на сноуборде, летом на велосипеде, нравится скалолазание и люблю путешествовать, пока что 32 посещенных страны."
+    text: "Я Фронтенд Разработчик и с 2022 года нахожусь в Стамбуле, Турция. Мой бэкграунд химико-технологический, последнее место работы - в крупнейшем мировом производителе полиграфических красок - дало мне большой опыт в управлении проектами, разработке продуктов и мышление ориентированное на бизнес. Но, поскольку я очень интересовался математикой и физикой, я всегда мечтал о программировании, оно всегда было частью меня. Я выбрал фронтенд т.к. у меня развитое чувство прекрасного, ежедневно посещая различные вебсайты я вижу, что хорошие фронтенд разработчики по-прежнему требуются. Также я люблю задачи и загадки, т.к не люблю вопросы без ответа. Я люблю обращать внимание на детали, надеюсь, вы заметили это, изучая этот сайт. Я очень рад, что смогу привнести свое видение, навыки и опыт в WEB. Зимой катаюсь на сноуборде, летом на велосипеде, нравится скалолазание и люблю путешествовать, пока что 32 посещенных страны."
   },
   en: {
     header: "About Me",
@@ -2001,10 +1991,10 @@ module.exports = throttle;
 
 /***/ }),
 
-/***/ "./node_modules/animate.css/animate.min.css":
-/*!**************************************************!*\
-  !*** ./node_modules/animate.css/animate.min.css ***!
-  \**************************************************/
+/***/ "./node_modules/animate.css/animate.css":
+/*!**********************************************!*\
+  !*** ./node_modules/animate.css/animate.css ***!
+  \**********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
