@@ -1,15 +1,15 @@
 import React, { useContext } from "react";
 import { education, TranslationContext } from "../contexts/TranslationContext";
 import { AnimationOnScroll } from "react-animation-on-scroll";
+import "animate.css";
 import "./styles/education.css";
-import "animate.css/animate.min.css";
 
 export default function Education() {
   const lang = useContext(TranslationContext);
 
   return (
     <section className="edu" id="__education">
-      <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce="true">
+      <AnimationOnScroll animateIn="animate__slideInUp" animateOnce="true">
         <div className="edu__container _container _container-wide">
           <h2 className="_section__header _huge">
             <span className="_accent">#</span>

@@ -44,7 +44,7 @@
 
 .gallery__control-item-selected {
   color: #8a00b4;
-  font-weight: 600;
+  font-weight: 500;
 }
 .gallery__control-item:hover:after,
 .gallery__control-item-selected::after {

@@ -12,7 +12,7 @@
   }
 }
 .skillz__header {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 34px;
   line-height: 28px;
   margin-bottom: 50px;
@@ -71,7 +71,7 @@
 }
 .skillz__title {
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 500;
   margin: 0;
 }
 @media (min-width: 500px) {

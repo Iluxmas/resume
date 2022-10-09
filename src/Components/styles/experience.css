@@ -36,7 +36,7 @@
 }
 
 .exp__header {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 34px;
   line-height: 28px;
   margin-bottom: 50px;
@@ -141,7 +141,7 @@
   flex-shrink: 2;
 }
 .exp__head-company {
-  font-weight: 600;
+  font-weight: 500;
   line-height: 24px;
   font-size: 14px;
   min-width: 100px;
@@ -208,7 +208,7 @@
 }
 @media (min-width: 890px) {
   .exp__head-date {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 26px;
     width: 230px;
   }
@@ -223,7 +223,7 @@
 }
 @media (min-width: 1080px) {
   .exp__head-date {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 28px;
     width: 248px;
   }
@@ -296,7 +296,7 @@
 }
 .exp__known-companies-title {
   margin-bottom: 0;
-  font-weight: 600;
+  font-weight: 500;
 }
 .exp__known-companies-subtitle {
   font-size: 16px;
