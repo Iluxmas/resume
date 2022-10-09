@@ -285,6 +285,7 @@
 }
 
 .lead__button {
+  display: inline-block;
   width: 170px;
   height: 46px;
   font-weight: 600;
@@ -292,7 +293,7 @@
   line-height: 46px;
   text-align: center;
   text-decoration: none;
-  background-color: none;
+  background-color: transparent;
   border: 1px solid #8822aa;
   color: #8822aa;
   border-radius: 4px;
@@ -304,13 +305,13 @@
     width: 180px;
     height: 50px;
     font-size: 18px;
-    line-height: 48px;
+    line-height: 50px;
     border-radius: 6px;
   }
 }
 @media (min-width: 1024px) {
   .lead__button {
-    width: 190px;
+    width: 210px;
     height: 54px;
   }
 }

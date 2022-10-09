@@ -33,7 +33,7 @@ export default function Skills() {
         <div className="skills__decor_dots1"></div>
         <div className="skills__decor_dots-group">
           <div className="skills__oval _medium"> </div>
-          {/* <div className="skills__oval _small"> </div> */}
+          <div className="skills__oval _small"> </div>
           {/* <div className="skills__oval _small"> </div> */}
         </div>
       </div>
