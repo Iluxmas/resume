@@ -26,9 +26,15 @@
   background-repeat: repeat-x;
   width: 100%;
   height: 200px;
-  bottom: -120px;
+  bottom: -17%;
   z-index: -22;
 }
+@media (min-width: 768px) {
+  .exp_bottom_bcg {
+    bottom: -120px;
+  }
+}
+
 .exp__header {
   font-weight: 600;
   font-size: 34px;

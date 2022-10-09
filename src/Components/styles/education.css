@@ -17,6 +17,120 @@
   line-height: 28px;
   margin-bottom: 50px;
 }
+.edu__courses {
+  margin-top: 40px;
+}
+
+.edu__row {
+  width: 100%;
+  display: flex;
+  padding: 6px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  border-top: 1px solid #232323;
+  font-size: 10px;
+}
+
+@media (min-width: 440px) {
+  .edu__row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px;
+  }
+}
+@media (min-width: 520px) {
+  .edu__row {
+    font-size: 12px;
+    gap: 10px;
+  }
+}
+@media (min-width: 620px) {
+  .edu__row {
+    font-size: 14px;
+  }
+}
+@media (min-width: 768px) {
+  .edu__row {
+    font-size: 18px;
+    padding: 14px 12px;
+  }
+}
+
+.edu__control {
+  min-width: 90px;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 440px) {
+  .edu__control {
+    max-width: 140px;
+    flex-direction: column-reverse;
+    /* gap: 6px; */
+    align-items: flex-start;
+    margin-bottom: 0;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 620px) {
+  .edu__control {
+    max-width: 160px;
+  }
+}
+
+@media (min-width: 768px) {
+  .edu__control {
+    width: 45%;
+    max-width: 400px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.edu__dates {
+  display: inline-block;
+  font-size: 1em;
+  line-height: 16px;
+  margin: 0;
+  margin-left: auto;
+}
+@media (min-width: 440px) {
+  .edu__dates {
+    margin: 0;
+  }
+}
+.edu__company {
+  font-size: 1.4em;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+}
+.edu__theme {
+  font-size: 1.2em;
+  line-height: 14px;
+  margin: 0;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .edu__dates {
+    line-height: 20px;
+    width: 152px;
+  }
+  .edu__company {
+    line-height: 20px;
+  }
+  .edu__theme {
+    line-height: 20px;
+  }
+}
+
 .edu__table {
   width: 100%;
   margin: 0 auto;
@@ -67,16 +181,17 @@ td {
     font-size: 18px;
   }
 }
-.column1 {
+.column2 {
   width: 25%;
 }
-.column2 {
+.column3 {
   /* min-width: 0; */
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.column3 {
+.column1 {
   width: 20%;
-  min-width: 140px;
+  min-width: 70px;
+  line-height: 18px;
 }

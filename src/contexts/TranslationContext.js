@@ -39,7 +39,24 @@ export const headerMenu = {
 };
 
 // ===== 1st block ========  LEAD
-export const lead = {};
+export const lead = {
+  ru: {
+    greet: "Привет! Меня зовут",
+    name: "Сулханов Илья",
+    header: "Фронтенд Разработчик",
+    description:
+      "Который сейчас находится в поиске работы. Ниже вы найдете описание моих навыков, опыта и контакты для связи.",
+    button: "Скачать Резюме",
+  },
+  en: {
+    greet: "Hello! I'm",
+    name: "Sulhanov Ilya",
+    header: "Frontend Developer",
+    description:
+      "Who is currently looking for the full-time remote job. E-commerce or EdTech companies would be especially welcome. Below you will find all information about my skills and portfolio.",
+    button: "Download CV",
+  },
+};
 
 // ===== 2nd block ======== EDUCATION
 export const education = {
@@ -106,7 +123,7 @@ export const exp = {
     header: "Опыт работы",
     data: [
       {
-        pos: "Фронтенд разработчик",
+        pos: "Фронтенд разработчик (обучение)",
         logo: Logo,
         company: "Я.Практикум",
         dates: "04.2022 - по н. в.",
@@ -241,19 +258,35 @@ export const about = {
 export const aboutsThis = {};
 
 // ===== 6th block ======== CONTACT
+// export const contactOLD = {
+//   ru: {
+//     header: "Контакты",
+//     location: "Местоположение:",
+//     place: "Стамбул, Турция",
+//     writeMe: "Связаться со мной:",
+//     checkMine: "Мои страницы:",
+//   },
+//   en: {
+//     header: "Contacts",
+//     location: "Location:",
+//     place: "Istanbul, Turkey",
+//     writeMe: "Feel free to write me:",
+//     checkMine: "Or check my profiles at:",
+//   },
+// };
+
+// ===== 6.5 th block ======== CONTACT TWO
 export const contact = {
   ru: {
     header: "Контакты",
-    location: "Местоположение:",
-    place: "Стамбул, Турция",
-    writeMe: "Связаться со мной:",
+    subheader:
+      "Был рад знакомству! Вы можете связаться со мной по почте или через телеграмм. Также ниже вы найдете ссылки на мои профили в Github и Linkedin, добавляйтесь :)",
     checkMine: "Мои страницы:",
   },
   en: {
     header: "Contacts",
-    location: "Location:",
-    place: "Istanbul, Turkey",
-    writeMe: "Feel free to write me:",
+    subheader:
+      "It was nice to meet you. Below you will find links to some my accounts where you can contact me. See you!",
     checkMine: "Or check my profiles at:",
   },
 };
@@ -262,13 +295,4 @@ export const contact = {
 export const footer = {
   ru: "",
   en: "",
-};
-
-export const translations = {
-  en: {
-    greeting: "Hello World",
-  },
-  ru: {
-    greeting: "Привет, мир!",
-  },
 };

@@ -12,28 +12,33 @@ export default function Education() {
           {education[lang].title}
           <span className="_accent">.</span>
         </h2>
-        <table className="edu__table">
+        <div className="edu__courses">
+          {education[lang].studies.map(({ place, dep, dates }, idx) => {
+            return (
+              <div className="edu__row" key={idx}>
+                <div className="edu__control">
+                  <p className="edu__dates">{dates}</p>
+                  <p className="edu__company">{place}</p>
+                </div>
+                <p className="edu__theme" title={dep}>
+                  {dep}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+        {/* <table className="edu__table">
           <thead>
             <tr>
-              <th className="edu__table-header column1">Company</th>
-              <th className="edu__table-header column2">Course</th>
-              <th className="edu__table-header column3">Dates</th>
+              <th className="edu__table-header column1">Dates</th>
+              <th className="edu__table-header column2">Company</th>
+              <th className="edu__table-header column3">Course</th>
             </tr>
           </thead>
           <tbody>
-            {education[lang].studies.map(({ place, dep, dates }, idx) => {
-              return (
-                <tr key={idx}>
-                  <td className="edu__table-body column1">{place}</td>
-                  <td className="edu__table-body column2" title={dep}>
-                    {dep}
-                  </td>
-                  <td className="edu__table-body column3">{dates}</td>
-                </tr>
-              );
-            })}
+            
           </tbody>
-        </table>
+        </table> */}
       </div>
     </section>
   );

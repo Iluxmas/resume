@@ -1,11 +1,13 @@
 /* -------SKILLZ BLOCK ---------*/
-
-.skillz__container {
+.skillz {
   padding: 70px 14px 90px;
   position: relative;
 }
+.skillz__container {
+  position: relative;
+}
 @media (min-width: 768px) {
-  .skillz__container {
+  .skillz {
     padding: 70px 14px 140px;
   }
 }

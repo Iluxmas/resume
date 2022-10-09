@@ -19,10 +19,7 @@ export default function Alter() {
           {contact[lang].header}
           <span className="_accent">.</span>
         </h2>
-        <p className="contacts__subheader">
-          It was nice to meet you. Below you will find links to some my accounts
-          where you can contact me. See you!
-        </p>
+        <p className="contacts__subheader">{contact[lang].subheader}</p>
 
         <img className="contacts__logo" src={Logo} />
         <div className="contacts__social2">

@@ -1,7 +1,7 @@
 .lead {
   margin: 0 auto;
   background-image: url("../../images/lead_bcg_frontend4.png");
-  background-size: 102%;
+  background-size: 127%;
   background-position: 50% 15%;
   background-repeat: no-repeat;
 }
@@ -33,25 +33,25 @@
 @media (min-width: 768px) {
   .lead__container {
     padding: 10px 24px 10px;
-    height: 780px;
+    height: 570px;
   }
 }
 @media (min-width: 1024px) {
   .lead__container {
-    padding: 50px 22px;
-    height: 860px;
+    padding: 20px 22px;
+    height: 620px;
   }
 }
 @media (min-width: 1280px) {
   .lead__container {
-    padding: 50px 26px;
-    height: 960px;
+    padding: 30px 26px;
+    height: 700px;
   }
 }
 .lead__decor_oval {
   position: absolute;
   height: 45%;
-  width: 45%;
+  width: 37%;
   z-index: 5;
   background: url("../../images/decor/VectorLeadOval.png");
   background-repeat: no-repeat;
@@ -61,7 +61,7 @@
 }
 @media (min-width: 500px) {
   .lead__decor_oval {
-    height: 48%;
+    height: 58%;
     width: 38%;
     background: url("../../images/decor/VectorLeadOval.png");
     background-size: 100%;
@@ -72,7 +72,7 @@
 }
 @media (min-width: 768px) {
   .lead__decor_oval {
-    height: 54%;
+    height: 64%;
     width: 42%;
     background: url("../../images/decor/VectorLeadOval.png");
     background-size: 100%;
@@ -85,19 +85,19 @@
   .lead__decor_oval {
     height: 60%;
     width: 42%;
-    max-width: 480px;
+    max-width: 460px;
 
     right: 20px;
-    top: 210px;
+    top: 190px;
   }
 }
 @media (min-width: 1280px) {
   .lead__decor_oval {
-    height: 60%;
-    width: 42%;
+    height: 70%;
+    width: 34%;
     max-width: 480px;
     right: 40px;
-    top: 250px;
+    top: 160px;
   }
 }
 .lead__decor_arrow {
@@ -105,7 +105,7 @@
   height: 200px;
   width: 60%;
   left: 85px;
-  bottom: -20%;
+  bottom: -15%;
   background: url("../../images/decor/Vector1.png");
   background-repeat: no-repeat;
   background-size: 300px 150px;
@@ -116,7 +116,7 @@
     height: 27%;
     width: 50%;
     background-size: 100% 100%;
-    bottom: -10px;
+    bottom: 8px;
     z-index: 5;
   }
   .lead__decor_oval {
@@ -124,10 +124,11 @@
 }
 @media (min-width: 768px) {
   .lead__decor_arrow {
-    height: 340px;
+    height: 320px;
     width: 70%;
-    background-size: 100% 100%;
-    bottom: 10px;
+    background-size: 100% 70%;
+    left: 100px;
+    bottom: -110px;
   }
 }
 @media (min-width: 1024px) {
@@ -135,7 +136,7 @@
     height: 340px;
     width: 70%;
     background-size: 100% 100%;
-    bottom: 0;
+    bottom: -50px;
     left: 105px;
   }
 }
@@ -144,7 +145,7 @@
     height: 340px;
     width: 70%;
     background-size: 100% 100%;
-    bottom: 44px;
+    bottom: -20px;
     left: 105px;
   }
 }
@@ -185,107 +186,106 @@
 @media (min-width: 768px) {
   .lead__greet {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 22px;
   }
   .lead__name {
-    font-size: 28px;
-    line-height: 26px;
+    font-size: 26px;
+    line-height: 24px;
   }
   .lead__header {
     max-width: 450px;
-
     text-align-last: end;
-    font-size: 74px;
-    line-height: 96px;
-    margin-bottom: 16px;
+    font-size: 70px;
+    line-height: 86px;
+    margin-bottom: 12px;
     margin-left: -16px;
   }
 
   .lead__description {
-    max-width: 450px;
+    max-width: 410px;
     font-size: 18px;
-    line-height: 26px;
+    line-height: 24px;
     margin-bottom: 18px;
   }
 }
 @media (min-width: 1024px) {
   .lead__greet {
     font-size: 18px;
-    line-height: 28px;
-    margin-bottom: 18px;
+    line-height: 22px;
+    margin-bottom: 14px;
   }
   .lead__name {
-    font-size: 30px;
-    line-height: 28px;
-    margin-bottom: 20px;
+    font-size: 28px;
+    line-height: 26px;
+    margin-bottom: 14px;
   }
   .lead__header {
     max-width: 500px;
-    font-size: 80px;
-    line-height: 106px;
-    margin-bottom: 18px;
+    font-size: 72px;
+    line-height: 92px;
+    margin-bottom: 14px;
     margin-left: -18px;
   }
 
   .lead__description {
     max-width: 475px;
     font-size: 20px;
-    line-height: 28px;
-    margin-bottom: 22px;
+    line-height: 26px;
+    margin-bottom: 20px;
   }
 }
 @media (min-width: 1280px) {
   .lead__greet {
     font-size: 20px;
-    line-height: 30px;
-    margin-bottom: 25px;
+    line-height: 24px;
+    margin-bottom: 16px;
   }
   .lead__name {
-    font-size: 32px;
-    line-height: 30px;
-    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 28px;
+    margin-bottom: 16px;
   }
   .lead__header {
     max-width: 540px;
-    font-size: 85px;
-    line-height: 110px;
-    margin-bottom: 20px;
+    font-size: 76px;
+    line-height: 96px;
+    margin-bottom: 18px;
     margin-left: -20px;
   }
   .lead__description {
     max-width: 500px;
     font-size: 20px;
-    line-height: 30px;
-    margin-bottom: 26px;
+    line-height: 28px;
+    margin-bottom: 24px;
   }
 }
 @media (min-width: 1440px) {
   .lead__greet {
-    font-size: 24px;
-    line-height: 30px;
-    margin-bottom: 25px;
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 18px;
   }
   .lead__name {
-    font-size: 36px;
+    font-size: 34px;
     line-height: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
   .lead__header {
-    max-width: 700px;
+    max-width: 640px;
     font-size: 90px;
     line-height: 110px;
     margin-bottom: 20px;
     margin-left: -20px;
   }
   .lead__description {
-    max-width: 500px;
+    max-width: 520px;
     font-size: 24px;
     line-height: 30px;
   }
 }
 
 .lead__button {
-  width: 150px;
+  width: 170px;
   height: 46px;
   font-weight: 600;
   font-size: 16px;
@@ -301,10 +301,10 @@
 }
 @media (min-width: 500px) {
   .lead__button {
-    width: 170px;
+    width: 180px;
     height: 50px;
     font-size: 18px;
-    line-height: 52px;
+    line-height: 48px;
     border-radius: 6px;
   }
 }
@@ -323,8 +323,8 @@
   position: absolute;
   right: 0;
   bottom: 0;
-  height: 80%;
-  width: 40%;
+  height: 70%;
+  width: 33%;
   padding-top: 20px;
   margin-top: -20px;
   background-image: linear-gradient(
@@ -340,20 +340,20 @@
 }
 @media (min-width: 768px) {
   .lead__photo {
-    height: 600px;
-    width: 300px;
+    height: 540px;
+    width: 260px;
     right: 5%;
   }
 }
 @media (min-width: 1024px) {
   .lead__photo {
-    height: 660px;
-    width: 330px;
+    height: 600px;
+    width: 300px;
   }
 }
 @media (min-width: 1280px) {
   .lead__photo {
-    height: 720px;
-    width: 360px;
+    height: 640px;
+    width: 320px;
   }
 }
