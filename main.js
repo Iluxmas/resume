@@ -109,85 +109,6 @@ function AboutMe() {
 
 /***/ }),
 
-/***/ "./src/Components/alter_contact.js":
-/*!*****************************************!*\
-  !*** ./src/Components/alter_contact.js ***!
-  \*****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Alter)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../contexts/TranslationContext */ "./src/contexts/TranslationContext.js");
-/* harmony import */ var _styles_alter_contact_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/alter_contact.css */ "./src/Components/styles/alter_contact.css");
-/* harmony import */ var _images_logo_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../images/logo.png */ "./src/images/logo.png");
-/* harmony import */ var _images_social_social_tele_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../images/social/social_tele.png */ "./src/images/social/social_tele.png");
-/* harmony import */ var _images_social_social_github_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../images/social/social_github.png */ "./src/images/social/social_github.png");
-/* harmony import */ var _images_social_social_linked_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../images/social/social_linked.png */ "./src/images/social/social_linked.png");
-/* harmony import */ var _images_social_social_mail_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../images/social/social_mail.png */ "./src/images/social/social_mail.png");
-
-
-
-
-
-
-
-
-function Alter() {
-  var lang = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.TranslationContext);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
-    className: "contacts",
-    id: "__contacts"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "contacts__container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
-    className: "_section__header _huge"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
-    className: "_accent"
-  }, "#"), _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.contact[lang].header, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
-    className: "_accent"
-  }, ".")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "contacts__subheader"
-  }, _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.contact[lang].subheader), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
-    className: "contacts__logo",
-    src: _images_logo_png__WEBPACK_IMPORTED_MODULE_3__
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "contacts__social2"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
-    className: "contacts__social-list"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-    className: "contacts__social-item"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    className: "contacts__social-link telegram",
-    href: "https://t.me/topsykrets",
-    target: "_blank"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-    className: "contacts__social-item"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    className: "contacts__social-link email",
-    href: "mailto:ilya.sulkhanov@gmail.com",
-    target: "_blank"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-    className: "contacts__social-item"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    className: "contacts__social-link git",
-    href: "https://github.com/Iluxmas",
-    target: "_blank"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-    className: "contacts__social-item"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    className: "contacts__social-link linked",
-    href: "https://www.linkedin.com/in/ilya-super-frontend/",
-    target: "_blank"
-  }))))));
-}
-
-/***/ }),
-
 /***/ "./src/Components/app.js":
 /*!*******************************!*\
   !*** ./src/Components/app.js ***!
@@ -324,12 +245,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../contexts/TranslationContext */ "./src/contexts/TranslationContext.js");
-/* harmony import */ var _styles_contacts_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/contacts.css */ "./src/Components/styles/contacts.css");
-/* harmony import */ var _images_social_social_tele_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../images/social/social_tele.png */ "./src/images/social/social_tele.png");
-/* harmony import */ var _images_social_social_github_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../images/social/social_github.png */ "./src/images/social/social_github.png");
-/* harmony import */ var _images_social_social_linked_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../images/social/social_linked.png */ "./src/images/social/social_linked.png");
-/* harmony import */ var _images_social_social_mail_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../images/social/social_mail.png */ "./src/images/social/social_mail.png");
-
+/* harmony import */ var _images_logo_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../images/logo.png */ "./src/images/logo.png");
+/* harmony import */ var react_animation_on_scroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-animation-on-scroll */ "./node_modules/react-animation-on-scroll/dist/esm/index.js");
+/* harmony import */ var animate_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! animate.css */ "./node_modules/animate.css/animate.css");
+/* harmony import */ var _styles_contacts_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styles/contacts.css */ "./src/Components/styles/contacts.css");
 
 
 
@@ -345,96 +264,53 @@ function Contacts() {
     className: "contacts__container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
     className: "_section__header _huge"
-  }, "#", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
     className: "_accent"
-  }, _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.contact[lang].header), "."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "contacts__main"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "contacts__social"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "contacts__social-subsection"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+  }, "#"), _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.contact[lang].header, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    className: "_accent"
+  }, ".")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "contacts__subheader"
-  }, _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.contact[lang].location), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
+  }, _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.contact[lang].subheader), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    className: "contacts__logo",
+    src: _images_logo_png__WEBPACK_IMPORTED_MODULE_2__
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "contacts__social2"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
     className: "contacts__social-list"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-    className: "contacts__social-item"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "contacts__social-icon location"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
-    className: "contacts__social-location"
-  }, _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.contact[lang].place)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "contacts__social-subsection"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "contacts__subheader"
-  }, _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.contact[lang].writeMe), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
-    className: "contacts__social-list"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-    className: "contacts__social-item"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "contacts__social-icon telegram"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    className: "contacts__social-link",
-    href: "https://t.me/topsykrets",
-    target: "_blank"
-  }, "Telegram")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-    className: "contacts__social-item"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "contacts__social-icon email"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    className: "contacts__social-link",
-    href: "mailto:ilya.sulkhanov@gmail.com",
-    target: "_blank"
-  }, "Email")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "contacts__social-subsection"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "contacts__subheader"
-  }, _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.contact[lang].checkMine), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
-    className: "contacts__social-list"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-    className: "contacts__social-item"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "contacts__social-icon git"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    className: "contacts__social-link",
-    href: "https://github.com/Iluxmas",
-    target: "_blank"
-  }, "GitHub")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-    className: "contacts__social-item"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "contacts__social-icon  linked"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-    className: "contacts__social-link",
-    href: "https://www.linkedin.com/in/ilya-super-frontend/",
-    target: "_blank"
-  }, "LinkedIn"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "contacts__form-container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", {
-    className: "contact__form"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
-    type: "text",
-    className: "contacts__input contacts__input_type_name",
-    placeholder: "First Name"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
-    type: "text",
-    className: "contacts__input contacts__input_type_lastname",
-    placeholder: "Last Name"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
-    type: "email",
-    className: "contacts__input contacts__input_type_email",
-    placeholder: "Email Address"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("textarea", {
-    className: "contacts__input contacts__input_type_message",
-    placeholder: "Your Message",
-    cols: "20",
-    rows: "6"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
-    className: "contacts__submit-btn",
-    disabled: true
-  }, "Submit")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "contacts__undercontruction"
+  }, _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.contactLinks.map(function (item, idx) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_animation_on_scroll__WEBPACK_IMPORTED_MODULE_3__.AnimationOnScroll, {
+      animateIn: "animate__heartBeat",
+      animateOnce: "true",
+      offset: 150,
+      duration: 2.5,
+      delay: 100 + idx * 90
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+      className: "contacts__social-item"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+      className: "contacts__social-link ".concat(item.title),
+      href: item.link,
+      target: "_blank"
+    })));
   })))));
-}
+} //     className="contacts__social-link email"
+//     href="mailto:ilya.sulkhanov@gmail.com"
+//     target="_blank"
+//   ></a>
+// </li>
+// <li className="contacts__social-item">
+//   <a
+//     className="contacts__social-link git"
+//     href="https://github.com/Iluxmas"
+//     target="_blank"
+//   ></a>
+// </li>
+// <li className="contacts__social-item">
+//   <a
+//     className="contacts__social-link linked"
+//     href="https://www.linkedin.com/in/ilya-super-frontend/"
+//     target="_blank"
+//   ></a>
+// </li>
 
 /***/ }),
 
@@ -534,7 +410,8 @@ function Experience() {
       className: "exp_top_bcg"
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_animation_on_scroll__WEBPACK_IMPORTED_MODULE_3__.AnimationOnScroll, {
       animateIn: "animate__slideInUp",
-      animateOnce: "true"
+      animateOnce: "true",
+      offset: 200
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
       className: "exp__container _container _container-wide"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
@@ -552,7 +429,8 @@ function Experience() {
       });
     })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_animation_on_scroll__WEBPACK_IMPORTED_MODULE_3__.AnimationOnScroll, {
       animateIn: "animate__slideInUp",
-      animateOnce: "true"
+      animateOnce: "true",
+      offset: 220
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
       className: "_container-narrow exp__known-companies "
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
@@ -698,11 +576,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../contexts/TranslationContext */ "./src/contexts/TranslationContext.js");
-/* harmony import */ var _images_logo3_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../images/logo3.png */ "./src/images/logo3.png");
-/* harmony import */ var _styles_burger_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/burger.css */ "./src/Components/styles/burger.css");
+/* harmony import */ var _styles_header_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/header.css */ "./src/Components/styles/header.css");
 
-
- // import "./header.css";
 
 
 function Header() {
@@ -863,7 +738,6 @@ function Job(_ref) {
       setIsOpen = _useState2[1];
 
   var pos = data.pos,
-      logo = data.logo,
       company = data.company,
       dates = data.dates,
       resp = data.resp;
@@ -936,10 +810,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../contexts/TranslationContext */ "./src/contexts/TranslationContext.js");
-/* harmony import */ var react_animation_on_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-animation-on-scroll */ "./node_modules/react-animation-on-scroll/dist/esm/index.js");
-/* harmony import */ var animate_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! animate.css */ "./node_modules/animate.css/animate.css");
-/* harmony import */ var _styles_lead_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./styles/lead.css */ "./src/Components/styles/lead.css");
-
+/* harmony import */ var animate_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! animate.css */ "./node_modules/animate.css/animate.css");
+/* harmony import */ var _styles_lead_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/lead.css */ "./src/Components/styles/lead.css");
 
 
 
@@ -994,8 +866,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _projects__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./projects */ "./src/Components/projects.js");
 /* harmony import */ var _aboutme__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./aboutme */ "./src/Components/aboutme.js");
 /* harmony import */ var _contacts__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./contacts */ "./src/Components/contacts.js");
-/* harmony import */ var _alter_contact__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./alter_contact */ "./src/Components/alter_contact.js");
-
 
 
 
@@ -1005,7 +875,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Main() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_lead__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_education__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_skills__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_experience__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_projects__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_aboutme__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_alter_contact__WEBPACK_IMPORTED_MODULE_8__["default"], null));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_lead__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_education__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_skills__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_experience__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_projects__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_aboutme__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_contacts__WEBPACK_IMPORTED_MODULE_7__["default"], null));
 }
 
 /***/ }),
@@ -1132,14 +1002,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _stackIconsData__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./stackIconsData */ "./src/Components/stackIconsData.js");
 /* harmony import */ var _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../contexts/TranslationContext */ "./src/contexts/TranslationContext.js");
-/* harmony import */ var _styles_skills_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles/skills.css */ "./src/Components/styles/skills.css");
+/* harmony import */ var react_animation_on_scroll__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-animation-on-scroll */ "./node_modules/react-animation-on-scroll/dist/esm/index.js");
+/* harmony import */ var animate_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! animate.css */ "./node_modules/animate.css/animate.css");
+/* harmony import */ var _styles_skills_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styles/skills.css */ "./src/Components/styles/skills.css");
+
+
 
 
 
 
 function Skills() {
   var lang = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_2__.TranslationContext);
-  var itemId = 1;
   var stack = [];
 
   for (var _i = 0, _Object$keys = Object.keys(_stackIconsData__WEBPACK_IMPORTED_MODULE_1__.icons); _i < _Object$keys.length; _i++) {
@@ -1160,16 +1033,19 @@ function Skills() {
     className: "_accent"
   }, ".")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
     className: "skillz__list"
-  }, stack.map(function (item) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+  }, stack.map(function (item, idx) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_animation_on_scroll__WEBPACK_IMPORTED_MODULE_3__.AnimationOnScroll, {
+      animateIn: "animate__zoomIn",
+      animateOnce: "true"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
       className: "skillz__item",
-      key: itemId++
+      key: idx
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
       className: "skillz__img",
       src: item[1]
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", {
       className: "skillz__title"
-    }, item[0]));
+    }, item[0])));
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "skills__decor_dots1"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -1300,6 +1176,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "about": () => (/* binding */ about),
 /* harmony export */   "aboutsThis": () => (/* binding */ aboutsThis),
 /* harmony export */   "contact": () => (/* binding */ contact),
+/* harmony export */   "contactLinks": () => (/* binding */ contactLinks),
 /* harmony export */   "education": () => (/* binding */ education),
 /* harmony export */   "exp": () => (/* binding */ exp),
 /* harmony export */   "expLogos": () => (/* binding */ expLogos),
@@ -1533,7 +1410,20 @@ var contact = {
     subheader: "It was nice to meet you. Below you will find links to some my accounts where you can contact me. See you!",
     checkMine: "Or check my profiles at:"
   }
-}; // ===== 7th block ======== FOOTER
+};
+var contactLinks = [{
+  title: "telegram",
+  link: "https://t.me/topsykrets"
+}, {
+  title: "email",
+  link: "mailto:ilya.sulkhanov@gmail.com"
+}, {
+  title: "git",
+  link: "https://github.com/Iluxmas"
+}, {
+  title: "linked",
+  link: "https://www.linkedin.com/in/ilya-super-frontend"
+}]; // ===== 7th block ======== FOOTER
 
 var footer = {
   ru: "",
@@ -2017,36 +1907,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/Components/styles/alter_contact.css":
-/*!*************************************************!*\
-  !*** ./src/Components/styles/alter_contact.css ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
 /***/ "./src/Components/styles/app.css":
 /*!***************************************!*\
   !*** ./src/Components/styles/app.css ***!
   \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./src/Components/styles/burger.css":
-/*!******************************************!*\
-  !*** ./src/Components/styles/burger.css ***!
-  \******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -2098,6 +1962,19 @@ __webpack_require__.r(__webpack_exports__);
 /***/ "./src/Components/styles/footer.css":
 /*!******************************************!*\
   !*** ./src/Components/styles/footer.css ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/Components/styles/header.css":
+/*!******************************************!*\
+  !*** ./src/Components/styles/header.css ***!
   \******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -35889,17 +35766,6 @@ module.exports = __webpack_require__.p + "assets/1bed7dcd350ded82fdbe.png";
 
 /***/ }),
 
-/***/ "./src/images/logo3.png":
-/*!******************************!*\
-  !*** ./src/images/logo3.png ***!
-  \******************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/d2671ebd4a1d4b21d2b0.png";
-
-/***/ }),
-
 /***/ "./src/images/photo3.png":
 /*!*******************************!*\
   !*** ./src/images/photo3.png ***!
@@ -35974,50 +35840,6 @@ module.exports = __webpack_require__.p + "assets/2cca2679ff6e04d769ec.JPG";
 
 "use strict";
 module.exports = __webpack_require__.p + "assets/3e5ae6e4bb91bc3ade16.JPG";
-
-/***/ }),
-
-/***/ "./src/images/social/social_github.png":
-/*!*********************************************!*\
-  !*** ./src/images/social/social_github.png ***!
-  \*********************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/07f691b5c84e684d5010.png";
-
-/***/ }),
-
-/***/ "./src/images/social/social_linked.png":
-/*!*********************************************!*\
-  !*** ./src/images/social/social_linked.png ***!
-  \*********************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/f0a09b2dc8c50ebf46dc.png";
-
-/***/ }),
-
-/***/ "./src/images/social/social_mail.png":
-/*!*******************************************!*\
-  !*** ./src/images/social/social_mail.png ***!
-  \*******************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/7ecdfaf5be399319db1b.png";
-
-/***/ }),
-
-/***/ "./src/images/social/social_tele.png":
-/*!*******************************************!*\
-  !*** ./src/images/social/social_tele.png ***!
-  \*******************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "assets/5993a5137152630fb63d.png";
 
 /***/ }),
 
