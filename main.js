@@ -283,7 +283,8 @@ function Contacts() {
       animateOnce: "true",
       offset: 150,
       duration: 2.5,
-      delay: 100 + idx * 90
+      delay: 100 + idx * 90,
+      initiallyVisible: true
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
       className: "contacts__social-item"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
@@ -292,25 +293,7 @@ function Contacts() {
       target: "_blank"
     })));
   })))));
-} //     className="contacts__social-link email"
-//     href="mailto:ilya.sulkhanov@gmail.com"
-//     target="_blank"
-//   ></a>
-// </li>
-// <li className="contacts__social-item">
-//   <a
-//     className="contacts__social-link git"
-//     href="https://github.com/Iluxmas"
-//     target="_blank"
-//   ></a>
-// </li>
-// <li className="contacts__social-item">
-//   <a
-//     className="contacts__social-link linked"
-//     href="https://www.linkedin.com/in/ilya-super-frontend/"
-//     target="_blank"
-//   ></a>
-// </li>
+}
 
 /***/ }),
 

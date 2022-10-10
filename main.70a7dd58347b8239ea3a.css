@@ -5618,12 +5618,12 @@ td {
 .contacts {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 40px 14px 50px;
+  padding: 40px 14px 40px;
 }
 
 @media (min-width: 768px) {
   .contacts {
-    padding: 50px 18px 60px;
+    padding: 50px 18px 50px;
   }
 }
 .contacts__logo {
@@ -5652,8 +5652,8 @@ td {
 }
 
 .contacts__subheader {
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-top: 16px;
+  margin-bottom: 24px;
   width: 85%;
   font-weight: 400;
   font-size: 16px;
@@ -5663,8 +5663,8 @@ td {
 
 @media (min-width: 768px) {
   .contacts__subheader {
-    margin-top: 40px;
-    margin-bottom: 50px;
+    margin-top: 22px;
+    margin-bottom: 36px;
     max-width: 870px;
     font-weight: 400;
     font-size: 20px;
@@ -6451,4 +6451,4 @@ body {
   }
 } */
 
-/*# sourceMappingURL=main.a77d5b8c31328af69fc5.css.map*/
+/*# sourceMappingURL=main.70a7dd58347b8239ea3a.css.map*/
