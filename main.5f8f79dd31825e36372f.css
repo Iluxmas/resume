@@ -5567,13 +5567,31 @@
 @media (min-width: 544px) {
   .about__maintext {
     font-size: 18px;
+    line-height: 22px;
     min-width: 300px;
   }
 }
+@media (min-width: 1280px) {
+  .about__maintext {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
 .about__title {
+  font-size: 18px;
   font-weight: 500;
 }
 
+@media (min-width: 440px) {
+  .about__title {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .about__title {
+    font-size: 22px;
+  }
+}
 .about__decor {
   position: absolute;
   width: 200px;
@@ -6302,4 +6320,4 @@ body {
   visibility: hidden;
 }
 
-/*# sourceMappingURL=main.2d54027dabc480cc4c7c.css.map*/
+/*# sourceMappingURL=main.5f8f79dd31825e36372f.css.map*/

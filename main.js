@@ -36,39 +36,20 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function AboutMe() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
       _useState2 = _slicedToArray(_useState, 2),
-      scrollPosition = _useState2[0],
-      setScrollPosition = _useState2[1];
-
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
-      _useState4 = _slicedToArray(_useState3, 2),
-      portraitPosition = _useState4[0],
-      setPortraitPosition = _useState4[1];
+      observeRatio = _useState2[0],
+      setObserveRatio = _useState2[1];
 
   var lang = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.TranslationContext);
   var portrait = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    createObserver(portrait.current); // let myPortrait = document.querySelector('.about__portrait');
-    // const rect = portrait.current.getBoundingClientRect();
-    // setPortraitPosition(rect.top + document.documentElement.scrollTop); // needed to add current scroll position, because page reload breaks the animation
-  }, []); // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, [portraitPosition]);
-  // useEffect(() => {
-  //   rotatePhoto(scrollPosition);
-  // }, [scrollPosition]);
-  // const handleScroll = () => {
-  //   const position = window.pageYOffset;
-  //   setScrollPosition(position);
-  // };
+    createObserver(portrait.current);
+  }, []);
 
   function createObserver(element) {
     var observer;
     var options = {
       root: null,
-      rootMargin: "40px",
+      rootMargin: "-60px 0px",
       threshold: buildThresholdList()
     };
     observer = new IntersectionObserver(handleIntersect, options);
@@ -89,31 +70,16 @@ function AboutMe() {
   }
 
   function handleIntersect(entries, observer) {
-    // let style = `rotate(-${90 - 90 * ratio}deg)`;
-    var prevRatio = 0;
     entries.forEach(function (entry) {
-      if (entry.intersectionRatio > prevRatio) {
-        entry.target.style.transform = "rotate(-".concat(90 - 90 * entry.intersectionRatio, "deg)");
+      if (entry.intersectionRatio > observeRatio) {
+        entry.target.style.transform = "rotate(-".concat(110 - 110 * entry.intersectionRatio, "deg)");
+        setObserveRatio(entry.intersectionRatio);
       }
 
-      prevRatio = entry.intersectionRatio;
+      if (entry.intersectionRatio >= 1) {
+        observer.unobserve(portrait.current);
+      }
     });
-  }
-
-  function rotatePhoto(scrollPosition) {
-    var elementHeight = portrait.current.height; // height of the my photo
-
-    var currentScroll = scrollPosition + window.innerHeight;
-    var start = portraitPosition; // getting starting point from state
-
-    var end = start + elementHeight * 1.3;
-
-    if (currentScroll >= start && currentScroll <= end) {
-      var angle = Math.floor((currentScroll - start) / (elementHeight * 1.3) * 90);
-      portrait.current.style.transform = "rotate(-".concat(90 - angle, "deg)");
-    } else if (currentScroll > end) {
-      portrait.current.style.transform = "rotate(-0deg)";
-    }
   }
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
@@ -240,8 +206,7 @@ function App() {
 
   if (currentScroll < window.innerHeight * 2) {
     downloadCVStyle = "back-top _position2 _hide";
-  } // add maximum offset of BACKTOP BUTTON, to no go to edge at high resolution
-  // ADD HIGHLIGHT OF MENU PUNKT WHILE SSCROLL TO GET iNFROMED WHERE YOU ARE (in desktop mode)
+  } // ADD HIGHLIGHT OF MENU PUNKT WHILE SSCROLL TO GET iNFROMED WHERE YOU ARE (in desktop mode)
 
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_contexts_ThemeContext__WEBPACK_IMPORTED_MODULE_1__.ThemeContext.Provider, {
@@ -451,7 +416,7 @@ function Experience() {
         data: item
       });
     })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-      className: "_container-narrow exp__known-companies "
+      className: "_container-narrow exp__known-companies"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_animation_on_scroll__WEBPACK_IMPORTED_MODULE_3__.AnimationOnScroll, {
       animateIn: "animate__slideInUp",
       animateOnce: "true",
@@ -480,27 +445,7 @@ function Experience() {
   ); // }
   // </TranslationContext.Consumer>
   // );
-} // {exp[lang].map((item) => {
-//   return (
-//     <div className="exp__card">
-//       <div className="exp__card-head">
-//         <img className="exp__card-logo" src={item.logo} />
-//         <div className="exp__card-head-textblock">
-//           <h3 className="exp__card-position">{item.pos}</h3>
-//           <p className="exp__card-company">{item.company}</p>
-//           <p className="exp__card-dates">{item.dates}</p>
-//         </div>
-//       </div>
-//       <div className="exp__card-body">
-//         <ul className="exp__card-list">
-//           {item.resp.map((element) => {
-//             return <li className="exp__card-list-item">{element}</li>;
-//           })}
-//         </ul>
-//       </div>
-//     </div>
-//   );
-// })}
+}
 
 /***/ }),
 
