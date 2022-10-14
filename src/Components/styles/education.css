@@ -1,15 +1,16 @@
 .edu {
-  padding: 50px 14px;
-}
-@media (min-width: 768px) {
-  .edu {
-    padding: 90px 20px;
-  }
+  width: 100%;
 }
 
 .edu__container {
   align-items: center;
   justify-content: center;
+  padding: 50px 14px;
+}
+@media (min-width: 768px) {
+  .edu__container {
+    padding: 90px 20px;
+  }
 }
 .edu__header {
   font-weight: 500;
@@ -30,6 +31,7 @@
   justify-content: space-around;
   border-top: 1px solid #232323;
   font-size: 10px;
+  box-sizing: border-box;
 }
 
 @media (min-width: 440px) {
@@ -124,7 +126,7 @@
 }
 .edu__theme {
   font-size: 1.2em;
-  line-height: 18px;
+  line-height: 16px;
   margin: 0;
   text-align: left;
 }

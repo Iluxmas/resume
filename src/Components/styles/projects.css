@@ -83,7 +83,7 @@
 .gallery__item {
   width: 100%;
   border-radius: 2px;
-  max-width: 350px;
+  max-width: 300px;
   margin: 0;
   overflow: hidden;
 }
@@ -110,7 +110,7 @@
   left: 0;
   right: 0;
   top: 0;
-  padding: 20px;
+  /* padding: 20px; */
   display: flex;
   align-items: center;
   justify-content: center;

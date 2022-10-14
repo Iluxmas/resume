@@ -2,25 +2,19 @@
 /* desktop mode............/// */
 
 .header {
-  width: 100%;
-  /* opacity: 1; */
-  /* animation: 2s 2.5s 1 forwards appearheader; */
+  width: 100vw;
+  padding: 0;
+  margin: 0;
 }
-@keyframes appearheader {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+
 .header__container {
-  box-shadow: 0px 5px 10px 0px #aaa;
+  /* box-shadow: 0px 5px 10px 0px #aaa; */
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
-  width: 100%;
+  /* width: 100%; */
+  width: 100vw;
   opacity: 0.98;
   height: 44px;
   background: #232323;
@@ -40,7 +34,7 @@
   }
 }
 .navmenu {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -164,19 +158,19 @@
     display: block;
     height: 32px;
     width: 30px;
-    top: 10px;
-    right: 13px;
+    top: 8px;
+    right: 34px;
     z-index: 5;
     opacity: 0;
   }
 
   .navmenu .header__hamburger-lines {
     display: block;
-    height: 23px;
+    height: 24px;
     width: 35px;
     position: absolute;
-    top: 11px;
-    right: 11px;
+    top: 10px;
+    right: 32px;
     z-index: 2;
     display: flex;
     flex-direction: column;

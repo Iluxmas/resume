@@ -1,14 +1,18 @@
 /* -------SKILLZ BLOCK ---------*/
 .skillz {
-  padding: 70px 14px 90px;
+  width: 100%;
   position: relative;
 }
 .skillz__container {
+  width: 100%;
   position: relative;
+  padding: 70px 0 90px;
+  z-index: 50;
+  margin: 0 auto;
 }
 @media (min-width: 768px) {
-  .skillz {
-    padding: 70px 14px 140px;
+  .skillz__container {
+    padding-bottom: 140px;
   }
 }
 .skillz__header {
@@ -18,22 +22,23 @@
   margin-bottom: 50px;
 }
 .skillz__list {
-  width: 100%;
+  width: 80%;
   list-style-type: none;
   margin: 0 auto;
   margin-top: 35px;
-  padding: 14px 18px;
+  padding: 14px 0;
   display: flex;
   flex-wrap: wrap;
   gap: 22px;
   row-gap: 22px;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
 }
 @media (min-width: 768px) {
   .skillz__list {
     max-width: 800px;
-    padding: 18px 24px;
+    padding: 18px 0;
     margin-top: 45px;
     gap: 30px;
     row-gap: 27px;
@@ -93,13 +98,13 @@
 }
 .skills__decor_dots1 {
   position: absolute;
-  height: 160px;
-  width: 40px;
+  height: 140px;
+  width: 35px;
   background: url("../../images/decor/Ornament_16.png");
   background-size: 100%;
   background-repeat: no-repeat;
   left: 3px;
-  top: -60px;
+  top: -50px;
   opacity: 0.7;
 }
 @media (min-width: 768px) {
@@ -123,22 +128,21 @@
   gap: 10px;
   align-items: center;
   height: auto;
-  width: 80px;
-  bottom: -78px;
-  right: -10px;
+  width: 62px;
+  bottom: 8px;
+  right: 68px;
   opacity: 0.7;
 }
 @media (min-width: 768px) {
   .skills__decor_dots-group {
-    bottom: -128px;
-    right: -30px;
+    bottom: 0;
+    right: 68px;
   }
 }
 .skills__oval {
   border-radius: 50%;
   background-color: #ff8800;
   display: inline-block;
-  z-index: 10;
 }
 ._small {
   height: 13px;

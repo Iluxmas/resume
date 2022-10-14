@@ -47,7 +47,6 @@
   opacity: 1;
   min-width: 280px;
   width: 70%;
-  /* max-width: 280px; */
   min-height: 280px;
   border-radius: 50%;
   align-self: center;
@@ -61,13 +60,6 @@
     transform: rotate(-90deg);
   }
 }
-
-/* @media (min-width: 668px) {
-  .about__portrait {
-    max-width: 315px;
-    max-height: 315px;
-  }
-} */
 @media (min-width: 768px) {
   .about__content {
     flex-direction: row;
@@ -86,14 +78,16 @@
   justify-content: center;
 }
 .about__maintext {
+  margin: 0;
   text-align: justify;
+  font-size: 14px;
+  line-height: 20px;
   width: 100%;
   min-width: 280px;
 }
 @media (min-width: 544px) {
   .about__maintext {
-    text-align: justify;
-    width: 100%;
+    font-size: 16px;
     min-width: 300px;
   }
 }

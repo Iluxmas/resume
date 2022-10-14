@@ -9,8 +9,8 @@ export default function Education() {
 
   return (
     <section className="edu" id="__education">
-      <AnimationOnScroll animateIn="animate__slideInUp" animateOnce="true">
-        <div className="edu__container _container _container-wide">
+      <div className="edu__container _container _container-wide">
+        <AnimationOnScroll animateIn="animate__slideInUp" animateOnce="true">
           <h2 className="_section__header _huge">
             <span className="_accent">#</span>
             {education[lang].title}
@@ -31,20 +31,8 @@ export default function Education() {
               );
             })}
           </div>
-          {/* <table className="edu__table">
-          <thead>
-            <tr>
-              <th className="edu__table-header column1">Dates</th>
-              <th className="edu__table-header column2">Company</th>
-              <th className="edu__table-header column3">Course</th>
-            </tr>
-          </thead>
-          <tbody>
-            
-          </tbody>
-        </table> */}
-        </div>
-      </AnimationOnScroll>
+        </AnimationOnScroll>
+      </div>
     </section>
   );
 }

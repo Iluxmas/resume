@@ -1,7 +1,7 @@
 .contacts {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 40px 14px 40px;
+  padding: 40px 14px 25px;
 }
 @media (min-width: 768px) {
   .contacts {
@@ -35,10 +35,10 @@
 .contacts__subheader {
   margin-top: 16px;
   margin-bottom: 24px;
-  width: 85%;
+  width: 90%;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 22px;
   text-align: center;
 }
 @media (min-width: 768px) {
@@ -48,7 +48,7 @@
     max-width: 870px;
     font-weight: 400;
     font-size: 20px;
-    line-height: 30px;
+    line-height: 28px;
   }
 }
 .contacts__social {
@@ -63,7 +63,7 @@
   justify-content: space-around;
   background-color: white;
 }
-@media (min-width: 494px) {
+/* @media (min-width: 494px) {
   .contacts__social {
     flex-direction: row;
     justify-content: space-between;
@@ -76,7 +76,7 @@
   .contacts__social {
     padding: 0;
   }
-}
+} */
 @media (max-width: 767px) {
   .contacts__social {
     gap: 20px;
