@@ -49,7 +49,7 @@ export default function App() {
   if (currentScroll < window.innerHeight * 2) {
     downloadCVStyle = "back-top _position2 _hide";
   }
-  // add maximum offset of BACKTOP BUTTON, to no go to edge at high resolution
+
   // ADD HIGHLIGHT OF MENU PUNKT WHILE SSCROLL TO GET iNFROMED WHERE YOU ARE (in desktop mode)
 
   return (
@@ -58,8 +58,6 @@ export default function App() {
         <div className="page" id="#">
           <Header />
           <Main />
-
-          {/* idea: company i am not worked with: google microsoft etc... */}
           <Footer />
           <div className={backtopStyle}>
             <a className="go-top ui-link" href="#"></a>

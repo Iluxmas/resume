@@ -5,47 +5,52 @@ import Photo from "../images/photo3.png";
 import "./styles/aboutme.css";
 
 export default function AboutMe() {
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [portraitPosition, setPortraitPosition] = useState("");
+  const [observeRatio, setObserveRatio] = useState(0);
 
   const lang = useContext(TranslationContext);
   const portrait = useRef(null);
 
   useEffect(() => {
-    const rect = portrait.current.getBoundingClientRect();
-    setPortraitPosition(rect.top + document.documentElement.scrollTop); // needed to add current scroll position, because page reload breaks the animation
+    createObserver(portrait.current);
   }, []);
 
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
+  function createObserver(element) {
+    let observer;
+    let options = {
+      root: null,
+      rootMargin: "-60px 0px",
+      threshold: buildThresholdList(),
     };
-  }, [portraitPosition]);
 
-  useEffect(() => {
-    rotatePhoto(scrollPosition);
-  }, [scrollPosition]);
+    observer = new IntersectionObserver(handleIntersect, options);
+    observer.observe(element);
+  }
 
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-    setScrollPosition(position);
-  };
+  function buildThresholdList() {
+    let thresholds = [];
+    let numSteps = 20;
 
-  function rotatePhoto(scrollPosition) {
-    const elementHeight = portrait.current.height; // height of the my photo
-    const currentScroll = scrollPosition + window.innerHeight;
-    const start = portraitPosition; // getting starting point from state
-    const end = start + elementHeight * 1.3;
-
-    if (currentScroll >= start && currentScroll <= end) {
-      let angle = Math.floor(
-        ((currentScroll - start) / (elementHeight * 1.3)) * 90
-      );
-      portrait.current.style.transform = `rotate(-${90 - angle}deg)`;
-    } else if (currentScroll > end) {
-      portrait.current.style.transform = `rotate(-0deg)`;
+    for (let i = 1.0; i <= numSteps; i++) {
+      let ratio = i / numSteps;
+      thresholds.push(ratio);
     }
+
+    thresholds.push(0);
+    return thresholds;
+  }
+
+  function handleIntersect(entries, observer) {
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio > observeRatio) {
+        entry.target.style.transform = `rotate(-${
+          110 - 110 * entry.intersectionRatio
+        }deg)`;
+        setObserveRatio(entry.intersectionRatio);
+      }
+      if (entry.intersectionRatio >= 1) {
+        observer.unobserve(portrait.current);
+      }
+    });
   }
 
   return (

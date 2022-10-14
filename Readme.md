@@ -5,13 +5,16 @@
 **Desription:** -
 **Featers:**
 
--
+- Appearing animation performed via IntersectionObserver API and react-on-scroll-dom library
+- Responsive desing for resolutions from 320px to 1440+ px
+- Projects gallery with filters
 
 Project compilation done by Webpack, avaliable via link in the bottom.
 
-In case of cloning of main branch, execute next commands to run the project - `npm i` to install dependencies, `npm start` to run page on port :8080
+**Next plans**:
 
-**Next plans**: -
+- Add theme and language switchers
+- Add menu highlight while scroll
 
 **GitHub**
 
