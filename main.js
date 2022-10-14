@@ -284,7 +284,8 @@ function Contacts() {
       offset: 150,
       duration: 2.5,
       delay: 100 + idx * 90,
-      initiallyVisible: true
+      initiallyVisible: true,
+      key: idx
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
       className: "contacts__social-item"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
@@ -1019,7 +1020,8 @@ function Skills() {
   }, stack.map(function (item, idx) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_animation_on_scroll__WEBPACK_IMPORTED_MODULE_3__.AnimationOnScroll, {
       animateIn: "animate__zoomIn",
-      animateOnce: "true"
+      animateOnce: "true",
+      key: idx
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
       className: "skillz__item",
       key: idx
@@ -1206,8 +1208,8 @@ var headerMenu = {
 var lead = {
   ru: {
     greet: "Привет! Меня зовут",
-    name: "Сулханов Илья, и я - ",
-    header: "Фронтенд Разработчик",
+    name: "Сулханов Илья,",
+    header: "Фронтенд Разработчик,",
     description: "Который сейчас находится в поиске работы. Ниже вы найдете описание моих навыков, опыта и контакты для связи.",
     button: "Скачать Резюме"
   },
