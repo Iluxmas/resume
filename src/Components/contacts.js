@@ -21,7 +21,6 @@ export default function Contacts() {
           <span className="_accent">.</span>
         </h2>
         <p className="contacts__subheader">{contact[lang].subheader}</p>
-
         <img className="contacts__logo" src={Logo} />
         <div className="contacts__social2">
           <ul className="contacts__social-list">

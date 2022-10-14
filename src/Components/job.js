@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import Close from "../images/plus.svg";
+import "./styles/job.css";
 
 export default function Job({ data }) {
   const descriptionHeight = useRef(null);
