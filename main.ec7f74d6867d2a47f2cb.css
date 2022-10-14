@@ -45,10 +45,12 @@
 
 @media (min-width: 769px) {
   .header__container {
+    box-sizing: content-box;
+    box-sizing: initial;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 44px;
   }
 }
 .navmenu {
@@ -56,10 +58,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
+  height: 44px;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .navmenu {
     /* margin: 0 auto; */
     width: auto;
@@ -100,9 +102,9 @@
   text-decoration: none;
   color: #232323;
   font-weight: 300;
-  height: 50px;
+  height: 44px;
   font-size: 16px;
-  line-height: 46px;
+  line-height: 44px;
   transition: color 0.2s ease-in-out;
 }
 
@@ -114,7 +116,7 @@
 @media (min-width: 800px) {
   .header__menu-link {
     font-size: 18px;
-    line-height: 50px;
+    line-height: 44px;
   }
 }
 .header__menu-link:hover {
@@ -167,7 +169,7 @@
     display: block;
     /* display: none; */
     position: relative;
-    height: 64px;
+    height: 44px;
     margin: 0;
   }
   .navmenu__input {
@@ -175,8 +177,8 @@
     display: block;
     height: 32px;
     width: 30px;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 13px;
     z-index: 5;
     opacity: 0;
   }
@@ -5169,7 +5171,7 @@
 .edu__row {
   width: 100%;
   display: flex;
-  padding: 6px;
+  padding: 10px 8px;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
@@ -5182,7 +5184,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    padding: 8px;
   }
 }
 @media (min-width: 520px) {
@@ -5215,7 +5216,7 @@
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 @media (min-width: 440px) {
@@ -6325,7 +6326,7 @@ body {
   float: right;
   height: 32px;
   position: fixed;
-  bottom: 14px;
+  bottom: 13px;
   z-index: 999;
   transition: opacity 0.4s ease-in-out, visibility 0.4s;
   border-radius: 50%;
@@ -6491,7 +6492,7 @@ body {
 
 @media (min-width: 768px) {
   ._container-xtra {
-    margin: 0 calc(24 * (100vw - 768px) / 672);
+    /* margin: 0 calc(24 * (100vw - 768px) / 672); */
   }
 }
 @media (min-width: 1440px) {
@@ -6529,4 +6530,4 @@ body {
   }
 } */
 
-/*# sourceMappingURL=main.364584d072a96e956c5d.css.map*/
+/*# sourceMappingURL=main.ec7f74d6867d2a47f2cb.css.map*/

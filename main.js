@@ -287,7 +287,8 @@ function Contacts() {
       initiallyVisible: true,
       key: idx
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-      className: "contacts__social-item"
+      className: "contacts__social-item",
+      key: idx
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
       className: "contacts__social-link ".concat(item.title),
       href: item.link,
