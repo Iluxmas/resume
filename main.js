@@ -47,23 +47,58 @@ function AboutMe() {
   var lang = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.TranslationContext);
   var portrait = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    var rect = portrait.current.getBoundingClientRect();
-    setPortraitPosition(rect.top + document.documentElement.scrollTop); // needed to add current scroll position, because page reload breaks the animation
-  }, []);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    window.addEventListener("scroll", handleScroll);
-    return function () {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [portraitPosition]);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    rotatePhoto(scrollPosition);
-  }, [scrollPosition]);
+    createObserver(portrait.current); // let myPortrait = document.querySelector('.about__portrait');
+    // const rect = portrait.current.getBoundingClientRect();
+    // setPortraitPosition(rect.top + document.documentElement.scrollTop); // needed to add current scroll position, because page reload breaks the animation
+  }, []); // useEffect(() => {
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, [portraitPosition]);
+  // useEffect(() => {
+  //   rotatePhoto(scrollPosition);
+  // }, [scrollPosition]);
+  // const handleScroll = () => {
+  //   const position = window.pageYOffset;
+  //   setScrollPosition(position);
+  // };
 
-  var handleScroll = function handleScroll() {
-    var position = window.pageYOffset;
-    setScrollPosition(position);
-  };
+  function createObserver(element) {
+    var observer;
+    var options = {
+      root: null,
+      rootMargin: "40px",
+      threshold: buildThresholdList()
+    };
+    observer = new IntersectionObserver(handleIntersect, options);
+    observer.observe(element);
+  }
+
+  function buildThresholdList() {
+    var thresholds = [];
+    var numSteps = 20;
+
+    for (var i = 1.0; i <= numSteps; i++) {
+      var ratio = i / numSteps;
+      thresholds.push(ratio);
+    }
+
+    thresholds.push(0);
+    return thresholds;
+  }
+
+  function handleIntersect(entries, observer) {
+    // let style = `rotate(-${90 - 90 * ratio}deg)`;
+    var prevRatio = 0;
+    entries.forEach(function (entry) {
+      if (entry.intersectionRatio > prevRatio) {
+        entry.target.style.transform = "rotate(-".concat(90 - 90 * entry.intersectionRatio, "deg)");
+      }
+
+      prevRatio = entry.intersectionRatio;
+    });
+  }
 
   function rotatePhoto(scrollPosition) {
     var elementHeight = portrait.current.height; // height of the my photo
@@ -326,11 +361,11 @@ function Education() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
     className: "edu",
     id: "__education"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "edu__container _container _container-wide"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_animation_on_scroll__WEBPACK_IMPORTED_MODULE_2__.AnimationOnScroll, {
     animateIn: "animate__slideInUp",
     animateOnce: "true"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "edu__container _container _container-wide"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
     className: "_section__header _huge"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
@@ -387,18 +422,21 @@ __webpack_require__.r(__webpack_exports__);
 
 function Experience() {
   var lang = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.TranslationContext);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.TranslationContext.Consumer, null, function (lang) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
+  return (
+    /*#__PURE__*/
+    // <TranslationContext.Consumer>
+    //   {(lang) => (
+    react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
       className: "exp",
       id: "__experience"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
       className: "exp_top_bcg"
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_animation_on_scroll__WEBPACK_IMPORTED_MODULE_3__.AnimationOnScroll, {
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "exp__container _container _container-wide"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_animation_on_scroll__WEBPACK_IMPORTED_MODULE_3__.AnimationOnScroll, {
       animateIn: "animate__slideInUp",
       animateOnce: "true",
       offset: 200
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-      className: "exp__container _container _container-wide"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
       className: "_section__header _huge"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
@@ -412,12 +450,12 @@ function Experience() {
         key: idx,
         data: item
       });
-    })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_animation_on_scroll__WEBPACK_IMPORTED_MODULE_3__.AnimationOnScroll, {
+    })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "_container-narrow exp__known-companies "
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_animation_on_scroll__WEBPACK_IMPORTED_MODULE_3__.AnimationOnScroll, {
       animateIn: "animate__slideInUp",
       animateOnce: "true",
       offset: 220
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-      className: "_container-narrow exp__known-companies "
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
       className: "_section__header _huge"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
@@ -438,8 +476,10 @@ function Experience() {
       className: "exp__known-decor_dots"
     }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
       className: "exp_bottom_bcg"
-    }));
-  });
+    }))
+  ); // }
+  // </TranslationContext.Consumer>
+  // );
 } // {exp[lang].map((item) => {
 //   return (
 //     <div className="exp__card">
@@ -697,6 +737,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _images_plus_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../images/plus.svg */ "./src/images/plus.svg");
+/* harmony import */ var _styles_job_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/job.css */ "./src/Components/styles/job.css");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -708,6 +749,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -1962,6 +2004,19 @@ __webpack_require__.r(__webpack_exports__);
 /*!******************************************!*\
   !*** ./src/Components/styles/header.css ***!
   \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/Components/styles/job.css":
+/*!***************************************!*\
+  !*** ./src/Components/styles/job.css ***!
+  \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
