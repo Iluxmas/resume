@@ -4094,8 +4094,7 @@
   background-size: contain;
   right: 20%;
   top: 20%;
-  -webkit-animation: 60s 3s infinite breathing;
-          animation: 60s 3s infinite breathing;
+  /* animation: 60s 3s infinite breathing; */
 }
 
 @media (min-width: 440px) {
@@ -6530,4 +6529,4 @@ body {
   }
 } */
 
-/*# sourceMappingURL=main.ec7f74d6867d2a47f2cb.css.map*/
+/*# sourceMappingURL=main.329db4116494bceec849.css.map*/
