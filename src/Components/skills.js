@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import { icons } from "./stackIconsData";
 import { skills, TranslationContext } from "../contexts/TranslationContext";
-
+import { AnimationOnScroll } from "react-animation-on-scroll";
+import "animate.css";
 import "./styles/skills.css";
 
 export default function Skills() {
   const lang = useContext(TranslationContext);
 
-  let itemId = 1;
   let stack = [];
   for (let key of Object.keys(icons)) {
     stack.push([key, icons[key]]);
@@ -21,12 +21,18 @@ export default function Skills() {
           <span className="_accent">.</span>
         </h2>
         <ul className="skillz__list">
-          {stack.map((item) => {
+          {stack.map((item, idx) => {
             return (
-              <li className="skillz__item" key={itemId++}>
-                <img className="skillz__img" src={item[1]} />
-                <h3 className="skillz__title">{item[0]}</h3>
-              </li>
+              <AnimationOnScroll
+                animateIn="animate__zoomIn"
+                animateOnce="true"
+                key={idx}
+              >
+                <li className="skillz__item" key={idx}>
+                  <img className="skillz__img" src={item[1]} />
+                  <h3 className="skillz__title">{item[0]}</h3>
+                </li>
+              </AnimationOnScroll>
             );
           })}
         </ul>

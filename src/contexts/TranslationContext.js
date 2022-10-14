@@ -42,8 +42,8 @@ export const headerMenu = {
 export const lead = {
   ru: {
     greet: "Привет! Меня зовут",
-    name: "Сулханов Илья, и я - ",
-    header: "Фронтенд Разработчик",
+    name: "Сулханов Илья,",
+    header: "Фронтенд Разработчик,",
     description:
       "Который сейчас находится в поиске работы. Ниже вы найдете описание моих навыков, опыта и контакты для связи.",
     button: "Скачать Резюме",
@@ -290,7 +290,12 @@ export const contact = {
     checkMine: "Or check my profiles at:",
   },
 };
-
+export const contactLinks = [
+  { title: "telegram", link: "https://t.me/topsykrets" },
+  { title: "email", link: "mailto:ilya.sulkhanov@gmail.com" },
+  { title: "git", link: "https://github.com/Iluxmas" },
+  { title: "linked", link: "https://www.linkedin.com/in/ilya-super-frontend" },
+];
 // ===== 7th block ======== FOOTER
 export const footer = {
   ru: "",

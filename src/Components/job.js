@@ -4,7 +4,7 @@ import Close from "../images/plus.svg";
 export default function Job({ data }) {
   const descriptionHeight = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
-  const { pos, logo, company, dates, resp } = data;
+  const { pos, company, dates, resp } = data;
 
   function handleOpenDescr(event) {
     setIsOpen(() => !isOpen);

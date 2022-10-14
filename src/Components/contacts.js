@@ -1,11 +1,13 @@
 import React, { useContext } from "react";
-import { contact, TranslationContext } from "../contexts/TranslationContext";
-
+import {
+  contact,
+  contactLinks,
+  TranslationContext,
+} from "../contexts/TranslationContext";
+import Logo from "../images/logo.png";
+import { AnimationOnScroll } from "react-animation-on-scroll";
+import "animate.css";
 import "./styles/contacts.css";
-import TeleIcon from "../images/social/social_tele.png";
-import GitIcon from "../images/social/social_github.png";
-import LinkedIcon from "../images/social/social_linked.png";
-import MailIcon from "../images/social/social_mail.png";
 
 export default function Contacts() {
   const lang = useContext(TranslationContext);
@@ -14,101 +16,37 @@ export default function Contacts() {
     <section className="contacts" id="__contacts">
       <div className="contacts__container">
         <h2 className="_section__header _huge">
-          #<span className="_accent">{contact[lang].header}</span>.
+          <span className="_accent">#</span>
+          {contact[lang].header}
+          <span className="_accent">.</span>
         </h2>
-        <div className="contacts__main">
-          <div className="contacts__social">
-            <div className="contacts__social-subsection">
-              <p className="contacts__subheader">{contact[lang].location}</p>
-              <ul className="contacts__social-list">
-                <li className="contacts__social-item">
-                  <div className="contacts__social-icon location"></div>
-                  <span className="contacts__social-location">
-                    {contact[lang].place}
-                  </span>
-                </li>
-              </ul>
-            </div>
-            <div className="contacts__social-subsection">
-              <p className="contacts__subheader">{contact[lang].writeMe}</p>
-              <ul className="contacts__social-list">
-                <li className="contacts__social-item">
-                  <div className="contacts__social-icon telegram"></div>
-                  <a
-                    className="contacts__social-link"
-                    href="https://t.me/topsykrets"
-                    target="_blank"
-                  >
-                    Telegram
-                  </a>
-                </li>
-                <li className="contacts__social-item">
-                  <div className="contacts__social-icon email"></div>
-                  <a
-                    className="contacts__social-link"
-                    href="mailto:ilya.sulkhanov@gmail.com"
-                    target="_blank"
-                  >
-                    Email
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="contacts__social-subsection">
-              <p className="contacts__subheader">{contact[lang].checkMine}</p>
-              <ul className="contacts__social-list">
-                <li className="contacts__social-item">
-                  <div className="contacts__social-icon git"></div>
-                  <a
-                    className="contacts__social-link"
-                    href="https://github.com/Iluxmas"
-                    target="_blank"
-                  >
-                    GitHub
-                  </a>
-                </li>
-                <li className="contacts__social-item">
-                  <div className="contacts__social-icon  linked"></div>
-                  <a
-                    className="contacts__social-link"
-                    href="https://www.linkedin.com/in/ilya-super-frontend/"
-                    target="_blank"
-                  >
-                    LinkedIn
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="contacts__form-container">
-            <form className="contact__form">
-              <input
-                type="text"
-                className="contacts__input contacts__input_type_name"
-                placeholder="First Name"
-              ></input>
-              <input
-                type="text"
-                className="contacts__input contacts__input_type_lastname"
-                placeholder="Last Name"
-              ></input>
-              <input
-                type="email"
-                className="contacts__input contacts__input_type_email"
-                placeholder="Email Address"
-              ></input>
-              <textarea
-                className="contacts__input contacts__input_type_message"
-                placeholder="Your Message"
-                cols="20"
-                rows="6"
-              ></textarea>
-              <button className="contacts__submit-btn" disabled>
-                Submit
-              </button>
-            </form>
-            <div className="contacts__undercontruction"></div>
-          </div>
+        <p className="contacts__subheader">{contact[lang].subheader}</p>
+
+        <img className="contacts__logo" src={Logo} />
+        <div className="contacts__social2">
+          <ul className="contacts__social-list">
+            {contactLinks.map((item, idx) => {
+              return (
+                <AnimationOnScroll
+                  animateIn="animate__heartBeat"
+                  animateOnce="true"
+                  offset={150}
+                  duration={2.5}
+                  delay={100 + idx * 90}
+                  initiallyVisible={true}
+                  key={idx}
+                >
+                  <li className="contacts__social-item" key={idx}>
+                    <a
+                      className={`contacts__social-link ${item.title}`}
+                      href={item.link}
+                      target="_blank"
+                    ></a>
+                  </li>
+                </AnimationOnScroll>
+              );
+            })}
+          </ul>
         </div>
       </div>
     </section>

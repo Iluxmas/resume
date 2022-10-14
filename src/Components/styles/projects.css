@@ -133,6 +133,12 @@
 .gallery__item-title {
   font-size: 24px;
   font-weight: 400;
+  /* text-decoration: underline; */
+  border-bottom: 1px solid #232323;
   margin: 0;
   z-index: 10;
+}
+.gallery__item-title:hover {
+  border-bottom: 1px solid #8822aa;
+  color: #8822aa;
 }

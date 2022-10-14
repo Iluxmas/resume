@@ -37,9 +37,9 @@ body {
   display: block;
   width: auto;
   float: right;
-  height: 34px;
+  height: 32px;
   position: fixed;
-  bottom: 23px;
+  bottom: 13px;
   z-index: 999;
   transition: opacity 0.4s ease-in-out, visibility 0.4s;
   border-radius: 50%;
@@ -55,8 +55,8 @@ body {
 .ui-link {
   cursor: pointer;
   display: inline-block;
-  height: 34px;
-  width: 34px;
+  height: 32px;
+  width: 32px;
   background: #ff8800;
   background-size: 70%;
   background-repeat: no-repeat;
@@ -87,7 +87,7 @@ body {
   line-height: 32px;
   margin-bottom: 0;
   text-align: center;
-  opacity: 0.1;
+  opacity: 1;
   z-index: 7;
 }
 ._invert {
@@ -196,7 +196,7 @@ body {
 }
 @media (min-width: 768px) {
   ._container-xtra {
-    margin: 0 calc(24 * (100vw - 768px) / 672);
+    /* margin: 0 calc(24 * (100vw - 768px) / 672); */
   }
 }
 @media (min-width: 1440px) {

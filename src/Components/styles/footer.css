@@ -2,8 +2,8 @@
   background-color: #232323;
 }
 .footer__container {
-  height: 80px;
-  padding: 16px 30px;
+  height: 60px;
+  padding: 14px 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,7 +18,7 @@
 }
 @media (min-width: 460px) {
   .footer__container {
-    padding: 20px 40px;
+    padding: 18px 40px;
   }
   .footer__copyright {
     margin: 0;

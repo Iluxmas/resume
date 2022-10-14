@@ -17,7 +17,11 @@ export default function Experience() {
       {(lang) => (
         <section className="exp" id="__experience">
           <div className="exp_top_bcg"></div>
-          <AnimationOnScroll animateIn="animate__slideInUp" animateOnce="true">
+          <AnimationOnScroll
+            animateIn="animate__slideInUp"
+            animateOnce="true"
+            offset={200}
+          >
             <div className="exp__container _container _container-wide">
               <h2 className="_section__header _huge">
                 <span className="_accent">#</span>
@@ -31,7 +35,11 @@ export default function Experience() {
               </div>
             </div>
           </AnimationOnScroll>
-          <AnimationOnScroll animateIn="animate__slideInUp" animateOnce="true">
+          <AnimationOnScroll
+            animateIn="animate__slideInUp"
+            animateOnce="true"
+            offset={220}
+          >
             <div className="_container-narrow exp__known-companies ">
               <h2 className="_section__header _huge">
                 <span className="_accent">#</span>

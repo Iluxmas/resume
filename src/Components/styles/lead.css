@@ -2,24 +2,26 @@
   margin: 0 auto;
   background-image: url("../../images/lead_bcg_frontend4.png");
   background-size: 127%;
-  background-position: 50% 15%;
+  background-position: 50% 25%;
   background-repeat: no-repeat;
 }
 /* LEAD BLOCK */
 .lead__container {
-  /* max-width: 1280px; */
   height: 100vh;
+  min-height: 440px;
+  max-height: 600px;
   position: relative;
   display: flex;
   flex-direction: column;
   padding: 12px 14px;
   align-items: flex-start;
   justify-content: center;
+  overflow: hidden;
 }
 @media (min-width: 500px) {
   .lead__container {
-    /* max-width: 1280px; */
-    height: 480px;
+    /* height: 480px; */
+    max-height: 800px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -33,53 +35,65 @@
 @media (min-width: 768px) {
   .lead__container {
     padding: 10px 24px 10px;
-    height: 570px;
+    /* margin: 0 auto; */
+    /* height: 570px; */
   }
 }
 @media (min-width: 1024px) {
   .lead__container {
     padding: 20px 22px;
-    height: 620px;
+    /* height: 620px; */
   }
 }
 @media (min-width: 1280px) {
   .lead__container {
     padding: 30px 26px;
-    height: 700px;
+    /* height: 700px; */
   }
 }
+@media (min-width: 1440px) {
+  .lead__container {
+    overflow: visible;
+  }
+}
+
 .lead__decor_oval {
   position: absolute;
-  height: 45%;
-  width: 37%;
-  z-index: 5;
+  height: 160px;
+  width: 155px;
+  max-height: 460px;
+  max-width: 450px;
+  z-index: 2;
   background: url("../../images/decor/VectorLeadOval.png");
   background-repeat: no-repeat;
-  background-size: 100%;
-  right: 0;
-  top: 120px;
-  animation: 60s 3s infinite breathing;
+  background-size: contain;
+  right: 20%;
+  top: 20%;
+  /* animation: 60s 3s infinite breathing; */
+}
+
+@media (min-width: 440px) {
+  .lead__decor_oval {
+    height: 43%;
+    width: 39%;
+    right: 10%;
+    top: 120px;
+  }
 }
 @media (min-width: 500px) {
   .lead__decor_oval {
-    height: 58%;
-    width: 38%;
-    background: url("../../images/decor/VectorLeadOval.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    right: 20px;
-    top: 140px;
+    height: 46%;
+    width: 44%;
+    right: 10%;
+    top: 120px;
   }
 }
 @media (min-width: 768px) {
   .lead__decor_oval {
-    height: 64%;
+    height: 55%;
     width: 42%;
-    background: url("../../images/decor/VectorLeadOval.png");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    right: 30px;
-    top: 190px;
+    right: 8%;
+    top: 170px;
   }
 }
 @media (min-width: 1024px) {
@@ -87,9 +101,8 @@
     height: 60%;
     width: 42%;
     max-width: 460px;
-
-    right: 20px;
-    top: 190px;
+    /* right: 20px; */
+    top: 180px;
   }
 }
 @media (min-width: 1280px) {
@@ -101,18 +114,26 @@
     top: 160px;
   }
 }
-.lead__decor_arrow {
-  position: absolute;
-  height: 200px;
-  width: 60%;
-  left: 85px;
-  bottom: -15%;
-  background: url("../../images/decor/Vector1.png");
-  background-repeat: no-repeat;
-  background-size: 300px 150px;
-  z-index: 15;
-  opacity: 0;
-  animation: 2s 2.5s 1 forwards appear;
+/*.lead__decor_arrow {
+  display: none;
+}
+
+@media (min-width: 440px) {
+  .lead__decor_arrow {
+    display: block;
+    position: absolute;
+    height: 200px;
+    width: 60%;
+    left: 85px;
+    top: auto;
+    bottom: 0;
+    background: url("../../images/decor/Vector1.png");
+    background-repeat: no-repeat;
+    background-size: 300px 150px;
+    opacity: 0;
+    z-index: 10;
+    animation: 2s 3s 1 forwards appear;
+  }
 }
 @media (min-width: 500px) {
   .lead__decor_arrow {
@@ -121,8 +142,6 @@
     background-size: 100% 100%;
     bottom: 8px;
     z-index: 5;
-  }
-  .lead__decor_oval {
   }
 }
 @media (min-width: 768px) {
@@ -151,13 +170,14 @@
     bottom: -20px;
     left: 105px;
   }
-}
+} */
 
 .lead__greet {
   font-weight: 500;
   font-size: 14px;
   line-height: 22px;
   margin-bottom: 12px;
+  z-index: 10;
 }
 .lead__name {
   font-weight: 500;
@@ -289,11 +309,11 @@
 
 .lead__button {
   display: inline-block;
-  width: 170px;
-  height: 46px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 50px;
+  width: 160px;
+  height: 44px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 43px;
   text-align: center;
   text-decoration: none;
   background-color: #8822aa;
@@ -303,19 +323,48 @@
   transition: background-color 0.15s, color 0.15s;
   z-index: 11;
 }
-@media (min-width: 500px) {
-  .lead__button {
-    width: 180px;
-    height: 50px;
-    font-size: 18px;
-    line-height: 50px;
-    border-radius: 6px;
+@media (min-width: 440px) {
+  .lead__description::after {
+    content: "";
+    position: absolute;
+    background: url("../../images/decor/Vector1.png");
+    background-repeat: no-repeat;
+    background-size: 340px 170px;
+    bottom: -140px;
+    left: 75px;
+    height: 170px;
+    width: 340px;
+    opacity: 0;
+    animation: 2s 3s 1 forwards appear;
+  }
+}
+@media (min-width: 768px) {
+  .lead__description::after {
+    content: "";
+    position: absolute;
+    background-size: 500px 250px;
+    bottom: -180px;
+    height: 250px;
+    width: 500px;
+  }
+}
+@media (min-width: 1024px) {
+  .lead__description::after {
+    content: "";
+    position: absolute;
+    background-size: 750px 375px;
+    bottom: -235px;
+    height: 375px;
+    width: 750px;
   }
 }
 @media (min-width: 1024px) {
   .lead__button {
-    width: 210px;
-    height: 54px;
+    width: 180px;
+    height: 50px;
+    font-size: 18px;
+    line-height: 48px;
+    border-radius: 6px;
   }
 }
 .lead__button:hover {
@@ -323,31 +372,37 @@
 
   color: #8822aa;
 }
-
 .lead__photo {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  height: 70%;
-  width: 33%;
-  padding-top: 20px;
-  margin-top: -20px;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(245, 246, 252, 0),
-      #f5f5f5 90%
-    ),
-    url("../../images/kirya.png");
-  background-size: cover;
-  background-position: center;
-  z-index: 7;
-  /* opacity: 0.1; */
+  display: none;
+}
+@media (min-width: 440px) {
+  .lead__photo {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 70%;
+    width: 33%;
+    padding-top: 20px;
+    margin-top: -20px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(245, 246, 252, 0),
+        #f5f5f5 90%
+      ),
+      url("../../images/kirya.png");
+    background-size: cover;
+    background-position: center;
+    z-index: 7;
+    /* opacity: 0.1; */
+  }
 }
 @media (min-width: 768px) {
   .lead__photo {
     height: 540px;
     width: 260px;
     right: 5%;
+    z-index: 17;
   }
 }
 @media (min-width: 1024px) {
@@ -378,21 +433,25 @@
 }
 @keyframes breathing {
   0% {
-    transform: rotate(0) scaleX(1) scaleY(1);
+    transform: rotate(0) scaleX(1) scaleY(1) translate(-5px, 5px) skew(0, 0);
   }
   20% {
-    transform: rotate(-45deg) scaleX(1.26) scaleY(0.87);
+    transform: rotate(-5deg) scaleX(1.16) scaleY(0.87) translate(-9px, 3px)
+      skew(3deg, -3deg);
   }
   40% {
-    transform: rotate(-90deg) scaleX(0.95) scaleY(0.77);
+    transform: rotate(-10deg) scaleX(0.95) scaleY(0.77) translate(-14px, 13px)
+      skew(6deg, -10deg);
   }
   60% {
-    transform: rotate(-15deg) scaleX(0.77) scaleY(0.96);
+    transform: rotate(-5deg) scaleX(0.77) scaleY(0.96) translate(-9px, 9px)
+      skew(-6deg, -2deg);
   }
   80% {
-    transform: rotate(35deg) scaleX(1.07) scaleY(1.15);
+    transform: rotate(10deg) scaleX(1.07) scaleY(1.15) translate(-5px, 5px)
+      skew(-9deg, 8deg);
   }
   100% {
-    transform: rotate(0) scaleX(1) scaleY(1);
+    transform: rotate(0) scaleX(1) scaleY(1) translate(0, 0) skew(0, 0);
   }
 }

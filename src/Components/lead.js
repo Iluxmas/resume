@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { lead, TranslationContext } from "../contexts/TranslationContext";
-import { AnimationOnScroll } from "react-animation-on-scroll";
 import "animate.css";
 import "./styles/lead.css";
 
@@ -12,7 +11,6 @@ export default function Lead() {
       <div className="lead__container _container _container-xtra ">
         <div className="lead__decor_arrow"></div>
         <div className="lead__decor_oval"></div>
-
         <p className="lead__greet animate__animated animate__fadeInLeft faster animate__delay-1s">
           {lead[lang].greet}
         </p>
