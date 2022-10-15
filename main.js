@@ -837,7 +837,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Main() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_education__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_skills__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_aboutme__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_contacts__WEBPACK_IMPORTED_MODULE_7__["default"], null));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_education__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_skills__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_projects__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_aboutme__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_contacts__WEBPACK_IMPORTED_MODULE_7__["default"], null));
 }
 
 /***/ }),
@@ -899,8 +899,8 @@ function Projects() {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     var tagsArray = ["all"];
 
-    for (var i = 0; i < _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.projects[lang].data.length; i++) {
-      tagsArray.push.apply(tagsArray, _toConsumableArray(_contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.projects[lang].data[i].tags));
+    for (var i = 0; i < _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.projects.data.length; i++) {
+      tagsArray.push.apply(tagsArray, _toConsumableArray(_contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.projects.data[i].tags));
     }
 
     setTags(_toConsumableArray(new Set(tagsArray)));
@@ -910,10 +910,10 @@ function Projects() {
     setFilter(tag);
   }
 
-  var visibleProjects = _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.projects[lang].data;
+  var visibleProjects = _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.projects.data;
 
   if (filter !== "all") {
-    visibleProjects = _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.projects[lang].data.filter(function (item) {
+    visibleProjects = _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.projects.data.filter(function (item) {
       return item.tags.includes(filter);
     });
   } // ДЕЛАЕМ ПО ШИРИНЕ КАК ЛИД
@@ -926,7 +926,7 @@ function Projects() {
     className: "_section__header _huge"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
     className: "_accent"
-  }, "#"), _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.projects[lang].header, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+  }, "#"), _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.projects.header[lang], /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
     className: "_accent"
   }, ".")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "gallery__container"
@@ -1283,52 +1283,47 @@ var exp = {
 var expLogos = [_images_comp_logos_stark_png__WEBPACK_IMPORTED_MODULE_10__, _images_comp_logos_quiksilver_png__WEBPACK_IMPORTED_MODULE_12__, _images_comp_logos_apple_png__WEBPACK_IMPORTED_MODULE_7__, _images_comp_logos_microsoft_png__WEBPACK_IMPORTED_MODULE_8__, _images_comp_logos_google_png__WEBPACK_IMPORTED_MODULE_9__, _images_comp_logos_umbrella_png__WEBPACK_IMPORTED_MODULE_11__]; // ===== 4th block ======== PROJECTS
 
 var projects = {
-  ru: {
-    header: "Проекты",
-    data: [{
-      id: 1,
-      image: _images_projects_todo_app_JPG__WEBPACK_IMPORTED_MODULE_2__,
-      title: "Todo manager",
-      description: "Application for managing todo list",
-      tags: ["React", "Webpack", "JavaScript"],
-      link: "https://github.com/Iluxmas/To-do-app"
-    }, {
-      id: 2,
-      image: _images_projects_mesto_app_JPG__WEBPACK_IMPORTED_MODULE_4__,
-      title: "Mesto app",
-      description: "Project theme was photo social network. Template was taken from Figma. Page is adaptive, size and position of elements depends on screen size. ApiService class component responsible for server-client interaction.",
-      tags: ["HTML", "CSS", "Webpack", "JavaScript", "API"],
-      link: "https://github.com/Iluxmas/mesto"
-    }, {
-      id: 3,
-      image: _images_projects_how_to_learn_JPG__WEBPACK_IMPORTED_MODULE_3__,
-      title: "How-to-learn",
-      description: "Project theme was Education Techniques. To create this page I implemented some new knowledges about markup language and css flex. Files organization was made according to BEM nested methodology. Language switch was made with JS.",
-      tags: ["HTML", "CSS", "JavaScript"],
-      link: "https://github.com/Iluxmas/how-to-learn"
-    }, {
-      id: 4,
-      image: _images_projects_russian_travel_JPG__WEBPACK_IMPORTED_MODULE_5__,
-      title: "Russian travel",
-      description: "Project theme was russian travel, template was taken from Figma. Page is adaptive, size and position of elements depends on screen size through media queries. Grid and flex both were used. For styles SCSS was used with further conversion to css.",
-      tags: ["HTML", "CSS", "SCSS"],
-      link: "https://github.com/Iluxmas/russian-travel"
-    }, {
-      id: 5,
-      image: _images_projects_star_db_JPG__WEBPACK_IMPORTED_MODULE_6__,
-      title: "Star Wars DB",
-      description: "Simple DB based on SWAPI",
-      tags: ["React", "JavaScript", "API"],
-      link: "https://github.com/Iluxmas/Starwars-DB"
-    }, {
-      id: 6,
-      image: _images_projects_mesto_app_JPG__WEBPACK_IMPORTED_MODULE_4__,
-      title: "Mesto React",
-      description: "React ported version of Mesto ",
-      tags: ["React", "JavaScript", "API"],
-      link: "https://github.com/Iluxmas/mesto"
-    }]
-  }
+  header: {
+    ru: "Проекты",
+    en: "Projects"
+  },
+  data: [{
+    id: 1,
+    image: _images_projects_todo_app_JPG__WEBPACK_IMPORTED_MODULE_2__,
+    title: "Todo manager",
+    tags: ["React", "Webpack", "JavaScript"],
+    link: "https://github.com/Iluxmas/To-do-app"
+  }, {
+    id: 2,
+    image: _images_projects_mesto_app_JPG__WEBPACK_IMPORTED_MODULE_4__,
+    title: "Mesto app",
+    tags: ["HTML", "CSS", "Webpack", "JavaScript", "API"],
+    link: "https://github.com/Iluxmas/mesto"
+  }, {
+    id: 3,
+    image: _images_projects_how_to_learn_JPG__WEBPACK_IMPORTED_MODULE_3__,
+    title: "How-to-learn",
+    tags: ["HTML", "CSS", "JavaScript"],
+    link: "https://github.com/Iluxmas/how-to-learn"
+  }, {
+    id: 4,
+    image: _images_projects_russian_travel_JPG__WEBPACK_IMPORTED_MODULE_5__,
+    title: "Russian travel",
+    tags: ["HTML", "CSS", "SCSS"],
+    link: "https://github.com/Iluxmas/russian-travel"
+  }, {
+    id: 5,
+    image: _images_projects_star_db_JPG__WEBPACK_IMPORTED_MODULE_6__,
+    title: "Star Wars DB",
+    tags: ["React", "JavaScript", "API"],
+    link: "https://github.com/Iluxmas/Starwars-DB"
+  }, {
+    id: 6,
+    image: _images_projects_mesto_app_JPG__WEBPACK_IMPORTED_MODULE_4__,
+    title: "Mesto React",
+    tags: ["React", "JavaScript", "API"],
+    link: "https://github.com/Iluxmas/mesto"
+  }]
 }; // ===== 5th block ======== ANOUTME
 
 var about = {
@@ -1340,7 +1335,7 @@ var about = {
   en: {
     header: "About Me",
     title: "Think BIG",
-    text: "I am Frontend Developer and since 2022 based in Istanbul, Turkey. My background is a chemical technology, job at Siegwerk, world's leading ink supplier, gave me great experience in project managing, product development and business oriented thinking. But, since my big interest in maths and phisics, I was always dreaming about coding, programming was};always a part of me. I choose Frontend cause I have great sense of beauty. Day-to-day websurfing just show that good FE developers is still in need. Also I love challenges and to solve puzzles, because don't like questions without an answer. I love to pay attention to the details, hope you noticed it while exloring this website. I am really happy that I can bring my vision, skills and experience to the WEB"
+    text: "I am Frontend Developer and since 2022 based in Istanbul, Turkey. My background is a chemical technology, job at Siegwerk, world's leading ink supplier, gave me great experience in project managing, product development and business oriented thinking. But, since my big interest in maths and phisics, I was always dreaming about coding, programming always was a part of me. I choose Frontend cause I have great sense of beauty. Day-to-day websurfing just show that good FE developers is still in need. Also I love challenges and to solve puzzles, because don't like questions without an answer. I love to pay attention to the details, hope you noticed it while exloring this website. I am really happy that I can bring my vision, skills and experience to the WEB"
   }
 };
 var aboutsThis = {}; // ===== 6th block ======== CONTACT
