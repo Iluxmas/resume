@@ -184,62 +184,51 @@ export const expLogos = [stark, quiksilver, apple, microsoft, google, umbrella];
 
 // ===== 4th block ======== PROJECTS
 export const projects = {
-  ru: {
-    header: "Проекты",
-    data: [
-      {
-        id: 1,
-        image: ThumbTodo,
-        title: "Todo manager",
-        description: "Application for managing todo list",
-        tags: ["React", "Webpack", "JavaScript"],
-        link: "https://github.com/Iluxmas/To-do-app",
-      },
-      {
-        id: 2,
-        image: ThumbMesto,
-        title: "Mesto app",
-        description:
-          "Project theme was photo social network. Template was taken from Figma. Page is adaptive, size and position of elements depends on screen size. ApiService class component responsible for server-client interaction.",
-        tags: ["HTML", "CSS", "Webpack", "JavaScript", "API"],
-        link: "https://github.com/Iluxmas/mesto",
-      },
-      {
-        id: 3,
-        image: ThumbHowto,
-        title: "How-to-learn",
-        description:
-          "Project theme was Education Techniques. To create this page I implemented some new knowledges about markup language and css flex. Files organization was made according to BEM nested methodology. Language switch was made with JS.",
-        tags: ["HTML", "CSS", "JavaScript"],
-        link: "https://github.com/Iluxmas/how-to-learn",
-      },
-      {
-        id: 4,
-        image: ThumbRusTravel,
-        title: "Russian travel",
-        description:
-          "Project theme was russian travel, template was taken from Figma. Page is adaptive, size and position of elements depends on screen size through media queries. Grid and flex both were used. For styles SCSS was used with further conversion to css.",
-        tags: ["HTML", "CSS", "SCSS"],
-        link: "https://github.com/Iluxmas/russian-travel",
-      },
-      {
-        id: 5,
-        image: ThumbStardb,
-        title: "Star Wars DB",
-        description: "Simple DB based on SWAPI",
-        tags: ["React", "JavaScript", "API"],
-        link: "https://github.com/Iluxmas/Starwars-DB",
-      },
-      {
-        id: 6,
-        image: ThumbMesto,
-        title: "Mesto React",
-        description: "React ported version of Mesto ",
-        tags: ["React", "JavaScript", "API"],
-        link: "https://github.com/Iluxmas/mesto",
-      },
-    ],
-  },
+  header: { ru: "Проекты", en: "Projects" },
+  data: [
+    {
+      id: 1,
+      image: ThumbTodo,
+      title: "Todo manager",
+      tags: ["React", "Webpack", "JavaScript"],
+      link: "https://github.com/Iluxmas/To-do-app",
+    },
+    {
+      id: 2,
+      image: ThumbMesto,
+      title: "Mesto app",
+      tags: ["HTML", "CSS", "Webpack", "JavaScript", "API"],
+      link: "https://github.com/Iluxmas/mesto",
+    },
+    {
+      id: 3,
+      image: ThumbHowto,
+      title: "How-to-learn",
+      tags: ["HTML", "CSS", "JavaScript"],
+      link: "https://github.com/Iluxmas/how-to-learn",
+    },
+    {
+      id: 4,
+      image: ThumbRusTravel,
+      title: "Russian travel",
+      tags: ["HTML", "CSS", "SCSS"],
+      link: "https://github.com/Iluxmas/russian-travel",
+    },
+    {
+      id: 5,
+      image: ThumbStardb,
+      title: "Star Wars DB",
+      tags: ["React", "JavaScript", "API"],
+      link: "https://github.com/Iluxmas/Starwars-DB",
+    },
+    {
+      id: 6,
+      image: ThumbMesto,
+      title: "Mesto React",
+      tags: ["React", "JavaScript", "API"],
+      link: "https://github.com/Iluxmas/mesto",
+    },
+  ],
 };
 
 // ===== 5th block ======== ANOUTME
@@ -252,7 +241,7 @@ export const about = {
   en: {
     header: "About Me",
     title: "Think BIG",
-    text: "I am Frontend Developer and since 2022 based in Istanbul, Turkey. My background is a chemical technology, job at Siegwerk, world's leading ink supplier, gave me great experience in project managing, product development and business oriented thinking. But, since my big interest in maths and phisics, I was always dreaming about coding, programming was};always a part of me. I choose Frontend cause I have great sense of beauty. Day-to-day websurfing just show that good FE developers is still in need. Also I love challenges and to solve puzzles, because don't like questions without an answer. I love to pay attention to the details, hope you noticed it while exloring this website. I am really happy that I can bring my vision, skills and experience to the WEB",
+    text: "I am Frontend Developer and since 2022 based in Istanbul, Turkey. My background is a chemical technology, job at Siegwerk, world's leading ink supplier, gave me great experience in project managing, product development and business oriented thinking. But, since my big interest in maths and phisics, I was always dreaming about coding, programming always was a part of me. I choose Frontend cause I have great sense of beauty. Day-to-day websurfing just show that good FE developers is still in need. Also I love challenges and to solve puzzles, because don't like questions without an answer. I love to pay attention to the details, hope you noticed it while exloring this website. I am really happy that I can bring my vision, skills and experience to the WEB",
   },
 };
 export const aboutsThis = {};

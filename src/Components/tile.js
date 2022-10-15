@@ -1,4 +1,5 @@
 import React from "react";
+
 export default function Tile(props) {
   const { image, title, link } = props.content;
 

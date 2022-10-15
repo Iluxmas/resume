@@ -1,6 +1,6 @@
 {
   "name": "personal_page",
-  "homepage": "https://iluxmas.github.io/resume/",
+  "homepage": "https://iluxmas.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

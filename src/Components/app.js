@@ -59,7 +59,7 @@ export default function App() {
           <Header />
           <Main />
           <Footer />
-          <div className={backtopStyle}>
+          {/* <div className={backtopStyle}>
             <a className="go-top ui-link" href="#"></a>
           </div>
           <div className={downloadCVStyle}>
@@ -67,7 +67,7 @@ export default function App() {
               className="download-cv ui-link"
               href="https://github.com/Iluxmas/resume/raw/master/src/files/Sulkhanov_Ilya_resume_final_RU.pdf"
             ></a>
-          </div>
+          </div> */}
         </div>
       </TranslationContext.Provider>
     </ThemeContext.Provider>
