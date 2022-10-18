@@ -5838,6 +5838,7 @@
 .contacts__social-link:focus {
   cursor: pointer;
   border-radius: 50%;
+  outline-style: none;
   outline: 2px solid #8822aa;
 }
 
@@ -6282,6 +6283,11 @@ body {
   border-radius: 50%;
 }
 
+.ui-link:focus {
+  outline-style: none;
+  outline: none;
+}
+
 @media (min-width: 768px) {
   .back-top {
     bottom: 13px;
@@ -6403,4 +6409,4 @@ body {
   visibility: hidden;
 }
 
-/*# sourceMappingURL=main.72a2a15dcff953171c0e.css.map*/
+/*# sourceMappingURL=main.d0703bf808be041bf026.css.map*/
