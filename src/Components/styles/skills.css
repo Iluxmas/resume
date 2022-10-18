@@ -103,16 +103,16 @@
   background: url("../../images/decor/Ornament_16.png");
   background-size: 100%;
   background-repeat: no-repeat;
-  left: 3px;
-  top: -50px;
-  opacity: 0.7;
+  left: 23px;
+  top: -45px;
+  opacity: 0.6;
 }
 @media (min-width: 768px) {
   .skills__decor_dots1 {
     height: 240px;
     width: 60px;
-    left: 3px;
-    top: -100px;
+    left: 23px;
+    top: -70px;
   }
 }
 

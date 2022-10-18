@@ -10,10 +10,10 @@ import Contacts from "./contacts";
 export default function Main() {
   return (
     <>
-      {/* <Lead /> */}
+      <Lead />
       <Education />
       <Skills />
-      {/* <Experience /> */}
+      <Experience />
       <Projects />
       <AboutMe />
       <Contacts />

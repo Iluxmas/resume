@@ -9,7 +9,7 @@ import "../vendors/normalize.css";
 import "./styles/app.css";
 
 export default function App() {
-  const [lang, setLang] = useState("ru");
+  const [lang, setLang] = useState("en");
   const [theme, setTheme] = useState("dark");
   const [currentScroll, setCurrentScroll] = useState(0);
 
@@ -59,7 +59,7 @@ export default function App() {
           <Header />
           <Main />
           <Footer />
-          {/* <div className={backtopStyle}>
+          <div className={backtopStyle}>
             <a className="go-top ui-link" href="#"></a>
           </div>
           <div className={downloadCVStyle}>
@@ -67,7 +67,7 @@ export default function App() {
               className="download-cv ui-link"
               href="https://github.com/Iluxmas/resume/raw/master/src/files/Sulkhanov_Ilya_resume_final_RU.pdf"
             ></a>
-          </div> */}
+          </div>
         </div>
       </TranslationContext.Provider>
     </ThemeContext.Provider>

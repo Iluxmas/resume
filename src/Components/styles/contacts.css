@@ -121,11 +121,13 @@
   box-sizing: content-box;
   border: 3px solid rgba(255, 255, 255, 0);
 }
-.contacts__social-link:hover {
+.contacts__social-link:hover,
+.contacts__social-link:focus {
   cursor: pointer;
   border-radius: 50%;
   outline: 2px solid #8822aa;
 }
+
 .git {
   background-image: url("../../images/social/social_github.png");
 }

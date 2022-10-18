@@ -90,7 +90,7 @@ export const education = {
     studies: [
       {
         place: "Yandex.Practicum",
-        dep: "Yandex , Frontend Developer",
+        dep: "Yandex, Frontend Developer",
         dates: "04.2022 - 01.2023",
       },
       {
@@ -100,7 +100,7 @@ export const education = {
       },
       {
         place: "Udemy",
-        dep: "Ivan Petrychenko/, JavaScript + React Complete Course",
+        dep: "Ivan Petrychenko, JavaScript + React Complete Course",
         dates: "02.2022 - 03.2022",
       },
       {
@@ -121,10 +121,11 @@ export const skills = {
 export const exp = {
   ru: {
     header: "Опыт работы",
+    refs: "Рекомендации",
+    subrefs: "Ниже логотипы классных компаний, с которыми я пока не работал.",
     data: [
       {
         pos: "Фронтенд разработчик (обучение)",
-        logo: Logo,
         company: "Я.Практикум",
         dates: "04.2022 - по н. в.",
         resp: [
@@ -137,21 +138,19 @@ export const exp = {
       },
       {
         pos: "Менеджер технологической поддержки",
-        logo: Logo,
         company: "Зигверк",
         dates: "12.2020 - 07.2022",
         resp: [
           "Оказывал технологическую поддержку клиентов на территории России",
           "Вел проекты клиентов начиная с запроса и до внедрения на производстве",
           "Искал и решал причины проблем, возникающие на производстве клиента",
-          "Работал с рецептурами, подбирал альтернативное сырье, проведил комплексные тесты красок",
+          "Работал с рецептурами, подбирал альтернативное сырье, проводил комплексные тесты красок",
           "Взаимодействовал с технологической командой и исследовательской лабораторией в Германии",
           "Отвечал за внедрение новых продуктов на российский рынок",
         ],
       },
       {
         pos: "Химик // Старший Химик",
-        logo: Logo,
         company: "Зигверк",
         dates: "05.2017 - 12.2020",
         resp: [
@@ -165,7 +164,6 @@ export const exp = {
       },
       {
         pos: "Научный сотрудник",
-        logo: Logo,
         company: "ФГУП Вимс",
         dates: "10.2011 - 05.2017",
         resp: [
@@ -174,10 +172,62 @@ export const exp = {
         ],
       },
     ],
-    refs: "Рекомендации",
-    subrefs: "Ниже логотипы классных компаний, с которыми я пока не работал.",
   },
-  en: [],
+  en: {
+    header: "Experience",
+    refs: "References",
+    subrefs: "Cool companies I haven't worked with yet",
+    data: [
+      {
+        pos: "Frontend Developer (education)",
+        company: "Ya.Practicum",
+        dates: "04.2022 - current",
+        resp: [
+          "Created pages using HTML and CSS",
+          "Made pages responsive and adaptive using css flex and grid",
+          "Used JavaScript for applications logic ",
+          "Set up client-server interaction via REST API",
+          "Refactored applications to React",
+        ],
+      },
+      {
+        pos: "Account technology manager",
+        logo: Logo,
+        company: "Siegwerk",
+        dates: "12.2020 - 07.2022",
+        resp: [
+          "Was responsible for regional clients support",
+          "Managed customer's projects from processing of request to implementing in production",
+          "Searched causes and solved problems appeared on client production site",
+          "Worked with recipies, searched for alternative raw materials, performed complex tests of inks",
+          "Cooperated with technology team and laboratory in Germany",
+          "Implemented new products on local market",
+        ],
+      },
+      {
+        pos: "Chemist // Senior Chemist",
+        logo: Logo,
+        company: "Siegwerk",
+        dates: "05.2017 - 12.2020",
+        resp: [
+          "Have created and adjusted recipes of ink and lacquers under customer needs",
+          "Planned and performed complex tests using standard company methodics, with result evaluation and reporting",
+          "Mentored newbie laboratory staff",
+          "Controlled laboratory functioning in terms of avaliable consumables, cleanliness and order",
+        ],
+      },
+      {
+        pos: "Science Researcher",
+        logo: Logo,
+        company: "FGUP Vims",
+        dates: "10.2011 - 05.2017",
+        resp: [
+          "Worked in team responsible for methodics development and samples analisys",
+          "Participated in writing of science articles",
+        ],
+      },
+    ],
+  },
 };
 
 export const expLogos = [stark, quiksilver, apple, microsoft, google, umbrella];
@@ -236,12 +286,12 @@ export const about = {
   ru: {
     header: "Обо мне",
     title: `Мысли ШИРЕ`,
-    text: "Я Фронтенд Разработчик и с 2022 года нахожусь в Стамбуле, Турция. Мой бэкграунд химико-технологический, последнее место работы - в крупнейшем мировом производителе полиграфических красок - дало мне большой опыт в управлении проектами, разработке продуктов и мышление ориентированное на бизнес. Но, поскольку я очень интересовался математикой и физикой, я всегда мечтал о программировании, оно всегда было частью меня. Я выбрал фронтенд т.к. у меня развитое чувство прекрасного, ежедневно посещая различные вебсайты я вижу, что хорошие фронтенд разработчики по-прежнему требуются. Также я люблю задачи и загадки, т.к не люблю вопросы без ответа. Я люблю обращать внимание на детали, надеюсь, вы заметили это, изучая этот сайт. Я очень рад, что смогу привнести свое видение, навыки и опыт в WEB. Зимой катаюсь на сноуборде, летом на велосипеде, нравится скалолазание и люблю путешествовать, пока что 32 посещенных страны.",
+    text: "Я Фронтенд Разработчик и с 2022 года нахожусь в Мармарис, Турция. Мой бэкграунд химико-технологический, последнее место работы - в крупнейшем мировом производителе полиграфических красок - дало мне большой опыт в управлении проектами, разработке продуктов и мышление ориентированное на бизнес. Но, поскольку я очень интересовался математикой и физикой, я всегда мечтал о программировании, оно всегда было частью меня. Я выбрал фронтенд т.к. у меня развитое чувство прекрасного, ежедневно посещая различные вебсайты я вижу, что хорошие фронтенд разработчики по-прежнему требуются. Также я люблю задачи и загадки, т.к не люблю вопросы без ответа. Я люблю обращать внимание на детали, надеюсь, вы заметили это, изучая этот сайт. Я очень рад, что смогу привнести свое видение, навыки и опыт в WEB. Зимой катаюсь на сноуборде, летом на велосипеде, нравится скалолазание и люблю путешествовать, пока что 32 посещенных страны.",
   },
   en: {
     header: "About Me",
     title: "Think BIG",
-    text: "I am Frontend Developer and since 2022 based in Istanbul, Turkey. My background is a chemical technology, job at Siegwerk, world's leading ink supplier, gave me great experience in project managing, product development and business oriented thinking. But, since my big interest in maths and phisics, I was always dreaming about coding, programming always was a part of me. I choose Frontend cause I have great sense of beauty. Day-to-day websurfing just show that good FE developers is still in need. Also I love challenges and to solve puzzles, because don't like questions without an answer. I love to pay attention to the details, hope you noticed it while exloring this website. I am really happy that I can bring my vision, skills and experience to the WEB",
+    text: "I am Frontend Developer and since 2022 based in Marmaris, Turkey. My background is a chemical technology, job at Siegwerk, world's leading ink supplier, gave me great experience in project managing, product development and business oriented thinking. But, since my big interest in maths and phisics, I was always dreaming about coding, programming always was a part of me. I choose Frontend cause I have great sense of beauty. Day-to-day websurfing just show that good FE developers is still in need. Also I love challenges and to solve puzzles, because don't like questions without an answer. I love to pay attention to the details, hope you noticed it while exloring this website. I am really happy that I can bring my vision, skills and experience to the WEB",
   },
 };
 export const aboutsThis = {};

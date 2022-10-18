@@ -2,7 +2,7 @@
   border: 1px solid #232323;
   box-sizing: border-box;
   margin-bottom: -1px;
-  max-width: 1080px;
+  max-width: 980px;
   overflow: hidden;
   max-height: 50px;
   transition: max-height 0.3s ease-in;
@@ -17,80 +17,138 @@
 }
 
 .exp__head {
-  padding: 8px 8px;
+  padding: 10px 8px;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   box-sizing: border-box;
   gap: 30px;
+  font-size: 10px;
 }
-
+@media (min-width: 480px) {
+  .edu__head {
+    font-size: 12px;
+    gap: 10px;
+  }
+}
+@media (min-width: 620px) {
+  .edu__head {
+    font-size: 14px;
+    padding: 12px 10px;
+  }
+}
 @media (min-width: 768px) {
   .exp__head {
     gap: 28px;
-    padding: 10px 10px;
+    padding: 14px 12px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1024px) {
   .exp__head {
     gap: 35px;
-    padding: 10px 16px;
+    padding: 16px 16px;
   }
 }
 @media (min-width: 1180px) {
   .exp__head {
     gap: 45px;
+    padding: 16px 18px;
   }
 }
-.exp__position-control {
+.exp__text-container {
+  width: 90%;
   min-width: 110px;
+  font-size: 10px;
   display: flex;
   gap: 0;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
-@media (min-width: 788px) {
-  .exp__position-control {
-    padding-left: 0;
-    min-width: 330px;
+@media (min-width: 480px) {
+  .exp__text-container {
+    font-size: 12px;
+    /* flex-direction: row; */
+    /* align-items: center; */
+    /* justify-content: flex-start; */
+  }
+}
+@media (min-width: 520px) {
+  .exp__text-container {
+    font-size: 12px;
+  }
+}
+@media (min-width: 600px) {
+  .exp__text-container {
+    font-size: 14px;
+    gap: 35px;
+    align-items: center;
     flex-direction: row;
-    gap: 28px;
+  }
+}
+@media (min-width: 660px) {
+  .exp__text-container {
+  }
+}
+@media (min-width: 768px) {
+  .exp__text-container {
+    font-size: 16px;
   }
 }
 @media (min-width: 890px) {
-  .exp__position-control {
-    min-width: 392px;
-    gap: 30px;
+  .exp__text-container {
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 18px;
   }
 }
+
+/* @media (min-width: 890px) {
+  .exp__text-container {
+    gap: 30px;
+  }
+} */
 @media (min-width: 1024px) {
-  .exp__position-control {
+  .exp__text-container {
     min-width: 445px;
     gap: 35px;
   }
 }
 @media (min-width: 1180px) {
-  .exp__position-control {
+  .exp__text-container {
     gap: 40px;
   }
 }
 
+.exp__pos-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4px;
+}
+@media (min-width: 600px) {
+  .exp__pos-control {
+    width: 30%;
+    margin-bottom: 0;
+  }
+}
 .exp__head-date {
   font-weight: 400;
-  font-size: 12px;
-  line-height: 22px;
+  font-size: 1em;
+  line-height: 16px;
+  color: #535353;
   min-width: 100px;
   flex-shrink: 2;
+  /* margin-bottom: 4px; */
 }
 .exp__head-company {
   font-weight: 500;
-  line-height: 24px;
-  font-size: 14px;
+  line-height: 1.2;
+  font-size: 1.4em;
   min-width: 100px;
 }
 .exp__head-position {
-  font-size: 14px;
-  line-height: 48px;
+  font-size: 1.2em;
+  line-height: 1.24;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -98,19 +156,26 @@
 }
 .exp__description {
   padding: 12px;
-
   background-color: #ffcb46;
 }
+@media (min-width: 660px) {
+  .exp__description {
+    padding: 12px 16px;
+  }
+}
+
 .exp__description-list {
   list-style-type: square;
   margin: 0;
   font-size: 14px;
   padding-left: 1.4rem;
 }
-
-@media (min-width: 580px) {
+.exp__description-list > li {
+  margin-bottom: 4px;
+}
+@media (min-width: 660px) {
   .exp__head-position {
-    font-size: 16px;
+    font-size: 1.3em;
   }
 }
 /* @media (min-width: 722px) {
@@ -127,7 +192,7 @@
       padding: 14px;
     }
   } */
-@media (min-width: 788px) {
+/* @media (min-width: 788px) {
   .exp__head-date {
     font-size: 18px;
     line-height: 44px;
@@ -147,24 +212,22 @@
     padding-left: 2rem;
     font-size: 16px;
   }
-}
+} */
 @media (min-width: 890px) {
   .exp__head-date {
-    font-weight: 500;
-    font-size: 26px;
-    width: 230px;
+    font-size: 16px;
   }
-  .exp__head-company {
+  /* .exp__head-company {
     font-weight: 400;
     min-width: 110px;
     font-size: 20px;
   }
   .exp__head-position {
     font-size: 16px;
-  }
+  } */
 }
 @media (min-width: 1080px) {
-  .exp__head-date {
+  /* .exp__head-date {
     font-weight: 500;
     font-size: 28px;
     width: 248px;
@@ -178,6 +241,10 @@
   }
   .exp__description {
     padding: 14px;
+  } */
+  .exp__description-list {
+    padding-left: 20px;
+    font-size: 16px;
   }
 }
 
