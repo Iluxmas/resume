@@ -182,8 +182,7 @@ function App() {
     } else if (!userLang.includes("ru") && lang === "ru") {
       setLang("en");
     }
-  }, []); // ADD CALCULATION OFFSET SCROLL TO NOT SHOW BACKTOP BUTTON !!!!
-
+  }, []);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     window.addEventListener("scroll", handleScroll);
     return function () {
