@@ -125,6 +125,7 @@
 .contacts__social-link:focus {
   cursor: pointer;
   border-radius: 50%;
+  outline-style: none;
   outline: 2px solid #8822aa;
 }
 

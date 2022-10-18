@@ -28,7 +28,6 @@ export default function App() {
     }
   }, []);
 
-  // ADD CALCULATION OFFSET SCROLL TO NOT SHOW BACKTOP BUTTON !!!!
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
