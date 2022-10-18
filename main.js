@@ -151,7 +151,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 function App() {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("ru"),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("en"),
       _useState2 = _slicedToArray(_useState, 2),
       lang = _useState2[0],
       setLang = _useState2[1];
@@ -216,7 +216,17 @@ function App() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "page",
     id: "#"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_header__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_main__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_footer__WEBPACK_IMPORTED_MODULE_5__["default"], null))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_header__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_main__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_footer__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: backtopStyle
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    className: "go-top ui-link",
+    href: "#"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: downloadCVStyle
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    className: "download-cv ui-link",
+    href: "https://github.com/Iluxmas/resume/raw/master/src/files/Sulkhanov_Ilya_resume_final_RU.pdf"
+  })))));
 }
 
 /***/ }),
@@ -689,15 +699,30 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 function Job(_ref) {
-  var _descriptionHeight$cu;
-
   var data = _ref.data;
-  var descriptionHeight = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
 
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(window.innerWidth),
       _useState2 = _slicedToArray(_useState, 2),
-      isOpen = _useState2[0],
-      setIsOpen = _useState2[1];
+      width = _useState2[0],
+      setWidth = _useState2[1];
+
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+      _useState4 = _slicedToArray(_useState3, 2),
+      descrHeight = _useState4[0],
+      setDescrHeight = _useState4[1];
+
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+      _useState6 = _slicedToArray(_useState5, 2),
+      headHeight = _useState6[0],
+      setHeadHeight = _useState6[1];
+
+  var descriptionElement = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  var headElement = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+      _useState8 = _slicedToArray(_useState7, 2),
+      isOpen = _useState8[0],
+      setIsOpen = _useState8[1];
 
   var pos = data.pos,
       company = data.company,
@@ -710,20 +735,30 @@ function Job(_ref) {
     });
   }
 
-  var addHeight = (_descriptionHeight$cu = descriptionHeight.current) === null || _descriptionHeight$cu === void 0 ? void 0 : _descriptionHeight$cu.clientHeight;
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    window.addEventListener("resize", function () {
+      return setWidth(window.innerWidth);
+    });
+  }, []);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    setDescrHeight(descriptionElement.current.clientHeight);
+    setHeadHeight(headElement.current.clientHeight);
+  }, [width]); // let addHeight = descriptionHeight.current?.clientHeight;
+  // let maxHeight = headHeight.current?.clientHeight;
+
   var bttnClass, divClass, heightStyle;
 
   if (isOpen) {
     bttnClass = "exp__expand-bttn rotate";
     divClass = "exp__item open";
     heightStyle = {
-      maxHeight: "".concat(64 + addHeight + 32) + "px"
+      maxHeight: "".concat(headHeight + descrHeight + 32) + "px"
     };
   } else {
     bttnClass = "exp__expand-bttn";
     divClass = "exp__item";
     heightStyle = {
-      maxHeight: "64px"
+      maxHeight: headHeight
     };
   }
 
@@ -731,23 +766,26 @@ function Job(_ref) {
     className: divClass,
     style: heightStyle
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    ref: headElement,
     className: "exp__head"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "exp__position-control"
+    className: "exp__text-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "exp__head-date"
-  }, dates), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "exp__pos-control"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "exp__head-company"
-  }, company)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, company), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "exp__head-date"
+  }, dates)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "exp__head-position"
-  }, pos), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+  }, pos)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
     className: bttnClass,
     src: _images_plus_svg__WEBPACK_IMPORTED_MODULE_1__,
     onClick: handleOpenDescr
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "exp__description"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
-    ref: descriptionHeight,
+    ref: descriptionElement,
     className: "exp__description-list"
   }, resp.map(function (item, idx) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
@@ -837,7 +875,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Main() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_education__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_skills__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_projects__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_aboutme__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_contacts__WEBPACK_IMPORTED_MODULE_7__["default"], null));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_lead__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_education__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_skills__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_experience__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_projects__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_aboutme__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_contacts__WEBPACK_IMPORTED_MODULE_7__["default"], null));
 }
 
 /***/ }),
@@ -1225,7 +1263,7 @@ var education = {
     title: "Education",
     studies: [{
       place: "Yandex.Practicum",
-      dep: "Yandex , Frontend Developer",
+      dep: "Yandex, Frontend Developer",
       dates: "04.2022 - 01.2023"
     }, {
       place: "Udemy",
@@ -1233,7 +1271,7 @@ var education = {
       dates: "04.2022 - 06.2022"
     }, {
       place: "Udemy",
-      dep: "Ivan Petrychenko/, JavaScript + React Complete Course",
+      dep: "Ivan Petrychenko, JavaScript + React Complete Course",
       dates: "02.2022 - 03.2022"
     }, {
       place: "Mendeleev University of Chemical Technology",
@@ -1250,35 +1288,59 @@ var skills = {
 var exp = {
   ru: {
     header: "Опыт работы",
+    refs: "Рекомендации",
+    subrefs: "Ниже логотипы классных компаний, с которыми я пока не работал.",
     data: [{
       pos: "Фронтенд разработчик (обучение)",
-      logo: _images_exp_icons_siegw_png__WEBPACK_IMPORTED_MODULE_1__,
       company: "Я.Практикум",
       dates: "04.2022 - по н. в.",
       resp: ["Создавал страницы с помощью HTML и CSS", "Использовал flex и grid для создания адаптивности под различные устройства", "Писал код на JavaScript для построения логики работы приложения", "Настройка клиент-серверного взаимодействия по средствам API", "Портировал проекты на React"]
     }, {
       pos: "Менеджер технологической поддержки",
-      logo: _images_exp_icons_siegw_png__WEBPACK_IMPORTED_MODULE_1__,
       company: "Зигверк",
       dates: "12.2020 - 07.2022",
-      resp: ["Оказывал технологическую поддержку клиентов на территории России", "Вел проекты клиентов начиная с запроса и до внедрения на производстве", "Искал и решал причины проблем, возникающие на производстве клиента", "Работал с рецептурами, подбирал альтернативное сырье, проведил комплексные тесты красок", "Взаимодействовал с технологической командой и исследовательской лабораторией в Германии", "Отвечал за внедрение новых продуктов на российский рынок"]
+      resp: ["Оказывал технологическую поддержку клиентов на территории России", "Вел проекты клиентов начиная с запроса и до внедрения на производстве", "Искал и решал причины проблем, возникающие на производстве клиента", "Работал с рецептурами, подбирал альтернативное сырье, проводил комплексные тесты красок", "Взаимодействовал с технологической командой и исследовательской лабораторией в Германии", "Отвечал за внедрение новых продуктов на российский рынок"]
     }, {
       pos: "Химик // Старший Химик",
-      logo: _images_exp_icons_siegw_png__WEBPACK_IMPORTED_MODULE_1__,
       company: "Зигверк",
       dates: "05.2017 - 12.2020",
       resp: ["Создавал и модифицировал рецептуры лаков и красок под нужны заказчиков", "Планировал и выполнял тесты по стандартным методикам, с оценкой результатов и написанием отчетов", "Изучал физические и технологические свойства красок и лаков в соответствии со стандартами компании", "Взаимодействовал с зарубежными коллегами по вопросам выполнения тестов и обмена опытом", "Обучал новых сотрудников лаборатории", "Контролировал и поддерживал функционирование лаборатории"]
     }, {
       pos: "Научный сотрудник",
-      logo: _images_exp_icons_siegw_png__WEBPACK_IMPORTED_MODULE_1__,
       company: "ФГУП Вимс",
       dates: "10.2011 - 05.2017",
       resp: ["Работал в команде по разработке методик подготовки и анализа руд методами АЭС", "Участвовал в создании научных публикаций"]
-    }],
-    refs: "Рекомендации",
-    subrefs: "Ниже логотипы классных компаний, с которыми я пока не работал."
+    }]
   },
-  en: []
+  en: {
+    header: "Experience",
+    refs: "References",
+    subrefs: "Cool companies I haven't worked with yet",
+    data: [{
+      pos: "Frontend Developer (education)",
+      company: "Ya.Practicum",
+      dates: "04.2022 - current",
+      resp: ["Created pages using HTML and CSS", "Made pages responsive and adaptive using css flex and grid", "Used JavaScript for applications logic ", "Set up client-server interaction via REST API", "Refactored applications to React"]
+    }, {
+      pos: "Account technology manager",
+      logo: _images_exp_icons_siegw_png__WEBPACK_IMPORTED_MODULE_1__,
+      company: "Siegwerk",
+      dates: "12.2020 - 07.2022",
+      resp: ["Was responsible for regional clients support", "Managed customer's projects from processing of request to implementing in production", "Searched causes and solved problems appeared on client production site", "Worked with recipies, searched for alternative raw materials, performed complex tests of inks", "Cooperated with technology team and laboratory in Germany", "Implemented new products on local market"]
+    }, {
+      pos: "Chemist // Senior Chemist",
+      logo: _images_exp_icons_siegw_png__WEBPACK_IMPORTED_MODULE_1__,
+      company: "Siegwerk",
+      dates: "05.2017 - 12.2020",
+      resp: ["Have created and adjusted recipes of ink and lacquers under customer needs", "Planned and performed complex tests using standard company methodics, with result evaluation and reporting", "Mentored newbie laboratory staff", "Controlled laboratory functioning in terms of avaliable consumables, cleanliness and order"]
+    }, {
+      pos: "Science Researcher",
+      logo: _images_exp_icons_siegw_png__WEBPACK_IMPORTED_MODULE_1__,
+      company: "FGUP Vims",
+      dates: "10.2011 - 05.2017",
+      resp: ["Worked in team responsible for methodics development and samples analisys", "Participated in writing of science articles"]
+    }]
+  }
 };
 var expLogos = [_images_comp_logos_stark_png__WEBPACK_IMPORTED_MODULE_10__, _images_comp_logos_quiksilver_png__WEBPACK_IMPORTED_MODULE_12__, _images_comp_logos_apple_png__WEBPACK_IMPORTED_MODULE_7__, _images_comp_logos_microsoft_png__WEBPACK_IMPORTED_MODULE_8__, _images_comp_logos_google_png__WEBPACK_IMPORTED_MODULE_9__, _images_comp_logos_umbrella_png__WEBPACK_IMPORTED_MODULE_11__]; // ===== 4th block ======== PROJECTS
 
@@ -1330,12 +1392,12 @@ var about = {
   ru: {
     header: "Обо мне",
     title: "\u041C\u044B\u0441\u043B\u0438 \u0428\u0418\u0420\u0415",
-    text: "Я Фронтенд Разработчик и с 2022 года нахожусь в Стамбуле, Турция. Мой бэкграунд химико-технологический, последнее место работы - в крупнейшем мировом производителе полиграфических красок - дало мне большой опыт в управлении проектами, разработке продуктов и мышление ориентированное на бизнес. Но, поскольку я очень интересовался математикой и физикой, я всегда мечтал о программировании, оно всегда было частью меня. Я выбрал фронтенд т.к. у меня развитое чувство прекрасного, ежедневно посещая различные вебсайты я вижу, что хорошие фронтенд разработчики по-прежнему требуются. Также я люблю задачи и загадки, т.к не люблю вопросы без ответа. Я люблю обращать внимание на детали, надеюсь, вы заметили это, изучая этот сайт. Я очень рад, что смогу привнести свое видение, навыки и опыт в WEB. Зимой катаюсь на сноуборде, летом на велосипеде, нравится скалолазание и люблю путешествовать, пока что 32 посещенных страны."
+    text: "Я Фронтенд Разработчик и с 2022 года нахожусь в Мармарис, Турция. Мой бэкграунд химико-технологический, последнее место работы - в крупнейшем мировом производителе полиграфических красок - дало мне большой опыт в управлении проектами, разработке продуктов и мышление ориентированное на бизнес. Но, поскольку я очень интересовался математикой и физикой, я всегда мечтал о программировании, оно всегда было частью меня. Я выбрал фронтенд т.к. у меня развитое чувство прекрасного, ежедневно посещая различные вебсайты я вижу, что хорошие фронтенд разработчики по-прежнему требуются. Также я люблю задачи и загадки, т.к не люблю вопросы без ответа. Я люблю обращать внимание на детали, надеюсь, вы заметили это, изучая этот сайт. Я очень рад, что смогу привнести свое видение, навыки и опыт в WEB. Зимой катаюсь на сноуборде, летом на велосипеде, нравится скалолазание и люблю путешествовать, пока что 32 посещенных страны."
   },
   en: {
     header: "About Me",
     title: "Think BIG",
-    text: "I am Frontend Developer and since 2022 based in Istanbul, Turkey. My background is a chemical technology, job at Siegwerk, world's leading ink supplier, gave me great experience in project managing, product development and business oriented thinking. But, since my big interest in maths and phisics, I was always dreaming about coding, programming always was a part of me. I choose Frontend cause I have great sense of beauty. Day-to-day websurfing just show that good FE developers is still in need. Also I love challenges and to solve puzzles, because don't like questions without an answer. I love to pay attention to the details, hope you noticed it while exloring this website. I am really happy that I can bring my vision, skills and experience to the WEB"
+    text: "I am Frontend Developer and since 2022 based in Marmaris, Turkey. My background is a chemical technology, job at Siegwerk, world's leading ink supplier, gave me great experience in project managing, product development and business oriented thinking. But, since my big interest in maths and phisics, I was always dreaming about coding, programming always was a part of me. I choose Frontend cause I have great sense of beauty. Day-to-day websurfing just show that good FE developers is still in need. Also I love challenges and to solve puzzles, because don't like questions without an answer. I love to pay attention to the details, hope you noticed it while exloring this website. I am really happy that I can bring my vision, skills and experience to the WEB"
   }
 };
 var aboutsThis = {}; // ===== 6th block ======== CONTACT
