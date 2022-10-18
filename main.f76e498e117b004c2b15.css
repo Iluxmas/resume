@@ -4416,20 +4416,20 @@
   .lead__photo {
     height: 533px;
     width: 369px;
-    right: 1%;
+    right: 10vw;
     z-index: 17;
   }
 }
 @media (min-width: 1024px) {
   .lead__photo {
-    height: 600px;
-    width: 300px;
+    height: 585px;
+    width: 400px;
   }
 }
 @media (min-width: 1280px) {
   .lead__photo {
-    height: 640px;
-    width: 320px;
+    height: 637px;
+    width: 441px;
   }
 }
 @-webkit-keyframes appear {
@@ -6409,4 +6409,4 @@ body {
   visibility: hidden;
 }
 
-/*# sourceMappingURL=main.d0703bf808be041bf026.css.map*/
+/*# sourceMappingURL=main.f76e498e117b004c2b15.css.map*/
