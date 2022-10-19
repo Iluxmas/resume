@@ -4017,13 +4017,14 @@
 
 /* LEAD BLOCK */
 .lead__container {
+  box-sizing: border-box;
   height: 100vh;
   min-height: 440px;
   max-height: 600px;
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 72px 14px 12px;
+  padding: 58px 14px 12px;
   align-items: flex-start;
   justify-content: flex-start;
   overflow: hidden;
@@ -4038,7 +4039,6 @@
 @media (min-width: 500px) {
   .lead__container {
     /* height: 480px; */
-    max-height: 700px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -4046,10 +4046,16 @@
     overflow: visible;
   }
 }
+@media (min-width: 500px) and (min-height: 500px) {
+  .lead__container {
+    /* height: 480px; */
+    /* max-height: 600px; */
+  }
+}
 @media (min-width: 768px) {
   .lead__container {
     /* padding: 10px 24px 10px; */
-    min-height: 560px;
+    min-height: 400px;
     /* margin: 0 auto; */
     /* height: 570px; */
   }
@@ -4077,8 +4083,8 @@
 }
 .lead__decor_oval {
   position: absolute;
-  height: 160px;
-  width: 155px;
+  height: 190px;
+  width: 175px;
   max-height: 460px;
   max-width: 450px;
   z-index: 2;
@@ -4087,8 +4093,8 @@
   background-size: contain;
   right: 20%;
   top: 20%;
-  -webkit-animation: 60s 3s infinite breathing;
-          animation: 60s 3s infinite breathing;
+  -webkit-animation: 90s 2s infinite breathing;
+          animation: 90s 2s infinite breathing;
 }
 
 @media (min-width: 440px) {
@@ -4116,7 +4122,7 @@
 }
 @media (min-width: 900px) {
   .lead__decor_oval {
-    right: 2vw;
+    right: 6vw;
     top: 10vh;
   }
 }
@@ -4237,7 +4243,7 @@
 }
 
 .lead__description {
-  max-width: 310px;
+  max-width: 330px;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -4361,7 +4367,24 @@
   z-index: 18;
 }
 
-@media (min-width: 440px) {
+@media (min-width: 375px) {
+  .lead__description::after {
+    content: "";
+    position: absolute;
+    background: url(assets/7210e1ae65760aa3ebae.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    bottom: -150px;
+    left: 75px;
+    height: 147px;
+    width: 266px;
+    opacity: 0;
+    -webkit-animation: 2s 2.5s 1 forwards appear;
+            animation: 2s 2.5s 1 forwards appear;
+    z-index: 8;
+  }
+}
+@media (min-width: 500px) {
   .lead__description::after {
     content: "";
     position: absolute;
@@ -4425,8 +4448,6 @@
     bottom: 0;
     height: 273px;
     width: 189px;
-    padding-top: 20px;
-    margin-top: -20px;
     background-image: url(assets/4c339dd006820648eeee.png);
     /* linear-gradient(
         to bottom,
@@ -4447,15 +4468,20 @@
 }
 @media (min-width: 768px) {
   .lead__photo {
-    height: 520px;
-    width: 360px;
-    right: 1vw;
+    right: 10vw;
+  }
+}
+@media (min-width: 768px) and (min-height: 520px) {
+  .lead__photo {
+    height: 507px;
+    width: 351px;
     z-index: 17;
+    right: 1vw;
   }
 }
 @media (min-width: 900px) {
   .lead__photo {
-    right: 16vw;
+    right: 13vw;
   }
 }
 @media (min-width: 1024px) {
@@ -4504,54 +4530,54 @@
 }
 @-webkit-keyframes breathing {
   0% {
-    -webkit-transform: rotate(0) scaleX(1) scaleY(1) translate(0, 0) skew(0, 0);
-            transform: rotate(0) scaleX(1) scaleY(1) translate(0, 0) skew(0, 0);
+    -webkit-transform: rotate(0) scaleX(1) scaleY(1) translate(0, 0);
+            transform: rotate(0) scaleX(1) scaleY(1) translate(0, 0);
   }
   20% {
-    -webkit-transform: rotate(-5deg) scaleX(1.06) scaleY(0.87) translate(-9px, 3px) skew(3deg, -3deg);
-            transform: rotate(-5deg) scaleX(1.06) scaleY(0.87) translate(-9px, 3px) skew(3deg, -3deg);
+    -webkit-transform: rotate(-72deg) scaleX(0.97) scaleY(0.87) translate(29px, -53px);
+            transform: rotate(-72deg) scaleX(0.97) scaleY(0.87) translate(29px, -53px);
   }
   40% {
-    -webkit-transform: rotate(-10deg) scaleX(0.95) scaleY(0.77) translate(-14px, 13px) skew(6deg, -10deg);
-            transform: rotate(-10deg) scaleX(0.95) scaleY(0.77) translate(-14px, 13px) skew(6deg, -10deg);
+    -webkit-transform: rotate(-144deg) scaleX(0.75) scaleY(0.77) translate(44px, 13px);
+            transform: rotate(-144deg) scaleX(0.75) scaleY(0.77) translate(44px, 13px);
   }
   60% {
-    -webkit-transform: rotate(-5deg) scaleX(0.77) scaleY(0.96) translate(-9px, 9px) skew(-6deg, -2deg);
-            transform: rotate(-5deg) scaleX(0.77) scaleY(0.96) translate(-9px, 9px) skew(-6deg, -2deg);
+    -webkit-transform: rotate(-216deg) scaleX(0.81) scaleY(0.9) translate(69px, 9px);
+            transform: rotate(-216deg) scaleX(0.81) scaleY(0.9) translate(69px, 9px);
   }
   80% {
-    -webkit-transform: rotate(10deg) scaleX(1.07) scaleY(1.1) translate(-5px, 5px) skew(-9deg, 8deg);
-            transform: rotate(10deg) scaleX(1.07) scaleY(1.1) translate(-5px, 5px) skew(-9deg, 8deg);
+    -webkit-transform: rotate(-288deg) scaleX(0.92) scaleY(0.97) translate(39px, 55px);
+            transform: rotate(-288deg) scaleX(0.92) scaleY(0.97) translate(39px, 55px);
   }
   100% {
-    -webkit-transform: rotate(0) scaleX(1) scaleY(1) translate(0, 0) skew(0, 0);
-            transform: rotate(0) scaleX(1) scaleY(1) translate(0, 0) skew(0, 0);
+    -webkit-transform: rotate(-360deg) scaleX(1) scaleY(1) translate(0, 0);
+            transform: rotate(-360deg) scaleX(1) scaleY(1) translate(0, 0);
   }
 }
 @keyframes breathing {
   0% {
-    -webkit-transform: rotate(0) scaleX(1) scaleY(1) translate(0, 0) skew(0, 0);
-            transform: rotate(0) scaleX(1) scaleY(1) translate(0, 0) skew(0, 0);
+    -webkit-transform: rotate(0) scaleX(1) scaleY(1) translate(0, 0);
+            transform: rotate(0) scaleX(1) scaleY(1) translate(0, 0);
   }
   20% {
-    -webkit-transform: rotate(-5deg) scaleX(1.06) scaleY(0.87) translate(-9px, 3px) skew(3deg, -3deg);
-            transform: rotate(-5deg) scaleX(1.06) scaleY(0.87) translate(-9px, 3px) skew(3deg, -3deg);
+    -webkit-transform: rotate(-72deg) scaleX(0.97) scaleY(0.87) translate(29px, -53px);
+            transform: rotate(-72deg) scaleX(0.97) scaleY(0.87) translate(29px, -53px);
   }
   40% {
-    -webkit-transform: rotate(-10deg) scaleX(0.95) scaleY(0.77) translate(-14px, 13px) skew(6deg, -10deg);
-            transform: rotate(-10deg) scaleX(0.95) scaleY(0.77) translate(-14px, 13px) skew(6deg, -10deg);
+    -webkit-transform: rotate(-144deg) scaleX(0.75) scaleY(0.77) translate(44px, 13px);
+            transform: rotate(-144deg) scaleX(0.75) scaleY(0.77) translate(44px, 13px);
   }
   60% {
-    -webkit-transform: rotate(-5deg) scaleX(0.77) scaleY(0.96) translate(-9px, 9px) skew(-6deg, -2deg);
-            transform: rotate(-5deg) scaleX(0.77) scaleY(0.96) translate(-9px, 9px) skew(-6deg, -2deg);
+    -webkit-transform: rotate(-216deg) scaleX(0.81) scaleY(0.9) translate(69px, 9px);
+            transform: rotate(-216deg) scaleX(0.81) scaleY(0.9) translate(69px, 9px);
   }
   80% {
-    -webkit-transform: rotate(10deg) scaleX(1.07) scaleY(1.1) translate(-5px, 5px) skew(-9deg, 8deg);
-            transform: rotate(10deg) scaleX(1.07) scaleY(1.1) translate(-5px, 5px) skew(-9deg, 8deg);
+    -webkit-transform: rotate(-288deg) scaleX(0.92) scaleY(0.97) translate(39px, 55px);
+            transform: rotate(-288deg) scaleX(0.92) scaleY(0.97) translate(39px, 55px);
   }
   100% {
-    -webkit-transform: rotate(0) scaleX(1) scaleY(1) translate(0, 0) skew(0, 0);
-            transform: rotate(0) scaleX(1) scaleY(1) translate(0, 0) skew(0, 0);
+    -webkit-transform: rotate(-360deg) scaleX(1) scaleY(1) translate(0, 0);
+            transform: rotate(-360deg) scaleX(1) scaleY(1) translate(0, 0);
   }
 }
 /*!*********************************************************************************************************************************************************************!*\
@@ -5089,7 +5115,7 @@
   background-repeat: repeat-x;
   width: 100%;
   height: 200px;
-  bottom: -199px;
+  bottom: -159px;
   z-index: -22;
 }
 
@@ -5120,7 +5146,7 @@
 
 .exp__known-companies {
   position: relative;
-  padding: 30px 20px 60px;
+  padding: 30px 20px 30px;
   max-width: 984px;
   margin: 0 auto;
   display: flex;
@@ -5131,7 +5157,7 @@
 
 @media (min-width: 768px) {
   .exp__known-companies {
-    padding: 40px 20px 140px;
+    padding: 40px 20px 100px;
   }
 }
 .exp__known-companies-title {
@@ -6460,4 +6486,4 @@ body {
   visibility: hidden;
 }
 
-/*# sourceMappingURL=main.1d9406b5286de6d294b4.css.map*/
+/*# sourceMappingURL=main.3c15978cc2de8394e598.css.map*/

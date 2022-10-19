@@ -280,7 +280,7 @@ function Contacts() {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_animation_on_scroll__WEBPACK_IMPORTED_MODULE_3__.AnimationOnScroll, {
       animateIn: "animate__heartBeat",
       animateOnce: "true",
-      offset: 150,
+      offset: 50,
       duration: 2.5,
       delay: 100 + idx * 90,
       initiallyVisible: true,
