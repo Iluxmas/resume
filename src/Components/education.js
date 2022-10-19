@@ -8,7 +8,7 @@ export default function Education() {
   const lang = useContext(TranslationContext);
 
   return (
-    <section className="edu" id="__education">
+    <section className="edu" id="education">
       <div className="edu__container _container _container-wide">
         <AnimationOnScroll animateIn="animate__slideInUp" animateOnce="true">
           <h2 className="_section__header _huge">

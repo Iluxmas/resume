@@ -12,7 +12,7 @@
 }
 @media (min-width: 768px) {
   .skillz__container {
-    padding-bottom: 140px;
+    padding: 100px 0 140px;
   }
 }
 .skillz__header {

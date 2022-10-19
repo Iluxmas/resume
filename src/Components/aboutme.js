@@ -54,7 +54,7 @@ export default function AboutMe() {
   }
 
   return (
-    <section className="about" id="__about">
+    <section className="about" id="about">
       <div className="about__decor"></div>
       <div className="about__container">
         <h2 className="_section__header _huge">

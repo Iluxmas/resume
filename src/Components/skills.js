@@ -13,7 +13,7 @@ export default function Skills() {
     stack.push([key, icons[key]]);
   }
   return (
-    <section className="skillz" id="__skills">
+    <section className="skillz" id="skills">
       <div className="skillz__container _container _container-narrow">
         <h2 className="_section__header _huge">
           <span className="_accent">#</span>

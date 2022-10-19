@@ -32,7 +32,7 @@ export default function Projects() {
   // ДЕЛАЕМ ПО ШИРИНЕ КАК ЛИД
 
   return (
-    <section className="projects" id="__projects">
+    <section className="projects" id="projects">
       <h2 className="_section__header _huge">
         <span className="_accent">#</span>
         {projects.header[lang]}

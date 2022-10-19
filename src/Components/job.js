@@ -6,22 +6,28 @@ export default function Job({ data }) {
   const [width, setWidth] = useState(window.innerWidth);
   const [descrHeight, setDescrHeight] = useState(null);
   const [headHeight, setHeadHeight] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   const descriptionElement = useRef(null);
   const headElement = useRef(null);
-  const [isOpen, setIsOpen] = useState(false);
+
   const { pos, company, dates, resp } = data;
 
   function handleOpenDescr(event) {
+    setDescrHeight(descriptionElement.current.offsetHeight);
+    setHeadHeight(headElement.current.clientHeight);
     setIsOpen(() => !isOpen);
   }
   useEffect(() => {
-    window.addEventListener("resize", () => setWidth(window.innerWidth));
-  }, []);
-  useEffect(() => {
-    setDescrHeight(descriptionElement.current.clientHeight);
+    setDescrHeight(descriptionElement.current.offsetHeight);
     setHeadHeight(headElement.current.clientHeight);
-  }, [width]);
+
+    window.addEventListener("resize", () => {
+      setDescrHeight(descriptionElement.current.offsetHeight);
+      setHeadHeight(headElement.current.clientHeight);
+    });
+  }, []);
+  // useEffect(() => {setWidth(window.innerWidth}, [width]);
 
   // let addHeight = descriptionHeight.current?.clientHeight;
   // let maxHeight = headHeight.current?.clientHeight;
@@ -50,8 +56,8 @@ export default function Job({ data }) {
 
         <img className={bttnClass} src={Close} onClick={handleOpenDescr} />
       </div>
-      <div className="exp__description">
-        <ul ref={descriptionElement} className="exp__description-list">
+      <div ref={descriptionElement} className="exp__description">
+        <ul className="exp__description-list">
           {resp.map((item, idx) => {
             return <li key={idx}>{item}</li>;
           })}

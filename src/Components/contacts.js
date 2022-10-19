@@ -13,7 +13,7 @@ export default function Contacts() {
   const lang = useContext(TranslationContext);
 
   return (
-    <section className="contacts" id="__contacts">
+    <section className="contacts" id="contacts">
       <div className="contacts__container">
         <h2 className="_section__header _huge">
           <span className="_accent">#</span>

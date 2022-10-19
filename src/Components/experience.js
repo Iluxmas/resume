@@ -15,7 +15,7 @@ export default function Experience() {
   return (
     // <TranslationContext.Consumer>
     //   {(lang) => (
-    <section className="exp" id="__experience">
+    <section className="exp" id="experience">
       <div className="exp_top_bcg"></div>
       <div className="exp__container _container _container-wide">
         <AnimationOnScroll
@@ -55,9 +55,10 @@ export default function Experience() {
               );
             })}
           </div>
-          <div className="exp__known-decor_dots"></div>
+
           {/* <div className="exp__known-decor"></div> */}
         </AnimationOnScroll>
+        <div className="exp__known-decor_dots"></div>
       </div>
       <div className="exp_bottom_bcg"></div>
     </section>

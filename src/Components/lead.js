@@ -7,7 +7,7 @@ export default function Lead() {
   const lang = useContext(TranslationContext);
 
   return (
-    <section className="lead" id="__lead">
+    <section className="lead" id="lead">
       <div className="lead__container _container _container-xtra ">
         <div className="lead__decor_arrow"></div>
         <div className="lead__decor_oval"></div>

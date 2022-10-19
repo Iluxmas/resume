@@ -64,12 +64,12 @@ export default function Header() {
   }
   const links = [
     "#",
-    "#__education",
-    "#__skills",
-    "#__experience",
-    "#__projects",
-    "#__about",
-    "#__contacts",
+    "#education",
+    "#skills",
+    "#experience",
+    "#projects",
+    "#about",
+    "#contacts",
   ];
 
   return (
@@ -112,32 +112,4 @@ export default function Header() {
     lang switcher */}
     </header>
   );
-}
-
-{
-  /* 
-    <header className="header">
-      <nav className="header__nav">
-        <input className="" type="checkbox" name="" id="" />
-        <div class="header__hamburger-lines">
-          <span class="line line1"></span>
-          <span class="line line2"></span>
-          <span class="line line3"></span>
-        </div>
-        <ul className="header__menu">
-          {links.map((block, idx) => {
-            return (
-              <li
-                className="header__list-item hover-underline-animation"
-                key={idx}
-              >
-                <a className="header__link">{block}</a>
-              </li>
-            );
-          })}
-        </ul>
-      </nav>
-       theme switcher
-      lang switcher 
-    </header> */
 }
