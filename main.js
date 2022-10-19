@@ -84,7 +84,7 @@ function AboutMe() {
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
     className: "about",
-    id: "__about"
+    id: "about"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "about__decor"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -258,7 +258,7 @@ function Contacts() {
   var lang = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.TranslationContext);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
     className: "contacts",
-    id: "__contacts"
+    id: "contacts"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "contacts__container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
@@ -324,7 +324,7 @@ function Education() {
   var lang = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.TranslationContext);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
     className: "edu",
-    id: "__education"
+    id: "education"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "edu__container _container _container-wide"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_animation_on_scroll__WEBPACK_IMPORTED_MODULE_2__.AnimationOnScroll, {
@@ -392,7 +392,7 @@ function Experience() {
     //   {(lang) => (
     react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
       className: "exp",
-      id: "__experience"
+      id: "experience"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
       className: "exp_top_bcg"
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -436,9 +436,9 @@ function Experience() {
         key: idx,
         src: item
       });
-    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-      className: "exp__known-decor_dots"
     }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      className: "exp__known-decor_dots"
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
       className: "exp_bottom_bcg"
     }))
   ); // }
@@ -603,7 +603,7 @@ function Header() {
     checkbox.current.checked = false;
   }
 
-  var links = ["#", "#__education", "#__skills", "#__experience", "#__projects", "#__about", "#__contacts"];
+  var links = ["#", "#education", "#skills", "#experience", "#projects", "#about", "#contacts"];
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("header", {
     className: "header"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -636,33 +636,6 @@ function Header() {
       onClick: closeNavBar
     }, block));
   })))));
-}
-{
-  /* 
-    <header className="header">
-      <nav className="header__nav">
-        <input className="" type="checkbox" name="" id="" />
-        <div class="header__hamburger-lines">
-          <span class="line line1"></span>
-          <span class="line line2"></span>
-          <span class="line line3"></span>
-        </div>
-        <ul className="header__menu">
-          {links.map((block, idx) => {
-            return (
-              <li
-                className="header__list-item hover-underline-animation"
-                key={idx}
-              >
-                <a className="header__link">{block}</a>
-              </li>
-            );
-          })}
-        </ul>
-      </nav>
-       theme switcher
-      lang switcher 
-    </header> */
 }
 
 /***/ }),
@@ -715,34 +688,35 @@ function Job(_ref) {
       headHeight = _useState6[0],
       setHeadHeight = _useState6[1];
 
-  var descriptionElement = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
-  var headElement = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
-
   var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
       _useState8 = _slicedToArray(_useState7, 2),
       isOpen = _useState8[0],
       setIsOpen = _useState8[1];
 
+  var descriptionElement = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+  var headElement = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
   var pos = data.pos,
       company = data.company,
       dates = data.dates,
       resp = data.resp;
 
   function handleOpenDescr(event) {
+    setDescrHeight(descriptionElement.current.offsetHeight);
+    setHeadHeight(headElement.current.clientHeight);
     setIsOpen(function () {
       return !isOpen;
     });
   }
 
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    window.addEventListener("resize", function () {
-      return setWidth(window.innerWidth);
-    });
-  }, []);
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    setDescrHeight(descriptionElement.current.clientHeight);
+    setDescrHeight(descriptionElement.current.offsetHeight);
     setHeadHeight(headElement.current.clientHeight);
-  }, [width]); // let addHeight = descriptionHeight.current?.clientHeight;
+    window.addEventListener("resize", function () {
+      setDescrHeight(descriptionElement.current.offsetHeight);
+      setHeadHeight(headElement.current.clientHeight);
+    });
+  }, []); // useEffect(() => {setWidth(window.innerWidth}, [width]);
+  // let addHeight = descriptionHeight.current?.clientHeight;
   // let maxHeight = headHeight.current?.clientHeight;
 
   var bttnClass, divClass, heightStyle;
@@ -782,9 +756,9 @@ function Job(_ref) {
     src: _images_plus_svg__WEBPACK_IMPORTED_MODULE_1__,
     onClick: handleOpenDescr
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    ref: descriptionElement,
     className: "exp__description"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", {
-    ref: descriptionElement,
     className: "exp__description-list"
   }, resp.map(function (item, idx) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
@@ -819,7 +793,7 @@ function Lead() {
   var lang = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.TranslationContext);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
     className: "lead",
-    id: "__lead"
+    id: "lead"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "lead__container _container _container-xtra "
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -958,7 +932,7 @@ function Projects() {
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
     className: "projects",
-    id: "__projects"
+    id: "projects"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
     className: "_section__header _huge"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
@@ -1021,7 +995,7 @@ function Skills() {
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
     className: "skillz",
-    id: "__skills"
+    id: "skills"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "skillz__container _container _container-narrow"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", {
