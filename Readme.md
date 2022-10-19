@@ -1,6 +1,6 @@
 # My resume page
 
-**GitHub:** [Link to GitHub Pages](https://iluxmas.github.io/resume/)
+**Build version on GitHub Pages:** [https://iluxmas.github.io/resume/](https://iluxmas.github.io/resume/)
 
 **Tech stack:** React.js, JavaScript, Webpack, CSS
 
