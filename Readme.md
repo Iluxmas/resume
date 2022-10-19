@@ -6,7 +6,7 @@
 
 **Desription:**
 
-A not long time ago in a galaxy not far away one despotic emperor decided to conquer other democratic republic which lead to many people leave their homes, as did the hero of this story. These circumstances forced him to start looking for remote work as soon as possible, and then he came up with the idea of ​​creating a page to demonstrate his abilities. There was no ready-made layout, he created it by his own rely only on aestetic and his sense of beauty.
+A not long time ago in a galaxy not far away one despotic emperor decided to conquer other democratic republic which lead to many people leave their homes, as did the hero of this story. These circumstances forced him to start looking for remote work as soon as possible, and then he came up with the idea of ​​creating a page to demonstrate his abilities. There was no ready-made layout, he created it by his own, rely only on aestetic and his sense of beauty...
 
 **Featers:**
 
@@ -21,6 +21,7 @@ Project compilation done by Webpack, avaliable via link in the bottom.
 
 - [x] Add animation
 - [x] Tune responsive behavior of elements
+- [ ] Add download Ru\En versions of resume depending on site language
 - [ ] Refactor responsive behaviour from CSS media queries to React Hook
 - [ ] Add animation showing interactive togglers in experience section
 - [ ] Add theme and language switchers

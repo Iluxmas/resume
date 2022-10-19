@@ -29,7 +29,7 @@ export default function Contacts() {
                 <AnimationOnScroll
                   animateIn="animate__heartBeat"
                   animateOnce="true"
-                  offset={150}
+                  offset={50}
                   duration={2.5}
                   delay={100 + idx * 90}
                   initiallyVisible={true}
