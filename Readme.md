@@ -15,7 +15,7 @@ A not long time ago in a galaxy not far away one despotic emperor decided to con
 - Projects gallery with filters
 - Language detection - Ru if russian and En if any other
 
-Project compilation done by Webpack, avaliable via link in the bottom.
+Project bundling done by Webpack, avaliable via link in the top.
 
 **Next plans**:
 
