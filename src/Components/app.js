@@ -13,6 +13,9 @@ export default function App() {
   const [theme, setTheme] = useState("dark");
   const [currentScroll, setCurrentScroll] = useState(0);
 
+  const linkRu = "https://github.com/Iluxmas/resume/raw/master/src/files/Sulkhanov_Ilya_resume_final_RU.pdf"
+  const linkEn = "https://github.com/Iluxmas/resume/raw/master/src/files/Sulkhanov_Ilya_resume_final_EN.pdf"
+
   useEffect(() => {
     const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
     if (darkThemeMq.matches && theme !== "dark") {
@@ -64,7 +67,7 @@ export default function App() {
           <div className={downloadCVStyle}>
             <a
               className="download-cv ui-link"
-              href="https://github.com/Iluxmas/resume/raw/master/src/files/Sulkhanov_Ilya_resume_final_RU.pdf"
+              href={lang === 'ru' ? linkRu : linkEn}
             ></a>
           </div>
         </div>
