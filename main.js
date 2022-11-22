@@ -166,6 +166,8 @@ function App() {
       currentScroll = _useState6[0],
       setCurrentScroll = _useState6[1];
 
+  var linkRu = "https://github.com/Iluxmas/resume/raw/master/src/files/Sulkhanov_Ilya_resume_final_RU.pdf";
+  var linkEn = "https://github.com/Iluxmas/resume/raw/master/src/files/Sulkhanov_Ilya_resume_final_EN.pdf";
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     var darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
 
@@ -224,7 +226,7 @@ function App() {
     className: downloadCVStyle
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     className: "download-cv ui-link",
-    href: "https://github.com/Iluxmas/resume/raw/master/src/files/Sulkhanov_Ilya_resume_final_RU.pdf"
+    href: lang === 'ru' ? linkRu : linkEn
   })))));
 }
 
@@ -35801,7 +35803,7 @@ module.exports = __webpack_require__.p + "assets/daaae5af9fceaff89913.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "assets/db03e87cd4359fd40e36.JPG";
+module.exports = __webpack_require__.p + "assets/6a0b17697e00b86d8c84.JPG";
 
 /***/ }),
 
@@ -35812,7 +35814,7 @@ module.exports = __webpack_require__.p + "assets/db03e87cd4359fd40e36.JPG";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "assets/a656f5b50cf8e0a27cff.JPG";
+module.exports = __webpack_require__.p + "assets/fad15e09db7a285f2bca.JPG";
 
 /***/ }),
 
@@ -35823,7 +35825,7 @@ module.exports = __webpack_require__.p + "assets/a656f5b50cf8e0a27cff.JPG";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "assets/4e0bbe6e3d919c5d9c80.JPG";
+module.exports = __webpack_require__.p + "assets/ef86a9c5ad41c740ddbe.JPG";
 
 /***/ }),
 
@@ -35834,7 +35836,7 @@ module.exports = __webpack_require__.p + "assets/4e0bbe6e3d919c5d9c80.JPG";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "assets/2cca2679ff6e04d769ec.JPG";
+module.exports = __webpack_require__.p + "assets/7d2ec96e2da3e96cf83d.JPG";
 
 /***/ }),
 
@@ -35845,7 +35847,7 @@ module.exports = __webpack_require__.p + "assets/2cca2679ff6e04d769ec.JPG";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "assets/3e5ae6e4bb91bc3ade16.JPG";
+module.exports = __webpack_require__.p + "assets/88155bd713f9307c80e5.JPG";
 
 /***/ }),
 
