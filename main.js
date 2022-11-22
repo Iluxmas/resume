@@ -793,6 +793,8 @@ __webpack_require__.r(__webpack_exports__);
 
 function Lead() {
   var lang = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.TranslationContext);
+  var linkRu = 'https://github.com/Iluxmas/resume/raw/master/src/files/Sulkhanov_Ilya_resume_final_RU.pdf';
+  var linkEn = 'https://github.com/Iluxmas/resume/raw/master/src/files/Sulkhanov_Ilya_resume_final_EN.pdf';
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("section", {
     className: "lead",
     id: "lead"
@@ -812,7 +814,7 @@ function Lead() {
     className: "lead__description animate__animated animate__fadeInLeft fast animate__delay-1s"
   }, _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.lead[lang].description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
     className: "lead__button animate__animated animate__fadeInLeft fast animate__delay-2s",
-    href: "https://github.com/Iluxmas/resume/raw/master/src/files/Sulkhanov_Ilya_resume_final_RU.pdf",
+    href: lang === 'ru' ? linkRu : linkEn,
     target: "_blank"
   }, _contexts_TranslationContext__WEBPACK_IMPORTED_MODULE_1__.lead[lang].button), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "lead__photo"
