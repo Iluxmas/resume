@@ -605,7 +605,7 @@ function Header() {
     checkbox.current.checked = false;
   }
 
-  var links = ["#", "#education", "#skills", "#experience", "#projects", "#about", "#contacts"];
+  var links = ["#education", "#skills", "#experience", "#projects", "#about", "#contacts"];
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("header", {
     className: "header"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -1054,11 +1054,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _images_stack_icons_javascript_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../images/stack_icons/javascript.svg */ "./src/images/stack_icons/javascript.svg");
 /* harmony import */ var _images_stack_icons_sass_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../images/stack_icons/sass.svg */ "./src/images/stack_icons/sass.svg");
 /* harmony import */ var _images_stack_icons_git_icon_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../images/stack_icons/git-icon.svg */ "./src/images/stack_icons/git-icon.svg");
-/* harmony import */ var _images_stack_icons_jest_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../images/stack_icons/jest.svg */ "./src/images/stack_icons/jest.svg");
-/* harmony import */ var _images_stack_icons_redux_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../images/stack_icons/redux.svg */ "./src/images/stack_icons/redux.svg");
-/* harmony import */ var _images_stack_icons_webpack_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../images/stack_icons/webpack.svg */ "./src/images/stack_icons/webpack.svg");
-/* harmony import */ var _images_stack_icons_figma_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../images/stack_icons/figma.svg */ "./src/images/stack_icons/figma.svg");
-/* harmony import */ var _images_stack_icons_photoshop_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../images/stack_icons/photoshop.svg */ "./src/images/stack_icons/photoshop.svg");
+/* harmony import */ var _images_stack_icons_mongo_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../images/stack_icons/mongo.svg */ "./src/images/stack_icons/mongo.svg");
+/* harmony import */ var _images_stack_icons_firebase_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../images/stack_icons/firebase.svg */ "./src/images/stack_icons/firebase.svg");
+/* harmony import */ var _images_stack_icons_bootstrap_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../images/stack_icons/bootstrap.svg */ "./src/images/stack_icons/bootstrap.svg");
+/* harmony import */ var _images_stack_icons_jest_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../images/stack_icons/jest.svg */ "./src/images/stack_icons/jest.svg");
+/* harmony import */ var _images_stack_icons_redux_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../images/stack_icons/redux.svg */ "./src/images/stack_icons/redux.svg");
+/* harmony import */ var _images_stack_icons_webpack_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../images/stack_icons/webpack.svg */ "./src/images/stack_icons/webpack.svg");
+/* harmony import */ var _images_stack_icons_figma_svg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../images/stack_icons/figma.svg */ "./src/images/stack_icons/figma.svg");
+/* harmony import */ var _images_stack_icons_photoshop_svg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../images/stack_icons/photoshop.svg */ "./src/images/stack_icons/photoshop.svg");
+
+
+
 
 
 
@@ -1076,12 +1082,15 @@ var icons = {
   CSS: _images_stack_icons_css_3_svg__WEBPACK_IMPORTED_MODULE_1__,
   React: _images_stack_icons_react_svg__WEBPACK_IMPORTED_MODULE_2__,
   Git: _images_stack_icons_git_icon_svg__WEBPACK_IMPORTED_MODULE_5__,
+  Webpack: _images_stack_icons_webpack_svg__WEBPACK_IMPORTED_MODULE_11__,
+  Bootstrap: _images_stack_icons_bootstrap_svg__WEBPACK_IMPORTED_MODULE_8__,
+  Mongo: _images_stack_icons_mongo_svg__WEBPACK_IMPORTED_MODULE_6__,
   SASS: _images_stack_icons_sass_svg__WEBPACK_IMPORTED_MODULE_4__,
-  Webpack: _images_stack_icons_webpack_svg__WEBPACK_IMPORTED_MODULE_8__,
-  Figma: _images_stack_icons_figma_svg__WEBPACK_IMPORTED_MODULE_9__,
-  Redux: _images_stack_icons_redux_svg__WEBPACK_IMPORTED_MODULE_7__,
-  Jest: _images_stack_icons_jest_svg__WEBPACK_IMPORTED_MODULE_6__,
-  Photoshop: _images_stack_icons_photoshop_svg__WEBPACK_IMPORTED_MODULE_10__
+  Firebase: _images_stack_icons_firebase_svg__WEBPACK_IMPORTED_MODULE_7__,
+  Redux: _images_stack_icons_redux_svg__WEBPACK_IMPORTED_MODULE_10__,
+  Jest: _images_stack_icons_jest_svg__WEBPACK_IMPORTED_MODULE_9__,
+  Figma: _images_stack_icons_figma_svg__WEBPACK_IMPORTED_MODULE_12__,
+  Photoshop: _images_stack_icons_photoshop_svg__WEBPACK_IMPORTED_MODULE_13__
 };
 
 /***/ }),
@@ -1194,8 +1203,8 @@ __webpack_require__.r(__webpack_exports__);
 var TranslationContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(""); // ===== Zero block ========  HEADER MENU
 
 var headerMenu = {
-  ru: ["Домой", "Образование", "Навыки", "Опыт", "Проекты", "Обо мне", "Контакты"],
-  en: ["Home", "Education", "Skills", "Experience", "Projects", "About Me", "Contacts"]
+  ru: ["Образование", "Навыки", "Опыт", "Проекты", "Обо мне", "Контакты"],
+  en: ["Education", "Skills", "Experience", "Projects", "About Me", "Contacts"]
 }; // ===== 1st block ========  LEAD
 
 var lead = {
@@ -1360,8 +1369,8 @@ var projects = {
     id: 6,
     image: _images_projects_mesto_app_JPG__WEBPACK_IMPORTED_MODULE_4__,
     title: "Mesto React",
-    tags: ["React", "JavaScript", "API"],
-    link: "https://github.com/Iluxmas/mesto"
+    tags: ["React", "JavaScript", "API", 'MongoDB', 'Express'],
+    link: "https://github.com/Iluxmas/react-mesto-api-full"
   }]
 }; // ===== 5th block ======== ANOUTME
 
@@ -35853,6 +35862,17 @@ module.exports = __webpack_require__.p + "assets/88155bd713f9307c80e5.JPG";
 
 /***/ }),
 
+/***/ "./src/images/stack_icons/bootstrap.svg":
+/*!**********************************************!*\
+  !*** ./src/images/stack_icons/bootstrap.svg ***!
+  \**********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "assets/3a162f65200426203695.svg";
+
+/***/ }),
+
 /***/ "./src/images/stack_icons/css-3.svg":
 /*!******************************************!*\
   !*** ./src/images/stack_icons/css-3.svg ***!
@@ -35872,6 +35892,17 @@ module.exports = __webpack_require__.p + "assets/d3080981cad3c5331f01.svg";
 
 "use strict";
 module.exports = __webpack_require__.p + "assets/f4520722e44b6d0f10bd.svg";
+
+/***/ }),
+
+/***/ "./src/images/stack_icons/firebase.svg":
+/*!*********************************************!*\
+  !*** ./src/images/stack_icons/firebase.svg ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "assets/c474efcfe237604200aa.svg";
 
 /***/ }),
 
@@ -35916,6 +35947,17 @@ module.exports = __webpack_require__.p + "assets/fd46ca41839433d73577.svg";
 
 "use strict";
 module.exports = __webpack_require__.p + "assets/bdea2af60148e3a6f8a1.svg";
+
+/***/ }),
+
+/***/ "./src/images/stack_icons/mongo.svg":
+/*!******************************************!*\
+  !*** ./src/images/stack_icons/mongo.svg ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "assets/114c881a2c5ed4fa71e0.svg";
 
 /***/ }),
 
