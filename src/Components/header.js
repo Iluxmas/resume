@@ -63,7 +63,6 @@ export default function Header() {
     checkbox.current.checked = false;
   }
   const links = [
-    "#",
     "#education",
     "#skills",
     "#experience",

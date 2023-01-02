@@ -19,7 +19,6 @@ export const TranslationContext = createContext("");
 // ===== Zero block ========  HEADER MENU
 export const headerMenu = {
   ru: [
-    "Домой",
     "Образование",
     "Навыки",
     "Опыт",
@@ -28,7 +27,6 @@ export const headerMenu = {
     "Контакты",
   ],
   en: [
-    "Home",
     "Education",
     "Skills",
     "Experience",
@@ -275,8 +273,8 @@ export const projects = {
       id: 6,
       image: ThumbMesto,
       title: "Mesto React",
-      tags: ["React", "JavaScript", "API"],
-      link: "https://github.com/Iluxmas/mesto",
+      tags: ["React", "JavaScript", "API", 'MongoDB', 'Express'],
+      link: "https://github.com/Iluxmas/react-mesto-api-full",
     },
   ],
 };

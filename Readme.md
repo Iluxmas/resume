@@ -21,9 +21,8 @@ Project bundling done by Webpack, avaliable via link in the top.
 
 - [x] Add animation
 - [x] Tune responsive behavior of elements
-- [ ] Add download Ru\En versions of resume depending on site language
+- [x] Add download Ru\En versions of resume depending on site language
 - [ ] Refactor responsive behaviour from CSS media queries to React Hook
 - [ ] Add animation showing interactive togglers in experience section
 - [ ] Add theme and language switchers
 - [ ] Add menu highlight while scroll
-- [ ] Determine the need of Redux implementation (is it worth it?)
