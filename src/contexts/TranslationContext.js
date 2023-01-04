@@ -331,7 +331,7 @@ export const contactLinks = [
   { title: "telegram", link: "https://t.me/topsykrets" },
   { title: "email", link: "mailto:ilya.sulkhanov@gmail.com" },
   { title: "git", link: "https://github.com/Iluxmas" },
-  { title: "linked", link: "https://www.linkedin.com/in/ilya-super-frontend" },
+  { title: "linked", link: "https://www.linkedin.com/in/ilya-front" },
 ];
 // ===== 7th block ======== FOOTER
 export const footer = {
