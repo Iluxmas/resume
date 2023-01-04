@@ -1428,7 +1428,7 @@ var contactLinks = [{
   link: "https://github.com/Iluxmas"
 }, {
   title: "linked",
-  link: "https://www.linkedin.com/in/ilya-super-frontend"
+  link: "https://www.linkedin.com/in/ilya-front"
 }]; // ===== 7th block ======== FOOTER
 
 var footer = {
