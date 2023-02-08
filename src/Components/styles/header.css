@@ -39,6 +39,7 @@
   justify-content: space-between;
   align-items: center;
   height: 44px;
+  position: relative;
 }
 
 @media (min-width: 768px) {
@@ -117,7 +118,7 @@
 }
 
 .hover-underline-animation:after {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   transform: scaleX(0);
