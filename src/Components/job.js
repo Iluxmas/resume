@@ -18,6 +18,7 @@ export default function Job({ data }) {
     setHeadHeight(headElement.current.clientHeight);
     setIsOpen(() => !isOpen);
   }
+
   useEffect(() => {
     setDescrHeight(descriptionElement.current.offsetHeight);
     setHeadHeight(headElement.current.clientHeight);
@@ -40,7 +41,8 @@ export default function Job({ data }) {
   } else {
     bttnClass = "exp__expand-bttn";
     divClass = "exp__item";
-    heightStyle = { maxHeight: headHeight };
+    console.log(headHeight)
+    heightStyle = { maxHeight: 78 };
   }
 
   return (
