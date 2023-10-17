@@ -732,6 +732,7 @@ function Job(_ref) {
   } else {
     bttnClass = "exp__expand-bttn";
     divClass = "exp__item";
+    console.log(headElement.current);
     heightStyle = {
       maxHeight: headHeight
     };
@@ -1229,6 +1230,10 @@ var education = {
     title: "Образование",
     studies: [{
       place: "Яндекс",
+      dep: "Школа Разработки Интерфейсов",
+      dates: "06.2023 - 08.2023"
+    }, {
+      place: "Яндекс",
       dep: "Я.Практикум, Фронтенд Разработчик",
       dates: "04.2022 - 01.2023"
     }, {
@@ -1239,15 +1244,15 @@ var education = {
       place: "Udemy",
       dep: "Иван Петриченко, Полный курс по JavaScript + React",
       dates: "02.2022 - 03.2022"
-    }, {
-      place: "РХТУ им. Д.И.Менделеева",
-      dep: "Кафедра высокотемпературных материалов и технологий",
-      dates: "09.2007 - 06.2011"
     }]
   },
   en: {
     title: "Education",
     studies: [{
+      place: "Yandex",
+      dep: "School of Interface Development",
+      dates: "06.2023 - 08.2023"
+    }, {
       place: "Yandex.Practicum",
       dep: "Yandex, Frontend Developer",
       dates: "04.2022 - 01.2023"
@@ -1259,10 +1264,6 @@ var education = {
       place: "Udemy",
       dep: "Ivan Petrychenko, JavaScript + React Complete Course",
       dates: "02.2022 - 03.2022"
-    }, {
-      place: "Mendeleev University of Chemical Technology",
-      dep: "High Temperature Materials and Technologies Department",
-      dates: "09.2007 - 06.2011"
     }]
   }
 }; // ===== 3rd block ======== SKILLZ + EXPERIENCE + KNOWN COMPANIES (DONT SHOUT ON ME!)
@@ -1277,9 +1278,19 @@ var exp = {
     refs: "Рекомендации",
     subrefs: "Ниже логотипы классных компаний, с которыми я пока не работал.",
     data: [{
+      pos: "Frontend Developer",
+      company: "Cupcake Development",
+      dates: "03.2022 - 10.2023",
+      resp: ["Проект - расширение для браузера для использования купонов и кэшбека (chrome, safari, firefox), занимался исправлением багов, внедрением новых функций и релизом в сторы. За время работы было сделано:", "Обновлены пакеты React до 18 версии", "Перенесено на Typescript", "Добавлен Github Action для CI по автосборке и загрузке билдов", "Интегрирована Sentry для логирования ошибок", "Интегрирована платформа по сбору аналитики о типичных действиях пользователя в приложении"]
+    }, {
+      pos: "Фронтенд разработчик",
+      company: "Flying Academy, Чехия",
+      dates: "11.2022 - 3.2023",
+      resp: ["Разработал mobile-friendly макеты портала тестирования учащихся с применением хороших практик UI/UX и верстал страницы с использованием HTML, CSS, Bootstrap", "Создавал новую функциональность на Javascript", "На основании обратной связи вносил изменения в страницы для улучшения пользовательского опыта", "Работал в команде с бекэнд разработчиком и проджект менеджером над созданием новой версией портала"]
+    }, {
       pos: "Фронтенд разработчик (обучение)",
       company: "Я.Практикум",
-      dates: "04.2022 - по н. в.",
+      dates: "04.2022 - 01.2023",
       resp: ["Создавал страницы с помощью HTML и CSS", "Использовал flex и grid для создания адаптивности под различные устройства", "Писал код на JavaScript для построения логики работы приложения", "Настройка клиент-серверного взаимодействия по средствам API", "Портировал проекты на React"]
     }, {
       pos: "Менеджер технологической поддержки",
@@ -1291,11 +1302,6 @@ var exp = {
       company: "Зигверк",
       dates: "05.2017 - 12.2020",
       resp: ["Создавал и модифицировал рецептуры лаков и красок под нужны заказчиков", "Планировал и выполнял тесты по стандартным методикам, с оценкой результатов и написанием отчетов", "Изучал физические и технологические свойства красок и лаков в соответствии со стандартами компании", "Взаимодействовал с зарубежными коллегами по вопросам выполнения тестов и обмена опытом", "Обучал новых сотрудников лаборатории", "Контролировал и поддерживал функционирование лаборатории"]
-    }, {
-      pos: "Научный сотрудник",
-      company: "ФГУП Вимс",
-      dates: "10.2011 - 05.2017",
-      resp: ["Работал в команде по разработке методик подготовки и анализа руд методами АЭС", "Участвовал в создании научных публикаций"]
     }]
   },
   en: {
@@ -1303,9 +1309,19 @@ var exp = {
     refs: "References",
     subrefs: "Cool companies I haven't worked with yet",
     data: [{
+      pos: "Frontend Developer",
+      company: "Cupcake Dev",
+      dates: "03.2022 - 10.2023",
+      resp: ["I managed a browser extension (Chrome, Safari, and Firefox) for coupons and cashback targeting the Australian market. My responsibilities included bug fixes, implementing new features, and ensuring regular releases to browser stores.", "Migrated the project to Typescript for improved code quality and maintainability", "Upgraded React to version 18 to leverage the latest features and performance improvements", "Implemented a Github action for automating the build process and uploading builds to a file host", "Integrated the Sentry platform for error tracing and logging, enhancing the project's stability", "Integrated a platform for collecting user analytics to gain insights into user behaviour"]
+    }, {
+      pos: "Frontend Developer",
+      company: "Flying Academy",
+      dates: "11.2022 - 3.2023",
+      resp: ["Developed 10+ mobile-friendly pages for students assessment portal", "Redesigned existing pages using UI/UX good practices to enhance user experience", "Created new functionality using Javascript", "Collaborated with backend developer to improve web page usability", "Created designs that satisfied business objectives and user needs"]
+    }, {
       pos: "Frontend Developer (education)",
       company: "Ya.Practicum",
-      dates: "04.2022 - current",
+      dates: "04.2022 - 01.2023",
       resp: ["Created pages using HTML and CSS", "Made pages responsive and adaptive using css flex and grid", "Used JavaScript for applications logic ", "Set up client-server interaction via REST API", "Refactored applications to React"]
     }, {
       pos: "Account technology manager",
@@ -1319,12 +1335,6 @@ var exp = {
       company: "Siegwerk",
       dates: "05.2017 - 12.2020",
       resp: ["Have created and adjusted recipes of ink and lacquers under customer needs", "Planned and performed complex tests using standard company methodics, with result evaluation and reporting", "Mentored newbie laboratory staff", "Controlled laboratory functioning in terms of avaliable consumables, cleanliness and order"]
-    }, {
-      pos: "Science Researcher",
-      logo: _images_exp_icons_siegw_png__WEBPACK_IMPORTED_MODULE_1__,
-      company: "FGUP Vims",
-      dates: "10.2011 - 05.2017",
-      resp: ["Worked in team responsible for methodics development and samples analisys", "Participated in writing of science articles"]
     }]
   }
 };
@@ -35803,7 +35813,7 @@ module.exports = __webpack_require__.p + "assets/d59eef1ec6da7d0d9be7.png";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "assets/daaae5af9fceaff89913.svg";
+module.exports = __webpack_require__.p + "assets/aa6542765e023b34a6f3.svg";
 
 /***/ }),
 
@@ -35891,7 +35901,7 @@ module.exports = __webpack_require__.p + "assets/d3080981cad3c5331f01.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "assets/f4520722e44b6d0f10bd.svg";
+module.exports = __webpack_require__.p + "assets/5e72d3d61fdc16394ba9.svg";
 
 /***/ }),
 
@@ -35913,7 +35923,7 @@ module.exports = __webpack_require__.p + "assets/c474efcfe237604200aa.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "assets/fd381642a8b14fec88b8.svg";
+module.exports = __webpack_require__.p + "assets/8497c3c4218d87dc7fd5.svg";
 
 /***/ }),
 
@@ -35935,7 +35945,7 @@ module.exports = __webpack_require__.p + "assets/9d1dbb977aad143d9519.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "assets/fd46ca41839433d73577.svg";
+module.exports = __webpack_require__.p + "assets/1d3d28798f08ea1ed7cd.svg";
 
 /***/ }),
 
@@ -35946,7 +35956,7 @@ module.exports = __webpack_require__.p + "assets/fd46ca41839433d73577.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "assets/bdea2af60148e3a6f8a1.svg";
+module.exports = __webpack_require__.p + "assets/662207d2df5ff94930a3.svg";
 
 /***/ }),
 
@@ -35957,7 +35967,7 @@ module.exports = __webpack_require__.p + "assets/bdea2af60148e3a6f8a1.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "assets/114c881a2c5ed4fa71e0.svg";
+module.exports = __webpack_require__.p + "assets/6bbae86efb567b4795a3.svg";
 
 /***/ }),
 
@@ -35968,7 +35978,7 @@ module.exports = __webpack_require__.p + "assets/114c881a2c5ed4fa71e0.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "assets/83a73c912259e0c1dffa.svg";
+module.exports = __webpack_require__.p + "assets/99b74a58de453589a12b.svg";
 
 /***/ }),
 
@@ -35979,7 +35989,7 @@ module.exports = __webpack_require__.p + "assets/83a73c912259e0c1dffa.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "assets/e27571eaed899c642345.svg";
+module.exports = __webpack_require__.p + "assets/19465659ecf7a1122618.svg";
 
 /***/ }),
 
@@ -35990,7 +36000,7 @@ module.exports = __webpack_require__.p + "assets/e27571eaed899c642345.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "assets/a95675408ae17c456965.svg";
+module.exports = __webpack_require__.p + "assets/546485b8d93d3edf5b36.svg";
 
 /***/ }),
 
@@ -36001,7 +36011,7 @@ module.exports = __webpack_require__.p + "assets/a95675408ae17c456965.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "assets/8351205a93eafac2e392.svg";
+module.exports = __webpack_require__.p + "assets/3572f53ec4f404e921a9.svg";
 
 /***/ }),
 
@@ -36012,7 +36022,7 @@ module.exports = __webpack_require__.p + "assets/8351205a93eafac2e392.svg";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "assets/b460dec8736fcf92a8c7.svg";
+module.exports = __webpack_require__.p + "assets/2aac4855dfae56dbd36a.svg";
 
 /***/ })
 
