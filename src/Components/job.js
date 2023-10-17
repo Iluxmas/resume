@@ -41,8 +41,8 @@ export default function Job({ data }) {
   } else {
     bttnClass = "exp__expand-bttn";
     divClass = "exp__item";
-    console.log(headHeight)
-    heightStyle = { maxHeight: 78 };
+    console.log(headElement.current)
+    heightStyle = { maxHeight: headHeight };
   }
 
   return (

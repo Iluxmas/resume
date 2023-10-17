@@ -193,7 +193,7 @@ export const exp = {
     data: [
       {
         pos: "Frontend Developer",
-        company: "Cupcake Development",
+        company: "Cupcake Dev",
         dates: "03.2022 - 10.2023",
         resp: [
           "I managed a browser extension (Chrome, Safari, and Firefox) for coupons and cashback targeting the Australian market. My responsibilities included bug fixes, implementing new features, and ensuring regular releases to browser stores.",
